@@ -1,0 +1,120 @@
+// grid
+$grid-gutter-width: 15px !default;
+$container-width: 1200px !default;
+
+$displays: none, block, flex !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  //sm: 576px,
+  md: 767px,
+  lg: 992px,
+  xl: 1400px,
+  xl2: 1920px) !default;
+
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: (
+  ) !default;
+$spacers: map-merge((0: 0,
+      5: ($spacer * .5),
+      10: ($spacer * 1),
+      20: ($spacer * 2),
+      30: ($spacer * 3),
+      40: ($spacer * 4),
+      50: ($spacer * 5)),
+    $spacers
+);
+
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Regular.woff2') format('woff2'),
+    url('../fonts/Averta-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta-bold';
+  src: url('../fonts/Averta-Bold.woff2') format('woff2'),
+    url('../fonts/Averta-Bold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta-semibold';
+  src: url('../fonts/Averta-Semibold.woff2') format('woff2'),
+    url('../fonts/Averta-Semibold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UTM-Impact';
+  src: url('../fonts/UTM-Impact.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+//font
+$font-Montserrat: "Averta", sans-serif;
+$font-Averta-bold: "Averta-bold", sans-serif;
+$font-Averta-semibold: "Averta-semibold", sans-serif;
+$font-impact: "UTM-Impact", sans-serif;
+$font-weight-extrabold: 900;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-thin: 100;
+$font-size-reset: 10px !default;
+$font-family-base: $font-Montserrat;
+$font-size-base: 16px !default;
+$line-height-base: 1.5;
+$font-weight-base: $font-weight-regular;
+
+//color
+$black: #000;
+$dark: #222;
+$white: #fff;
+$gray: #EAEAEA;
+$gray-2: #E6E6E6;
+$gray-3: #dcdcdc;
+$primary: #00267C;
+$primary-2: #F9CA00;
+$primary-3: #DDE8FF;
+$primary-4: #FF4800;
+$body-color : $dark;
+$body-bg: $white !default;
+$border-color: $dark !default;
+
+// Button
+$btn-disabled-opacity: .6;
+$btn-border-width: 1px !default;
+$btn-font-weight: $font-weight-regular;
+$btn-font-family: $font-family-base;
+
+// Table
+$table-th-font-weight: $font-weight-base;
+
+// Form
+$input-height: 50px !default;
+$input-padding-y: 5px !default;
+$input-padding-x: 10px !default;
+$input-font-family: $font-family-base;
+$input-bg: $white;
+$input-border-width: 1px;
+$input-border-color: $border-color;
+$input-color: $black;
+$input-disabled-bg: $dark;
+$input-placeholder-color: $dark;
+$input-font-size: $font-size-base;
+$input-font-weight: $font-weight-base;
+$input-line-height: 1.5;

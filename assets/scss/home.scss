@@ -1,0 +1,593 @@
+@import "common/variables";
+@import "common/mixin";
+
+.mv-js {
+    margin-bottom: rem(15px);
+
+    @include mq("md", min) {
+        margin-bottom: rem(40px);
+    }
+
+    .slick-dots {
+
+        bottom: rem(40px);
+
+        li {
+            width: rem(10px);
+            height: rem(10px);
+            transition: all 0.3s;
+
+            &.slick-active {
+                width: rem(24px);
+
+                button {
+                    width: rem(24px);
+                    background: #FFF;
+                    border-radius: rem(9px);
+                }
+            }
+
+            button {
+                width: rem(10px);
+                height: rem(10px);
+                border: 1px solid #fff;
+                background: none;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+
+.box-sale {
+
+
+    @include mq("md", min) {
+        margin: 0 rem(-10px);
+    }
+
+    &__item {
+        background: #ECF2FF;
+        border-radius: rem(8px);
+        padding: rem(13px) rem(15px);
+        margin: 0 rem(10px);
+
+        @include mq("md") {
+            width: rem(295px);
+            padding: rem(10px);
+            margin: 0 rem(7px);
+        }
+
+        &__code {
+            font-size: rem(20px);
+            background: url(../images/ic_gilf.png) no-repeat left center;
+            background-size: contain;
+            padding-left: rem(50px);
+
+            @include mq("md", min) {
+                padding-left: rem(56px);
+            }
+
+            .c-code {
+                font-family: $font-Averta-bold;
+            }
+        }
+
+        &__txt {
+            margin: rem(10px) 0;
+        }
+
+        &__copy {
+            display: flex;
+            justify-content: space-between;
+
+            .btn-copy {
+                cursor: pointer;
+                background: $primary-2;
+                border-radius: rem(4px);
+                color: $primary;
+                padding: rem(5px) rem(10px);
+                transition: all 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        width: rem(50px);
+        height: rem(50px);
+        border-radius: 50%;
+        background: #20202033;
+
+        &:before {
+            content: "";
+            background: url(../images/ic_prev.svg) no-repeat top center;
+            background-size: contain;
+            width: rem(22px);
+            height: rem(22px);
+            filter: brightness(0) invert(1);
+            position: absolute;
+            left: 50%;
+            top: 54%;
+            transform: translate(-50%, -50%);
+        }
+
+        &.slick-prev {
+            left: rem(-60px);
+        }
+
+        &.slick-next {
+            right: rem(-60px);
+
+            &:before {
+                top: 47%;
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+
+        &:hover {
+            background: $primary;
+        }
+    }
+}
+
+.p-sale {
+    background: $primary;
+    position: relative;
+    border-radius: rem(20px);
+    overflow: hidden;
+    margin-top: rem(17px);
+    margin-bottom: rem(33px);
+
+    @include mq("md", min) {
+        margin-top: rem(25px);
+    }
+
+    &__head {
+        background: $primary-2;
+        display: flex;
+
+        padding: rem(20px) rem(16px) rem(16px);
+        justify-content: space-between;
+        position: relative;
+
+        @include mq("md", min) {
+            height: rem(77px);
+            padding: 0 rem(26px);
+            align-items: center;
+        }
+
+        @include mq("md") {
+            flex-direction: column;
+        }
+
+        &__ttl {
+            color: $primary;
+            font-size: rem(23px);
+            font-family: $font-Averta-bold;
+            text-transform: uppercase;
+            background: url(../images/ic_time_sale.svg) no-repeat;
+            background-position: left top;
+            background-size: rem(37px) rem(27px);
+            padding-left: rem(40px);
+            line-height: calc(24/23);
+
+            @include mq("md", min) {
+                font-size: rem(26px);
+                padding-left: rem(45px);
+                background-size: contain;
+                background-position: left center;
+            }
+        }
+
+        &__notice {
+            background: #FFF8D8;
+            margin-top: rem(20px);
+            color: $primary;
+            font-size: rem(13px);
+            position: relative;
+            padding: rem(7px) rem(26px) rem(7px) rem(32px);
+            border-radius: rem(32px);
+            line-height: calc(18/13);
+
+            @include mq("md", min) {
+                padding: rem(10px) rem(26px) rem(10px) rem(53px);
+                display: flex;
+                align-items: center;
+                margin-top: 0;
+            }
+
+            &:before {
+                content: "";
+                background: url(../images/ic_sale.svg) no-repeat top center;
+                background-size: contain;
+                width: rem(17px);
+                height: rem(17px);
+                position: absolute;
+                left: rem(10px);
+                top: rem(10px);
+
+                @include mq("md", min) {
+                    left: rem(30px);
+                    top: rem(10px);
+                }
+            }
+
+            strong {
+                text-transform: uppercase;
+                font-family: $font-Averta-bold;
+
+            }
+        }
+
+        &__time {
+            display: flex;
+            gap: rem(24px);
+
+            @include mq("md") {
+                position: absolute;
+                right: rem(16px);
+                top: rem(16px);
+            }
+
+            .box-count {
+                line-height: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: rem(14px);
+                text-transform: capitalize;
+                gap: rem(5px);
+                position: relative;
+
+                &:not(:last-child) {
+                    &:after {
+                        position: absolute;
+                        font-family: $font-Averta-bold;
+                        right: rem(-15px);
+                        top: rem(5px);
+                        content: ":";
+                        font-size: rem(26px);
+                    }
+                }
+
+                .sale-num {
+                    font-size: rem(26px);
+                    font-weight: $font-weight-semibold;
+                    line-height: 1;
+                    background: #Fff;
+                    width: rem(45px);
+                    height: rem(40px);
+                    border-radius: rem(7px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mq("md", min) {
+                        width: rem(42px);
+                        height: rem(37px);
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding: rem(20px) rem(10px);
+        margin-bottom: 2rem;
+
+        .product-item {
+            margin: 0 rem(10px) rem(10px);
+        }
+    }
+
+    .slick-dots {
+        z-index: 1;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        bottom: rem(-5px);
+
+        li {
+            width: rem(14px);
+            height: rem(14px);
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 rem(3px);
+
+            &.slick-active button {
+                background: #fff;
+            }
+
+            button {
+                width: rem(14px);
+                height: rem(14px);
+                background: #0B3DAE;
+            }
+        }
+    }
+}
+
+.p-commit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(14px) rem(8px);
+    margin-bottom: rem(49px);
+
+    @include mq("md", min) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(23px);
+    }
+
+    .commit-item {
+        border-radius: rem(10px);
+        border: 1px solid #C0D2FB;
+        background: #ECF2FF;
+        padding: rem(11px) 0 rem(11px) rem(11px);
+        display: flex;
+        align-items: center;
+        gap: rem(6px);
+
+        @include mq("md", min) {
+            padding: rem(16px) 0 rem(16px) rem(16px);
+        }
+
+        &__img {
+            width: rem(52px);
+            height: rem(52px);
+            flex-shrink: 0;
+
+            @include mq("md", min) {
+                width: rem(73px);
+                height: rem(73px);
+            }
+        }
+
+        &__meta {
+            color: $primary;
+
+            &__ttl {
+                font-family: $font-impact;
+                font-weight: normal;
+                text-transform: uppercase;
+                font-size: rem(20px);
+                line-height: calc(24/20);
+
+                @include mq("md", min) {
+                    font-size: rem(22px);
+                }
+
+            }
+
+            &__txt {
+                font-size: rem(14px);
+                line-height: calc(16/14);
+
+                @include mq("md", min) {
+                    font-size: rem(18px);
+                    line-height: calc(24/18);
+                }
+            }
+        }
+    }
+}
+
+.p-cate {
+    margin-bottom: rem(27px);
+
+    @include mq("md", min) {
+        margin-bottom: rem(40px);
+    }
+
+    &-wrap {
+        margin: rem(20px) rem(-7.5px) 0;
+
+        .cate-item {
+            border-radius: rem(15px);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 rem(7.5px) 0 rgba($color: #000000, $alpha: 0.15);
+            margin: rem(10px) rem(8.5px);
+            text-align: center;
+            padding: rem(5px) rem(10px) rem(20px);
+
+            &__ttl {
+                font-size: rem(18px);
+                line-height: calc(24/18);
+                margin-top: rem(15px);
+            }
+
+            img {
+                height: rem(80px);
+                width: rem(80px);
+                margin: auto;
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                .cate-item__ttl {
+                    color: $primary;
+                }
+
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.product-home {
+    position: relative;
+    margin-bottom: rem(30px);
+
+    &-wrap {
+        margin-top: rem(20px);
+
+        @include mq("md") {
+            margin-left: rem(-5px);
+        }
+
+        @include mq("md", min) {
+            margin-top: rem(30px);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: rem(30px);
+        }
+
+        .slick-list {
+            overflow: visible;
+        }
+
+        .product-item {
+            @include mq("md") {
+                width: rem(180px);
+                margin-left: rem(13px);
+            }
+        }
+    }
+
+}
+
+.p-bnr {
+    margin-bottom: rem(23px);
+
+    @include mq("md", min) {
+        margin-bottom: rem(49px);
+    }
+}
+
+.p-news {
+    margin-bottom: rem(40px);
+
+    &-home {
+        margin-top: rem(25px);
+        display: flex;
+        gap: rem(15px);
+        flex-direction: column;
+
+        @include mq("md", min) {
+            gap: rem(18px);
+            flex-direction: row;
+        }
+
+        .main-news {
+
+            position: relative;
+            box-shadow: 0 0 rem(16px) 0 rgba($color: #000000, $alpha: 0.1);
+
+            @include mq("md", min) {
+                width: rem(676px);
+            }
+
+            &__img {
+                display: block;
+                overflow: hidden;
+                height: rem(246px);
+
+                @include mq("md", min) {
+                    height: rem(403px);
+                }
+            }
+
+            &__meta {
+
+                padding: rem(18px) rem(20px);
+
+                @include mq("md", min) {
+                    padding: rem(30px) rem(30px) rem(20px) rem(30px);
+                }
+            }
+
+            &__ttl {
+                font-size: rem(25px);
+                font-family: $font-Averta-bold;
+                line-height: 1.22;
+                transition: all 0.3s ease;
+                display: block;
+
+                @include mq("md") {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    margin-bottom: rem(13px);
+                }
+
+                @include mq("md", min) {
+                    line-height: 1.3;
+                    margin-bottom: rem(20px);
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            &__txt {
+                font-size: rem(18px);
+            }
+
+            &__bot {
+                display: flex;
+                justify-content: space-between;
+                padding-top: rem(10px);
+                margin-top: rem(20px);
+                border-top: 1px solid #E9E9E9;
+
+                @include mq("md", min) {
+                    padding-top: rem(20px);
+                }
+            }
+
+            .view-more-new {
+                font-size: rem(16px);
+                color: #666;
+                background: url(../images/ic_right.svg) no-repeat right center;
+                background-size: rem(10px);
+                padding-right: rem(15px);
+                transition: all 0.3s;
+
+                @include mq("md", min) {
+                    padding-right: rem(22px);
+                    background-size: rem(12px);
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+
+        }
+
+        .second-news {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(14px);
+
+            @include mq("md", min) {
+                gap: rem(18px);
+            }
+        }
+    }
+}

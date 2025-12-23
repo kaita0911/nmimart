@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Averta";
+  src: url("../fonts/Averta-Regular.woff2") format("woff2"), url("../fonts/Averta-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta-bold";
+  src: url("../fonts/Averta-Bold.woff2") format("woff2"), url("../fonts/Averta-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta-semibold";
+  src: url("../fonts/Averta-Semibold.woff2") format("woff2"), url("../fonts/Averta-Semibold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UTM-Impact";
+  src: url("../fonts/UTM-Impact.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.p-consulting {
+  margin-top: 2rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 767px) {
+  .p-consulting {
+    padding-bottom: 10rem;
+    margin-top: 6.5rem;
+  }
+}
+.p-consulting-flex {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+}
+.p-consulting-sidebar {
+  width: 32rem;
+  flex-shrink: 0;
+  height: 40vh;
+  position: sticky;
+  top: 3%;
+}
+@media (max-width: 766px) {
+  .p-consulting-sidebar {
+    display: none;
+  }
+}
+.p-consulting-sidebar .sidebar-content {
+  background: #FFF;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  padding: 1.9rem 2.5rem;
+}
+.p-consulting-sidebar .sidebar-ttl {
+  font-size: 2.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #00267C;
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.p-consulting-sidebar .sidebar-lst {
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+.p-consulting-sidebar .sidebar-lst li {
+  list-style: none;
+}
+.p-consulting-sidebar .sidebar-lst li a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: url(../images/ic_right_1.svg) no-repeat left center;
+  display: block;
+  padding: 0.9rem 1rem 0.9rem 2rem;
+  transition: all 0.3s;
+}
+.p-consulting-sidebar .sidebar-lst li a:hover, .p-consulting-sidebar .sidebar-lst li a.active {
+  color: #00267C;
+  background: url(../images/ic_right_hover.svg) no-repeat left center;
+}
+.p-consulting-content {
+  flex: 1;
+}/*# sourceMappingURL=consulting.css.map */

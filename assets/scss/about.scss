@@ -1,0 +1,12 @@
+@import "common/variables";
+@import "common/mixin";
+
+.p-about {
+    margin-top: rem(20px);
+
+    @include mq("md", min) {
+
+        margin-top: rem(46px);
+    }
+
+}

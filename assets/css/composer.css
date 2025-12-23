@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Averta";
+  src: url("../fonts/Averta-Regular.woff2") format("woff2"), url("../fonts/Averta-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta-bold";
+  src: url("../fonts/Averta-Bold.woff2") format("woff2"), url("../fonts/Averta-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta-semibold";
+  src: url("../fonts/Averta-Semibold.woff2") format("woff2"), url("../fonts/Averta-Semibold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UTM-Impact";
+  src: url("../fonts/UTM-Impact.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.p-composer {
+  margin-top: 2rem;
+}
+@media (min-width: 767px) {
+  .p-composer {
+    margin-top: 5.5rem;
+  }
+}
+.p-composer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media (min-width: 767px) {
+  .p-composer-top {
+    gap: 5.5rem;
+    flex-direction: row;
+  }
+}
+@media (max-width: 766px) {
+  .p-composer-detail {
+    padding-bottom: 3rem;
+  }
+}
+.p-composer__ttl {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+@media (min-width: 767px) {
+  .p-composer__ttl {
+    font-size: 3rem;
+  }
+}
+.p-composer__img {
+  width: 25rem;
+  margin: auto;
+}
+@media (min-width: 767px) {
+  .p-composer__img {
+    width: 39rem;
+    height: 39.2rem;
+  }
+}
+.p-composer-more {
+  padding-bottom: 4rem;
+}
+@media (min-width: 767px) {
+  .p-composer-more {
+    padding-bottom: 8rem;
+  }
+}
+.p-composer-more .tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+@media (min-width: 767px) {
+  .p-composer-more .tabs {
+    gap: 7rem;
+  }
+}
+.p-composer-more .tabs .tab-btn {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  border-bottom-color: #f7e8d4;
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  cursor: pointer;
+  color: #444;
+}
+@media (min-width: 767px) {
+  .p-composer-more .tabs .tab-btn {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    border-bottom-width: 0.5rem;
+  }
+}
+.p-composer-more .tabs .tab-btn .i-num {
+  color: #bdbdbd;
+}
+.p-composer-more .tabs .tab-btn.active {
+  border-bottom-color: #00267C;
+}
+.p-composer-more .tab-content {
+  display: none;
+}
+.p-composer-more .tab-content.active {
+  display: grid;
+}
+.p-composer-other {
+  padding: 3rem 0;
+}
+@media (min-width: 767px) {
+  .p-composer-other {
+    padding: 6rem 0;
+  }
+}
+.p-composer-other__grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 767px) {
+  .p-composer-other__grid {
+    margin-top: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 10rem;
+  }
+}
+.p-composer-other .c-composer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 767px) {
+  .p-composer-other .c-composer {
+    gap: 3rem;
+  }
+}
+.p-composer-other .c-composer__img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (min-width: 767px) {
+  .p-composer-other .c-composer__img {
+    width: 14rem;
+    height: 14rem;
+  }
+}
+.p-composer-other .c-composer__ttl {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+@media (min-width: 767px) {
+  .p-composer-other .c-composer__ttl {
+    font-size: 1.8rem;
+  }
+}
+.p-composer-other .c-composer__info {
+  flex: 1;
+}
+.p-composer-other .c-composer__pos {
+  text-transform: uppercase;
+  color: #00267C;
+  font-weight: 500;
+}/*# sourceMappingURL=composer.css.map */

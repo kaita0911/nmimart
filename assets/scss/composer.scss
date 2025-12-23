@@ -1,0 +1,134 @@
+@import "common/variables";
+@import "common/mixin";
+
+.p-composer {
+    margin-top: rem(20px);
+    @include mq("md", min) {
+        margin-top: rem(55px);
+    }
+    &-top {
+        display: flex;
+        flex-direction: column;
+        gap: rem(25px);
+        @include mq("md", min) {
+            gap: rem(55px);
+            flex-direction: row;
+        }
+    }
+    &-detail {
+        @include mq("md") {
+            padding-bottom: rem(30px);
+        }
+    }
+    &__ttl {
+        font-size: rem(18px);
+        font-weight: $font-weight-semibold;
+        margin-bottom: rem(10px);
+        @include mq("md", min) {
+            font-size: rem(30px);
+        }
+    }
+    &__img {
+        width: rem(250px);
+        margin: auto;
+        @include mq("md", min) {
+            width: rem(390px);
+            height: rem(392px);
+        }
+    }
+    &-more {
+        padding-bottom: rem(40px);
+        @include mq("md", min) {
+            padding-bottom: rem(80px);
+        }
+        .tabs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(30px);
+            @include mq("md", min) {
+                gap: rem(70px);
+            }
+            .tab-btn {
+                font-size: rem(14px);
+                font-weight: $font-weight-semibold;
+                text-transform: uppercase;
+                display: inline-block;
+                padding-bottom: rem(4px);
+                border-bottom-color: #f7e8d4;
+                border-bottom-width: rem(2px);
+                border-bottom-style: solid;
+                cursor: pointer;
+                color: #444;
+                @include mq("md", min) {
+                    font-size: rem(20px);
+                    padding-bottom: rem(10px);
+                    border-bottom-width: rem(5px);
+                }
+                .i-num {
+                    color: #bdbdbd;
+                }
+                &.active {
+                    border-bottom-color: $primary;
+                }
+            }
+        }
+        .tab-content {
+            display: none;
+            &.active {
+                display: grid;
+            }
+        }
+    }
+    &-other {
+        padding: rem(30px) 0;
+        @include mq("md", min) {
+            padding: rem(60px) 0;
+        }
+        &__grid {
+            margin-top: rem(20px);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(15px);
+            @include mq("md", min) {
+                margin-top: rem(40px);
+                grid-template-columns: repeat(4, 1fr);
+                gap: rem(30px) rem(100px);
+            }
+        }
+        .c-composer {
+            display: flex;
+            align-items: center;
+            gap: rem(10px);
+            @include mq("md", min) {
+                gap: rem(30px);
+            }
+            &__img {
+                width: rem(55px);
+                height: rem(55px);
+                border-radius: 50%;
+                overflow: hidden;
+                flex-shrink: 0;
+                @include mq("md", min) {
+                    width: rem(140px);
+                    height: rem(140px);
+                }
+            }
+            &__ttl {
+                font-size: rem(14px);
+                font-weight: $font-weight-semibold;
+                @include mq("md", min) {
+                    font-size: rem(18px);
+                }
+            }
+            &__info {
+                flex: 1;
+            }
+            &__pos {
+                text-transform: uppercase;
+                color: $primary;
+                font-weight: $font-weight-medium;
+            }
+        }
+    }
+}

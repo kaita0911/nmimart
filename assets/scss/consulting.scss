@@ -1,0 +1,75 @@
+@import "common/variables";
+@import "common/mixin";
+
+.p-consulting {
+    margin-top: rem(20px);
+    padding-bottom: rem(50px);
+
+    @include mq("md", min) {
+        padding-bottom: rem(100px);
+        margin-top: rem(65px);
+    }
+
+    &-flex {
+        display: flex;
+        gap: rem(50px);
+        position: relative;
+
+    }
+
+    &-sidebar {
+        width: rem(320px);
+        flex-shrink: 0;
+        height: 40vh;
+        position: sticky;
+        top: 3%;
+        @include mq("md") {
+            display: none;
+        }
+        .sidebar-content {
+            background: #FFF;
+            box-shadow: 0 0 rem(25px) rgba($color: #000000, $alpha: 0.1);
+            padding: rem(19px) rem(25px);
+
+
+        }
+
+        .sidebar-ttl {
+            font-size: rem(25px);
+            font-weight: $font-weight-semibold;
+            border-bottom: 1px solid $primary;
+            padding-bottom: rem(5px);
+            text-transform: capitalize;
+        }
+
+        .sidebar-lst {
+            padding: 0;
+            margin: 0;
+            margin-top: rem(15px);
+
+            li {
+                list-style: none;
+
+                a {
+                    font-size: rem(18px);
+                    font-weight: $font-weight-semibold;
+                    background: url(../images/ic_right_1.svg) no-repeat left center;
+                    display: block;
+                    padding: rem(9px) rem(10px) rem(9px) rem(20px);
+                    transition: all 0.3s;
+
+                    &:hover,
+                    &.active {
+                        color: $primary;
+                        background: url(../images/ic_right_hover.svg) no-repeat left center;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &-content {
+        flex: 1;
+    }
+}

@@ -1,0 +1,100 @@
+.btn {
+    border: none;
+    background: $primary-2;
+    color: $white;
+    padding: 0 rem(20px);
+    height: rem(45px);
+    border-radius: rem(90px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: rem(14px);
+
+    @include mq("md", min) {
+        font-size: rem(16px);
+        padding: 0 rem(35px);
+        height: rem(56px);
+    }
+
+    @include hover() {
+        background: $primary;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+}
+
+.c-btn {
+    border: none;
+    background: $primary;
+    border-radius: rem(55px);
+    width: rem(130px);
+    height: rem(40px);
+    color: #fff;
+    font-weight: $font-weight-semibold;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10px);
+    cursor: pointer;
+
+    @include mq("md", min) {
+        width: rem(167px);
+        height: rem(55px);
+    }
+
+    &:hover {
+        background: $primary-3;
+    }
+
+    .c-reduce {
+        display: none;
+    }
+
+    .ic-send {
+        display: inline-block;
+        width: rem(10px);
+        height: rem(10px);
+        background-image: url(../images/ic_right_hover.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: brightness(0) invert(1);
+
+        @include mq("md", min) {
+            width: rem(13px);
+            height: rem(13px);
+        }
+    }
+
+    &.btn-load-more {
+        @include mq("md", min) {
+            width: rem(159px);
+            height: rem(35px);
+        }
+    }
+
+    &.--comment {
+        margin: auto;
+
+        &.--related {
+            margin-top: rem(40px);
+        }
+    }
+}

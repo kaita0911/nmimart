@@ -1,0 +1,413 @@
+@import "common/variables";
+@import "common/mixin";
+
+.p-contact {
+
+    margin-top: rem(20px);
+    margin-bottom: rem(-60px);
+
+    @include mq("md", min) {
+
+        margin-top: rem(40px);
+
+    }
+
+    &-info {
+        display: flex;
+        position: relative;
+        margin-bottom: rem(30px);
+
+        @include mq("md") {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(20px) rem(10px);
+        }
+    }
+
+    &__txt {
+        font-size: rem(15px);
+    }
+
+    &-item {
+
+        text-align: center;
+        position: relative;
+
+        @include mq("md", min) {
+            width: 25%;
+        }
+
+        &:not(:last-child):before {
+            @include mq("md", min) {
+                border-top: 1px solid #EAEAEA;
+                top: rem(44px);
+                left: 50%;
+                width: 100%;
+                position: absolute;
+                content: "";
+
+            }
+        }
+
+        &:not(:last-child):after {
+
+            @include mq("md", min) {
+                background: $primary;
+                width: rem(7px);
+                height: rem(7px);
+                border-radius: 50%;
+                position: absolute;
+                content: "";
+                top: rem(41px);
+                left: 100%;
+            }
+        }
+
+        &__icon {
+            background: $primary;
+            position: relative;
+            width: rem(60px);
+            height: rem(60px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            z-index: 1;
+            padding: rem(17px);
+
+            @include mq("md", min) {
+                width: rem(84px);
+                height: rem(84px);
+            }
+
+
+            &:before {
+                border: 1px dashed #fff;
+                width: calc(100% - rem(8px));
+                height: calc(100% - rem(8px));
+                border-radius: 50%;
+                position: absolute;
+                content: "";
+                left: rem(3px);
+                top: rem(3px);
+            }
+        }
+
+        &__txt {
+            margin-top: rem(10px);
+            font-size: rem(16px);
+            font-family: $font-Averta-bold;
+
+            @include mq("md", min) {
+                margin-top: rem(25px);
+                font-size: rem(18px);
+            }
+        }
+    }
+
+    &-form {
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(15px);
+        margin-top: rem(25px);
+        margin-bottom: rem(25px);
+
+        @include mq("md", min) {
+            margin-top: rem(20px);
+            margin-bottom: rem(57px);
+        }
+
+        .fr-field {
+            display: flex;
+            gap: rem(15px);
+            flex-direction: column;
+
+            @include mq("md", min) {
+                gap: rem(20px);
+                flex-direction: row;
+            }
+
+            input {
+                width: 100%;
+                border: 1px solid #EAEAEA;
+                height: rem(45px);
+                padding-left: rem(15px);
+                font-size: rem(14px);
+                color: #666;
+                box-shadow: 0 rem(4px) 0 0 #EDEDED;
+                border-radius: rem(5px);
+
+                @include mq("md", min) {
+                    height: rem(60px);
+                    padding-left: rem(23px);
+                    font-size: rem(16px);
+                    border-radius: rem(10px);
+                }
+            }
+        }
+
+        #note {
+            font-size: rem(14px);
+            border-radius: rem(5px);
+            min-height: rem(70px);
+            padding: rem(15px);
+            color: #666;
+            box-shadow: 0 rem(4px) 0 0 #EDEDED;
+            border-radius: rem(10px);
+            border: 1px solid #EAEAEA;
+
+            @include mq("md", min) {
+                min-height: rem(80px);
+                font-size: rem(16px);
+                width: 90%;
+                padding: rem(16px) rem(22px);
+            }
+        }
+
+        .btn-send {
+            border: none;
+            background: $primary;
+            border-radius: rem(10px);
+            color: #FFF;
+            font-family: $font-Averta-bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(8px);
+            cursor: pointer;
+            box-shadow: 0 rem(4px) 0 0 #001546;
+
+            @include mq("md") {
+                height: rem(45px);
+            }
+
+            @include mq("md", min) {
+                gap: rem(3px);
+                flex: 1;
+                font-size: rem(20px);
+                flex-direction: column;
+
+            }
+
+            &:hover {
+                background: #073CB2;
+            }
+
+            .ic-send {
+                display: inline-block;
+                width: rem(20px);
+                height: rem(20px);
+                background-image: url(../images/ic_paper.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                @include mq("md", min) {
+                    width: rem(33px);
+                    height: rem(25px);
+                }
+            }
+        }
+    }
+
+    &-finish {
+        padding-bottom: rem(60px);
+        text-align: center;
+        margin: auto;
+        max-width: rem(550px);
+
+        img {
+            max-width: rem(70px);
+
+            @include mq("md", min) {
+                max-width: rem(110px);
+            }
+        }
+
+        &__ttl {
+            font-size: rem(22px);
+            color: $primary;
+            font-family: $font-Averta-bold;
+            margin: rem(15px) 0 rem(10px);
+
+            @include mq("md", min) {
+                font-size: rem(28px);
+                margin: rem(25px) 0 rem(10px);
+            }
+        }
+
+        &__txt {
+            font-size: rem(16px);
+            margin-bottom: rem(10px);
+
+            strong {
+                font-family: $font-Averta-bold;
+            }
+
+            .order-code {
+                color: $primary;
+            }
+
+            .tel {
+                color: #B90C0C;
+                font-family: $font-Averta-bold;
+                font-size: rem(20px);
+            }
+        }
+
+        .btn-back {
+            background: $primary-2;
+            color: $primary;
+            font-family: $font-Averta-bold;
+            text-transform: uppercase;
+            border-radius: rem(5px);
+            width: rem(229px);
+            height: rem(49px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            transition: all 0.3s;
+            margin-top: rem(20px);
+
+            &:hover {
+                background: $primary;
+                color: #FFF;
+            }
+        }
+    }
+
+    .store-wrap {
+        display: flex;
+        margin-bottom: rem(100px);
+        flex-direction: column;
+
+        @include mq("md", min) {
+            margin-bottom: rem(120px);
+            flex-direction: row;
+        }
+
+        .store-list {
+
+            border: 1px solid #E0E0E0;
+            border-radius: rem(10px) rem(10px) 0 0;
+            flex-shrink: 0;
+            padding: rem(15px);
+
+            @include mq("md", min) {
+                width: rem(475px);
+                border-radius: rem(10px) 0 0 rem(10px);
+                padding: rem(25px) rem(35px);
+            }
+
+            &__ttl {
+                text-align: center;
+                font-family: $font-Averta-bold;
+                font-size: rem(25px);
+                color: $primary;
+                margin-bottom: rem(18px);
+
+                @include mq("md", min) {
+                    font-size: rem(35px);
+                }
+            }
+
+            &__search {
+                position: relative;
+
+                input {
+                    padding-left: rem(10px);
+                    height: rem(46px);
+                    border: 1px solid #CBCBFF;
+                    border-radius: rem(10px);
+                    width: 100%;
+                    box-shadow: 0 rem(4px) 0 0 #CBCBFF;
+
+                    @include mq("md", min) {
+                        padding-left: rem(20px);
+                        height: rem(56px);
+                    }
+                }
+
+                #store-search {
+                    position: absolute;
+                    right: rem(10px);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: rem(19px);
+                    height: rem(19px);
+
+                    @include mq("md", min) {
+                        right: rem(18px);
+                    }
+                }
+            }
+
+            &-scroll {
+                overflow-y: scroll;
+                margin: rem(27px) 0 0;
+                max-height: rem(530px);
+                padding-right: rem(15px);
+
+                /* width của scrollbar */
+                &::-webkit-scrollbar {
+                    width: rem(5px);
+                }
+
+                /* background của scrollbar */
+                &::-webkit-scrollbar-track {
+                    background: #EDEDED;
+                }
+
+                /* thanh kéo */
+                &::-webkit-scrollbar-thumb {
+                    background: $primary;
+                    border-radius: rem(5px);
+                }
+
+                .store-item {
+                    padding-bottom: rem(20px);
+                    margin-bottom: rem(20px);
+                    border-bottom: 1px dashed #00009B33;
+                    font-size: rem(15px);
+                    display: flex;
+                    flex-direction: column;
+                    gap: rem(7px);
+
+                    &__ttl {
+                        font-family: $font-Averta-bold;
+                        color: $primary;
+                        font-size: rem(18px);
+                    }
+
+                    &__address {
+                        background: url(../images/ic_address_2.svg) no-repeat left rem(6px);
+                        background-size: rem(13px) rem(15px);
+                        padding-left: rem(20px);
+                    }
+
+                    &__tel {
+                        background: url(../images/ic_phone_2.svg) no-repeat left rem(6px);
+                        background-size: rem(15px) rem(15px);
+                        padding-left: rem(20px);
+                    }
+
+                    &__time {
+                        background: url(../images/ic_time_2.svg) no-repeat left rem(5px);
+                        background-size: rem(14px) rem(14px);
+                        padding-left: rem(20px);
+                    }
+                }
+            }
+        }
+
+        #map {
+            flex: 1;
+        }
+    }
+
+
+}
