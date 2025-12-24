@@ -974,9 +974,7 @@
     display: flex;
     align-items: center;
     border: 1px solid #e3e3e3;
-    //background: #F7F7F7;
     height: rem(25px);
-
     overflow: hidden;
 
     @include mq("md", min) {
@@ -985,20 +983,54 @@
     }
 
     &.--detail {
-
-        height: rem(37px);
+        border-radius: rem(45px);
 
         @include mq("md", min) {
-            height: rem(50px);
+            height: rem(45px);
         }
 
         .ins {
-            font-size: rem(20px);
-            width: rem(30px);
+            width: rem(45px);
+            height: rem(45px);
+            border: none;
+            border-radius: 50%;
+            background: #E8E8E8;
+            position: relative;
 
-            @include mq("md", min) {
-                width: rem(44px);
+            &:before {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: rem(13px);
+
             }
+
+            &.btn-minus {
+                &:before {
+                    background: url(../images/ic_minus_2.svg) no-repeat top center;
+                    background-size: contain;
+                    height: rem(2px);
+
+                }
+            }
+
+            &.btn-plus {
+                background: $primary;
+
+                &:before {
+                    background: url(../images/ic_plus_2.svg) no-repeat top center;
+                    background-size: contain;
+                    filter: brightness(0) invert(1);
+                    height: rem(13px);
+
+                }
+            }
+        }
+
+        .qty {
+            border: none;
         }
     }
 

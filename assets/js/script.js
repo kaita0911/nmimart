@@ -580,6 +580,44 @@ $(document).ready(function () {
     li.toggleClass("active");
     li.children("ul").slideToggle();
   });
+  const btnaddcart = document.getElementById("add-to-cart");
+  const boxcart = document.getElementById("box-add-cart");
+  if (btnaddcart != null) {
+    btnaddcart.addEventListener("click", function () {
+      boxcart.classList.add("is-show");
+
+      setTimeout(() => {
+        boxcart.classList.remove("is-show");
+      }, 5000); // 5000ms = 5 giây
+    });
+  }
+  const btnclose = document.getElementById("btn-close-cart");
+  if (btnclose != null) {
+    btnclose.addEventListener("click", function () {
+      boxcart.classList.remove("is-show");
+      // Nếu muốn chỉ add (không toggle), dùng: target.classList.add('active');
+    });
+  }
+  const btn_show_cart = document.getElementById("btn-show-cart");
+  const box_cart = document.getElementById("box-cart");
+
+  if (btn_show_cart && box_cart) {
+    // Mở cart
+    btn_show_cart.addEventListener("click", function (e) {
+      e.stopPropagation(); // chặn lan sự kiện
+      box_cart.classList.add("show");
+    });
+
+    // Click bên trong cart -> không đóng
+    box_cart.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+
+    // Click bên ngoài -> đóng
+    document.addEventListener("click", function () {
+      box_cart.classList.remove("show");
+    });
+  }
 
   app.init();
 });
@@ -635,25 +673,7 @@ $(document).ready(function () {
 //           }
 //         }
 //       });
-//       const btnaddcart = document.getElementById("add-to-cart");
-//       const boxcart = document.getElementById("box-add-cart");
-//       if (btnaddcart != null) {
-//         btnaddcart.addEventListener("click", function () {
-//           boxcart.classList.add("is-show");
-
-//           setTimeout(() => {
-//             boxcart.classList.remove("is-show");
-//           }, 5000); // 5000ms = 5 giây
-//         });
-//       }
-
-//       const btnclose = document.getElementById("btn-close-cart");
-//       if (btnclose != null) {
-//         btnclose.addEventListener("click", function () {
-//           boxcart.classList.remove("is-show");
-//           // Nếu muốn chỉ add (không toggle), dùng: target.classList.add('active');
-//         });
-//       }
+//
 //     });
 //   });
 // });

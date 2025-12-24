@@ -169,316 +169,407 @@
         flex: 1;
     }
 
-    &.detail {
+    &-detail {
+        margin-top: rem(40px);
 
-        @include mq("md") {
+        &__top {
+
             display: flex;
-            gap: rem(20px);
-            flex-direction: column;
-            flex-wrap: wrap;
-        }
+            gap: rem(50px);
+            padding: rem(23px) rem(43px) rem(38px);
+            border-radius: rem(10px);
+            box-shadow: 0 0 rem(20px) 0 rgba($color: #000000, $alpha: 0.08);
+            margin-bottom: rem(50px);
 
-        @include mq("md", min) {
-            display: grid;
-            gap: rem(30px) rem(80px);
-            grid-template-columns: 54% 40%;
-        }
-
-        .product-left,
-        .product-right {
-            @include mq("md") {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: rem(20px);
-                flex: none;
-                width: 100%;
-                display: contents;
-                /* Trộn nội dung cột vào parent */
-
+            .w-50 {
+                width: 50%;
             }
 
-        }
+            .product-gallery {
 
-        .product-gallery {
+                overflow: hidden;
 
-            overflow: hidden;
+                .slider-for img {
 
-            @include mq("md") {
-                order: 1;
-                width: rem(345px);
-            }
-
-            .slider-for img {
-                padding: rem(10px);
-                width: 100%;
-                height: auto;
-                cursor: pointer;
-                height: rem(300px);
-                object-fit: scale-down;
-
-                @include mq("md", min) {
-                    padding: rem(20px);
-                    height: rem(600px);
-                }
-            }
-
-            .slider-nav .slick-current img {
-                opacity: 1;
-
-            }
-
-            .slider-nav {
-                margin-top: rem(10px);
-
-                img {
-                    width: rem(100px);
+                    width: 100%;
                     height: auto;
                     cursor: pointer;
-                    opacity: 0.6;
-                    padding: rem(5px);
-                    height: rem(100px);
-                    object-fit: scale-down;
+                    height: rem(300px);
+                    object-fit: cover;
+
+                    @include mq("md", min) {
+
+                        height: rem(544px);
+                    }
+                }
+
+                .slider-nav .slick-current img {
+                    opacity: 1;
 
                 }
-            }
-        }
 
-        /* Trái trên */
-        .product-meta {
-            @include mq("md") {
-                order: 2;
-            }
+                .slider-nav {
+                    margin: rem(10px) rem(-8px) 0;
 
-            .ttl01 {
-                margin-bottom: rem(10px);
-            }
+                    &__item {
+                        width: rem(130px);
+                        cursor: pointer;
+                        opacity: 0.6;
+                        height: rem(130px);
+                        object-fit: cover;
+                        margin: 0 rem(4px);
 
-            .product-price {
-                margin: rem(10px) 0;
-
-                @include mq("md", min) {
-                    margin: rem(15px) 0 rem(20px);
-                }
-            }
-
-            &__short {
-                ul {
-                    padding: 0;
-                    padding: 0;
-                    list-style: none;
-
-                    li {
-                        background: url(../images/ic_check.svg);
-                        background-repeat: no-repeat;
-                        background-position: left rem(8px);
-                        background-size: rem(12px) rem(12px);
-                        padding: rem(5px) 0 rem(5px) rem(20px);
-
-                        @include mq("md", min) {
-                            background-position: left rem(9px);
-                            background-size: rem(15px) rem(15px);
-                            padding: rem(5px) 0 rem(5px) rem(25px);
+                        &.slick-current {
+                            opacity: 1;
                         }
                     }
                 }
             }
 
-            &__qty {
-                margin: rem(10px) 0;
-                display: flex;
-                align-items: center;
-                gap: rem(5px);
-
-                @include mq("md", min) {
+            .product-meta {
+                &__multi {
+                    display: flex;
+                    margin: rem(12px) 0;
                     gap: rem(15px);
-                    margin: rem(30px) 0;
-                }
+                    align-items: center;
 
-                span {
+                    &__views {
+                        display: flex;
+                        gap: rem(15px);
 
-                    font-weight: $font-weight-medium;
-
-                    @include mq("md", min) {
-                        font-size: rem(18px);
-                        font-weight: $font-weight-semibold;
+                        span {
+                            display: flex;
+                            line-height: 1;
+                            padding-left: 1.5rem;
+                            border-left: 1px solid #DADADA;
+                        }
                     }
                 }
 
-                #add-to-cart {
-                    color: $primary;
-                    border: 1px solid $primary;
-                    background: #FAF6EF;
-                    height: rem(37px);
+                &__brand {
                     display: flex;
                     align-items: center;
                     gap: rem(10px);
-                    justify-content: center;
-                    font-size: rem(13px);
-                    font-weight: $font-weight-semibold;
-                    flex: 1;
-                    cursor: pointer;
-                    transition: all 0.3s;
 
-                    @include mq("md", min) {
-                        font-size: rem(18px);
-                        height: rem(50px);
-                        gap: rem(15px);
-                    }
+                    label {
+                        line-height: 1;
 
-                    .ic-cart {
-                        display: inline-block;
-                        width: rem(17px);
-                        height: rem(17px);
-                        background: url(../images/ic_cart_2.svg) no-repeat top center;
-                        background-size: contain;
-                        transition: all 0.3s;
-
-                        @include mq("md", min) {
-                            width: rem(24px);
-                            height: rem(24px);
+                        &:not(:last-child) {
+                            padding-right: rem(10px);
+                            border-right: 1px solid #dadada;
                         }
-                    }
 
-                    &:hover {
-                        background: $primary;
-                        color: #FFF;
-
-                        .ic-cart {
-                            filter: brightness(0) invert(1);
+                        span {
+                            color: $primary;
+                            font-family: $font-Averta-bold;
+                            display: inline-block;
+                            margin-left: rem(3px);
                         }
                     }
                 }
-            }
 
-            &__support {
-                margin: rem(15px) 0;
-                border: 1px solid #ECDFCE;
-                background: linear-gradient(to right, #FAF6EF, #fff);
-                border-radius: rem(5px);
-                text-align: center;
-                padding: rem(15px) rem(15px) rem(20px);
-
-                @include mq("md", min) {
-                    border-radius: rem(15px);
-                    margin: rem(15px) 0 rem(24px);
-                }
-
-                .support-ttl {
-                    font-size: rem(15px);
-                    display: inline-block;
-                    text-transform: capitalize;
-                    color: $primary;
-                    font-weight: $font-weight-semibold;
-                    background: url(../images/ic_support.svg) no-repeat left center;
-                    background-size: rem(20px) rem(20px);
-                    padding-left: rem(30px);
-                    margin-bottom: rem(15px);
-
-                    @include mq("md", min) {
-                        background-size: rem(28px) rem(28px);
-                        font-size: rem(25px);
-                        padding-left: rem(40px);
-                    }
-                }
-
-                .support-form {
+                &__sale {
+                    margin: rem(25px) 0 rem(20px);
+                    padding: rem(7px);
+                    border-radius: rem(5px);
+                    background: $primary-2;
                     display: flex;
-                    gap: rem(5px);
+                    align-items: center;
+                    justify-content: space-between;
 
-
-                    @include mq("md", min) {
-                        gap: rem(15px);
+                    &__ttl {
+                        color: $primary;
+                        text-transform: uppercase;
+                        font-size: rem(20px);
+                        font-family: $font-Averta-bold;
+                        background: url(../images/ic_time_sale.svg) no-repeat left center;
+                        background-size: rem(25px) rem(21px);
+                        padding-left: rem(35px);
                     }
 
-                    &__input {
-                        height: rem(37px);
-                        border: 1px solid $primary;
-                        background: #Fff;
-                        flex: 1;
-                        font-weight: $font-weight-medium;
-                        padding-left: rem(5px);
-
-                        @include mq("md", min) {
-                            font-size: rem(18px);
-                            height: rem(50px);
-                            padding-left: rem(25px);
-                        }
-
-                        &:focus {
-                            outline: 1px solid $primary;
-                        }
-                    }
-
-                    &__btn {
-                        color: #FFF;
-                        font-size: rem(13px);
-                        font-weight: $font-weight-bold;
-                        width: rem(100px);
-                        height: rem(37px);
+                    &__time {
+                        text-transform: uppercase;
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        flex-shrink: 0;
-                        background: $primary-2;
-                        cursor: pointer;
-                        transition: all 0.3s;
+                        gap: rem(10px);
+                        color: $primary;
+                        font-family: $font-Averta-bold;
 
-                        @include mq("md", min) {
-                            width: rem(160px);
-                            height: rem(50px);
-                            font-size: rem(20px);
-                        }
+                        .box-time {
+                            display: flex;
+                            gap: rem(20px);
 
-                        &:hover {
-                            background: $primary;
+                            &-num {
+                                background: #FFF;
+                                font-size: rem(18px);
+                                font-family: $font-Averta-semibold;
+                                color: #000;
+                                width: rem(32px);
+                                height: rem(29px);
+                                border-radius: rem(5px);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+
+                                &:not(:last-child) {
+                                    &:after {
+                                        position: absolute;
+                                        right: rem(-12px);
+                                        top: rem(-2px);
+                                        content: ":";
+                                        color: #000;
+                                        font-size: rem(22px);
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-            }
 
-            &__commit {
-                background: $primary;
-                border-radius: rem(20px);
-                display: grid;
-                gap: rem(6px);
-                grid-template-columns: repeat(2, 1fr);
-                padding: rem(10px) rem(6px);
+                &__price {
+                    display: flex;
+                    flex-direction: column;
+                    gap: rem(10px);
+                    margin-bottom: rem(20px);
 
-                @include mq("md", min) {
-                    padding: 0 rem(14px);
-                    gap: rem(12px);
-                    border-radius: rem(90px);
-                    height: rem(83px);
-                    grid-template-columns: repeat(4, 1fr);
+                    .price-now {
+                        font-size: rem(40px);
+                        font-family: $font-Averta-bold;
+                        color: $primary-4;
+                        line-height: 1;
+                    }
+
+                    .price-old {
+                        text-decoration: line-through;
+                    }
+
+                    .save-percent {
+                        color: #FF6A00;
+                    }
                 }
 
-                .commit-item {
-                    color: #Fff;
+                &__parts {
+                    display: flex;
+                    align-items: center;
+                    gap: rem(10px);
+
+
+                    label {
+                        margin-right: rem(20px);
+                    }
+
+                    .variale-item {
+                        display: inline-flex;
+                        padding: rem(10px) rem(30px);
+                        border-radius: rem(25px);
+                        border: 1px solid #DDDDDD;
+                        cursor: pointer;
+
+                        &.active,
+                        &:hover {
+
+                            color: $primary;
+                            border: 1px solid $primary;
+                        }
+                    }
+                }
+
+                &__qty {
+                    margin: rem(10px) 0;
                     display: flex;
                     align-items: center;
                     gap: rem(5px);
-                    line-height: calc(16/14);
 
                     @include mq("md", min) {
-                        font-weight: $font-weight-semibold;
-                        font-size: rem(14px);
+                        gap: rem(15px);
+                        margin: rem(20px) 0 rem(35px);
                     }
 
-                    img {
-                        width: rem(28px);
-                        height: rem(28px);
-                        object-fit: contain;
+                    // #add-to-cart {
+                    //     color: $primary;
+                    //     border: 1px solid $primary;
+                    //     background: #FAF6EF;
+                    //     height: rem(37px);
+                    //     display: flex;
+                    //     align-items: center;
+                    //     gap: rem(10px);
+                    //     justify-content: center;
+                    //     font-size: rem(13px);
+                    //     font-weight: $font-weight-semibold;
+                    //     flex: 1;
+                    //     cursor: pointer;
+                    //     transition: all 0.3s;
 
-                        @include mq("md", min) {
-                            width: rem(38px);
-                            height: rem(38px);
+                    //     @include mq("md", min) {
+                    //         font-size: rem(18px);
+                    //         height: rem(50px);
+                    //         gap: rem(15px);
+                    //     }
+
+                    //     .ic-cart {
+                    //         display: inline-block;
+                    //         width: rem(17px);
+                    //         height: rem(17px);
+                    //         background: url(../images/ic_cart_2.svg) no-repeat top center;
+                    //         background-size: contain;
+                    //         transition: all 0.3s;
+
+                    //         @include mq("md", min) {
+                    //             width: rem(24px);
+                    //             height: rem(24px);
+                    //         }
+                    //     }
+
+                    //     &:hover {
+                    //         background: $primary;
+                    //         color: #FFF;
+
+                    //         .ic-cart {
+                    //             filter: brightness(0) invert(1);
+                    //         }
+                    //     }
+                    // }
+                }
+
+                &__gift {
+                    background: #FFF7D3;
+                    border-radius: rem(20px);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: rem(18px);
+                    padding: rem(28px) rem(40px);
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        left: rem(15px);
+                        top: rem(12px);
+                        width: calc(100% - rem(30px));
+                        height: calc(100% - rem(24px));
+                        border: 1.5px dashed #EDDC94;
+                        border-radius: rem(20px);
+                    }
+
+                    &__img {
+                        width: rem(89px);
+                        flex-shrink: 0;
+                    }
+
+                    &__meta {
+                        flex: 1;
+                        font-size: rem(16px);
+
+                        &__label {
+                            text-transform: uppercase;
+                            font-family: $font-Averta-bold;
+                            color: $primary;
+                        }
+
+                        &__price {
+                            margin-top: rem(5px);
+
+                            span {
+                                font-size: rem(18px);
+                                color: $primary-4;
+                                font-family: $font-Averta-bold;
+                            }
                         }
                     }
                 }
+
+                &__short {
+                    ul {
+                        padding: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            background: url(../images/ic_check.svg);
+                            background-repeat: no-repeat;
+                            background-position: left rem(8px);
+                            background-size: rem(12px) rem(12px);
+                            padding: rem(5px) 0 rem(5px) rem(20px);
+
+                            @include mq("md", min) {
+                                background-position: left rem(9px);
+                                background-size: rem(15px) rem(15px);
+                                padding: rem(5px) 0 rem(5px) rem(25px);
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        &__body {
+            margin-top: rem(30px);
+            display: flex;
+            gap: 50px;
+
+            &__left {
+                flex: 1;
             }
 
+            &__right {
+                width: rem(308px);
+            }
         }
+
+        &__ttl {
+
+            border-bottom: 1px solid #F4F4F4;
+            margin-bottom: rem(20px);
+
+            span {
+                display: inline-block;
+                font-size: rem(25px);
+                font-family: $font-Averta-bold;
+                color: $primary;
+                position: relative;
+                padding-bottom: rem(8px);
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: $primary-2;
+                }
+            }
+
+
+        }
+
+    }
+
+    &.detail {
+
+        // @include mq("md") {
+        //     display: flex;
+        //     gap: rem(20px);
+        //     flex-direction: column;
+        //     flex-wrap: wrap;
+        // }
+
+        // @include mq("md", min) {
+        //     display: grid;
+        //     gap: rem(30px) rem(80px);
+        //     grid-template-columns: 54% 40%;
+        // }
+
+        .product-left,
+        .product-right {}
+
+
+
+        /* Trái trên */
+
 
         .product-specifications {
             padding: rem(10px);

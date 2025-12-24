@@ -31,28 +31,54 @@
                         <span class="p-header__hotline__call">0356858885</span>
                     </div>
                     <div class="p-header__cart">
-                        <a href="cart/">
+                        <div id="btn-show-cart" class="btn-cart">
                             <span class="ic_cart"></span>
-                            <span class="ic_num">0</span>
-                        </a>
-                        <div class="add-to-cart radius-20" id="box-add-cart">
+                            <span class="ic_num">1</span>
+                        </div>
+                        <div class="add-to-cart" id="box-add-cart">
                             <div class="add-to-cart__ttl">
                                 Thêm vào giỏ hàng thành công
                                 <span class="ic_close_2" id="btn-close-cart"></span>
                             </div>
                             <a class="add-to-cart__item" href="">
-                                <div class="add-to-cart__item__img radius-20">
+                                <div class="add-to-cart__item__img">
                                     <img src="<?= BASE_URL ?>assets/images/product.jpg" alt="" width="99" height="99">
                                 </div>
                                 <div class="add-to-cart__item__meta">
-                                    <h3 class="add-to-cart__item__ttl">Ghế Massage Treeboss Supreme – S568</h3>
+                                    <h3 class="add-to-cart__item__ttl">Quạt phun sương NMIMART - QCT01</h3>
                                     <div class="add-to-cart__item__price">
-                                        <span class="new-price">175.000.000 <sup>₫</sup></span>
-                                        <span class="old-price"></span>
+                                        <span class="new-price">15.000.000đ</span>
+                                        <span class="old-price">17.000.000đ</span>
                                     </div>
                                 </div>
                             </a>
-                            <a class="btn-view-cart" href="cart/">Xem giỏ hàng</a>
+                            <a class="btn-view-cart" href="<?= BASE_URL ?>cart/">Xem giỏ hàng</a>
+                        </div>
+                        <div class="box-cart" id="box-cart">
+                            <div class="box-cart-wrap">
+                                <div class="box-cart__item">
+                                    <div class="box-cart__item__img">
+                                        <img class="img_scale" src="<?= BASE_URL ?>assets/images/product.jpg" alt="" width="53" height="53">
+                                    </div>
+                                    <div class="box-cart__item__info">
+                                        <h3 class="box-cart__item__info__ttl">Quạt điều hòa NMI MART</h3>
+                                        <span class="box-cart__item__del">Bỏ chọn</span>
+                                    </div>
+                                    <div class="box-cart__item__qty">
+                                        <input type="number" value="2" name="qty">
+                                    </div>
+                                    <div class="box-cart__item__price">
+                                        <span class="new-price">1.580.000đ</span>
+                                    </div>
+                                </div>
+                                <div class="box-cart__total">
+                                    Tổng tiền: <strong>1.590.000đ</strong>
+                                </div>
+                            </div>
+                            <div class="box-cart-action">
+                                <a href="#" class="box-cart-action__continue">Tiếp tục mua hàng</a>
+                                <a href="<?= BASE_URL ?>cart/" class="box-cart-action__view">Xem giỏ hàng</a>
+                            </div>
                         </div>
                     </div>
                 </div>

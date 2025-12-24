@@ -10,7 +10,6 @@
     }
 }
 
-
 .breadcrumb {
     background: #F1EFEF;
     padding: rem(15px) 0;
@@ -103,23 +102,6 @@ html {
     }
 }
 
-.radius-20 {
-    border-radius: rem(10px);
-    overflow: hidden;
-
-    @include mq("md", min) {
-        border-radius: rem(20px);
-    }
-}
-
-.radius-10 {
-    border-radius: rem(5px);
-    overflow: hidden;
-
-    @include mq("md", min) {
-        border-radius: rem(10px);
-    }
-}
 
 .mrg-20 {
     margin-bottom: rem(10px);
@@ -754,6 +736,17 @@ a {
                 height: rem(28px);
             }
 
+            &.--detail {
+                width: rem(47px);
+                height: rem(21px);
+                gap: rem(5px);
+
+                .ic_rates {
+                    width: rem(11px);
+                    height: rem(11px);
+                }
+            }
+
             .ic_rates {
                 background: url(../images/ic_star.svg) no-repeat top center;
                 background-size: contain;
@@ -1066,88 +1059,49 @@ a {
 
 .c-btn-cart {
     display: flex;
-    flex-direction: column;
-    gap: rem(12px);
-    margin-top: rem(14px);
+    margin-top: rem(25px);
+    gap: rem(10px);
 
-    &-inc {
-        border-radius: rem(65px);
+    &-btn {
+        border-radius: rem(5px);
+        background: $primary;
         color: #fff;
-        font-weight: $font-weight-bold;
         height: rem(50px);
+        font-size: rem(16px);
+        font-family: $font-Averta-bold;
         display: flex;
         align-items: center;
         justify-content: center;
         text-transform: uppercase;
+        width: 100%;
+        transition: all 0.3s;
+        cursor: pointer;
 
-        @include mq("md", min) {
-            height: rem(65px);
-        }
-    }
-
-    &__buynow {
-        font-size: rem(16px);
-        background: $primary-2;
-
-        @include mq("md", min) {
-            font-size: rem(30px);
-        }
-
-        &.--cuz {
-            margin: auto;
-            width: rem(150px);
-            font-size: rem(15px);
-            text-transform: none;
-            height: rem(40px);
-
-            @include mq("md", min) {
-                width: rem(202px);
-                font-size: rem(18px);
-                height: rem(47px);
-            }
-        }
-
-        &:hover {
-            opacity: 0.7;
-        }
-    }
-
-    &__credit {
-        background: #3c1c13;
-
-        &:hover {
-            opacity: 0.7;
-        }
-
-        .c-credit {
-            display: flex;
-            flex-direction: column;
-            background: url(../images/ic_dollar.svg) no-repeat left center;
-            background-size: rem(30px) rem(30px);
-            padding-left: rem(40px);
-
-            @include mq("md", min) {
-                padding-left: rem(50px);
-                background-size: rem(38px) rem(38px);
-            }
-
+        &.addtocart {
             span {
-                font-weight: $font-weight-bold;
-                font-size: rem(15px);
-                display: block;
-                line-height: 1;
-                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                gap: rem(5px);
 
-                @include mq("md", min) {
-                    font-size: rem(20px);
+                &:before {
+                    content: "";
+                    width: rem(20px);
+                    height: rem(18px);
+                    background: url(../images/ic_cart_3.svg) no-repeat top center;
+                    background-size: contain;
                 }
             }
 
-            label {
-                font-weight: normal;
-                text-transform: none;
-                line-height: 1;
-                margin-top: rem(4px);
+            &:hover {
+                background: $primary-4;
+            }
+        }
+
+        &.buynow {
+            background: $primary-4;
+
+            &:hover {
+                background: $primary;
             }
         }
     }
@@ -1768,6 +1722,169 @@ a {
             &:after {
                 transform: translate(-50%, -50%) rotate(-180deg);
             }
+        }
+    }
+}
+
+.p-commit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(14px) rem(8px);
+    margin-bottom: rem(49px);
+
+    @include mq("md", min) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(23px);
+    }
+
+    &.--product {
+        margin-bottom: rem(23px);
+    }
+
+    .commit-item {
+        border-radius: rem(10px);
+        border: 1px solid #C0D2FB;
+        background: #ECF2FF;
+        padding: rem(11px) 0 rem(11px) rem(11px);
+        display: flex;
+        align-items: center;
+        gap: rem(6px);
+
+        @include mq("md", min) {
+            padding: rem(16px) 0 rem(16px) rem(16px);
+        }
+
+        &__img {
+            width: rem(52px);
+            height: rem(52px);
+            flex-shrink: 0;
+
+            @include mq("md", min) {
+                width: rem(73px);
+                height: rem(73px);
+            }
+        }
+
+        &__meta {
+            color: $primary;
+
+            &__ttl {
+                font-family: $font-impact;
+                font-weight: normal;
+                text-transform: uppercase;
+                font-size: rem(20px);
+                line-height: calc(24/20);
+
+                @include mq("md", min) {
+                    font-size: rem(22px);
+                }
+
+            }
+
+            &__txt {
+                font-size: rem(14px);
+                line-height: calc(16/14);
+
+                @include mq("md", min) {
+                    font-size: rem(18px);
+                    line-height: calc(24/18);
+                }
+            }
+        }
+    }
+}
+
+.box-sale {
+
+
+    @include mq("md", min) {
+        margin: 0 rem(-10px);
+    }
+
+    &__item {
+        background: #ECF2FF;
+        border-radius: rem(8px);
+        padding: rem(13px) rem(15px);
+        margin: 0 rem(10px);
+
+        @include mq("md") {
+            width: rem(295px);
+            padding: rem(10px);
+            margin: 0 rem(7px);
+        }
+
+        &__code {
+            font-size: rem(20px);
+            background: url(../images/ic_gilf.png) no-repeat left center;
+            background-size: contain;
+            padding-left: rem(50px);
+
+            @include mq("md", min) {
+                padding-left: rem(56px);
+            }
+
+            .c-code {
+                font-family: $font-Averta-bold;
+            }
+        }
+
+        &__txt {
+            margin: rem(10px) 0;
+        }
+
+        &__copy {
+            display: flex;
+            justify-content: space-between;
+
+            .btn-copy {
+                cursor: pointer;
+                background: $primary-2;
+                border-radius: rem(4px);
+                color: $primary;
+                padding: rem(5px) rem(10px);
+                transition: all 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        width: rem(50px);
+        height: rem(50px);
+        border-radius: 50%;
+        background: #20202033;
+
+        &:before {
+            content: "";
+            background: url(../images/ic_prev.svg) no-repeat top center;
+            background-size: contain;
+            width: rem(22px);
+            height: rem(22px);
+            filter: brightness(0) invert(1);
+            position: absolute;
+            left: 50%;
+            top: 54%;
+            transform: translate(-50%, -50%);
+        }
+
+        &.slick-prev {
+            left: rem(-60px);
+        }
+
+        &.slick-next {
+            right: rem(-60px);
+
+            &:before {
+                top: 47%;
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+
+        &:hover {
+            background: $primary;
         }
     }
 }

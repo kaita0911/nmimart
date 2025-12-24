@@ -82,6 +82,11 @@
     @include mq("md", min) {
         font-size: rem(30px);
     }
+
+    &-02 {
+        font-size: rem(25px);
+        font-family: $font-Averta-semibold;
+    }
 }
 
 .ttl-cate {
