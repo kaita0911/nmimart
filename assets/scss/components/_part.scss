@@ -403,11 +403,16 @@ a {
         font-size: rem(24px);
     }
 
+
     &.--anchor {
         position: relative;
         max-height: rem(500px);
         transition: max-height 0.3s ease;
         overflow: hidden;
+
+        &.--product {
+            max-height: rem(1070px);
+        }
 
         &:after {
             width: 100%;
@@ -587,6 +592,25 @@ a {
     }
 }
 
+.c-time {
+    display: inline-block;
+    background: url(../images/ic_time.svg) no-repeat left center;
+    background-size: rem(14px) rem(14px);
+    padding-left: rem(20px);
+    font-size: rem(14px);
+    color: #666;
+}
+
+.c-like {
+    display: inline-block;
+    background: url(../images/ic_like_2.svg) no-repeat left center;
+    background-size: rem(13px) rem(13px);
+    padding-left: rem(16px);
+    font-size: rem(14px);
+    color: #000;
+    cursor: pointer;
+}
+
 .c-images {
     margin: rem(18px) 0;
 }
@@ -748,7 +772,7 @@ a {
             }
 
             .ic_rates {
-                background: url(../images/ic_star.svg) no-repeat top center;
+                background: url(../images/ic_star_full.svg) no-repeat top center;
                 background-size: contain;
                 display: inline-block;
                 width: rem(11px);
@@ -827,6 +851,56 @@ a {
             }
         }
     }
+
+    &.hot {
+        box-shadow: none;
+        display: flex;
+        border-radius: 0;
+        gap: rem(10px);
+        padding-bottom: rem(20px);
+        margin-bottom: rem(20px);
+        border-bottom: 1px solid #EDEDED;
+
+        .product-item__img {
+            width: rem(91px);
+            height: rem(91px);
+            overflow: hidden;
+            border-radius: rem(10px);
+            flex-shrink: 0;
+
+        }
+
+        .product-item__meta {
+            padding: 0;
+            flex: 1;
+        }
+
+        .product-item__ttl {
+            font-size: rem(16px);
+            line-height: 1.2;
+            margin-bottom: rem(5px);
+        }
+
+        .product-item__buyed {
+            font-size: rem(13px);
+        }
+
+        .product-item__rates {
+            &__star {
+                width: rem(44px);
+                height: rem(19px);
+                gap: rem(5px);
+                font-size: rem(13px);
+
+                .ic_rates {
+                    width: rem(11px);
+                    height: rem(11px);
+                }
+            }
+        }
+
+    }
+
 }
 
 .product-price {
@@ -835,58 +909,19 @@ a {
     justify-content: space-between;
     gap: rem(10px);
 
-    &.--f2 {
-        margin-bottom: rem(15px);
-
-        @include mq("md", min) {
-            margin-bottom: rem(30px);
-        }
+    &.hot {
+        justify-content: flex-start;
+        gap: rem(20px);
 
         .new-price {
-            font-size: rem(16px);
-
-            @include mq("md", min) {
-                font-size: rem(24px);
-            }
-        }
-
-        .old-price {
-            font-size: rem(12px);
-
             @include mq("md", min) {
                 font-size: rem(20px);
             }
         }
-    }
-
-    &.--f1 {
-        margin-bottom: rem(10px);
-        gap: rem(5px);
-        flex-direction: column;
-
-        @include mq("md") {
-            align-items: baseline;
-        }
-
-        @include mq("md", min) {
-            flex-direction: row;
-            margin-bottom: rem(20px);
-            gap: rem(8px);
-        }
-
-        .new-price {
-            font-size: rem(15px);
-
-            @include mq("md", min) {
-                font-size: rem(18px);
-            }
-        }
 
         .old-price {
-            font-size: rem(12px);
-
             @include mq("md", min) {
-                font-size: rem(14px);
+                font-size: rem(13px);
             }
         }
     }
@@ -1488,28 +1523,45 @@ a {
         --rating: 0;
         --percent: calc(var(--rating) / 5 * 100%);
         position: relative;
-        display: inline-block;
-        font-size: rem(18px);
+        display: flex;
+        --gap: 2px;
         line-height: 1;
+        --star-full: url(../images/ic_star_full.svg);
+        /* sao vàng */
+        --star-empty: url(../images/ic_star.svg);
+        /* sao xám */
+        --star-size: 15px;
+        width: calc((var(--star-size) + var(--gap)) * 5 - var(--gap));
+        height: var(--star-size);
+        position: relative;
+        background: var(--star-empty) repeat-x;
+        background-size: calc(var(--star-size) + var(--gap)) var(--star-size);
+        background-position: left center;
 
-
-        &::before {
-            content: "★★★★★";
-            color: transparent;
-            -webkit-text-stroke: 1px $primary-2;
-            letter-spacing: 0.2em;
+        &.--comment {
+            --star-size: 25px;
         }
 
+        // &::before {
+        //     content: "";
+        //     color: transparent;
+        //     -webkit-text-stroke: 1px $primary-2;
+        //     letter-spacing: 0.2em;
+        //     background: url(../images/ic_star.svg) no-repeat top center;
+        //     background-size: contain;
+        //     width: rem(26px);
+        //     height: rem(26px);
+        // }
+
         &::after {
-            content: "★★★★★";
+            content: "";
             position: absolute;
-            left: 0;
-            top: 0;
-            width: var(--percent);
+            inset: 0;
+            width: calc(var(--rating) / 5 * 100%);
+            background: var(--star-full) repeat-x;
+            background-size: calc(var(--star-size) + var(--gap)) var(--star-size);
+            ;
             overflow: hidden;
-            color: $primary-2;
-            white-space: nowrap;
-            letter-spacing: 0.2em;
         }
     }
 }
@@ -1886,5 +1938,40 @@ a {
         &:hover {
             background: $primary;
         }
+    }
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    &.show {
+        display: flex;
+    }
+
+    .popup-box {
+        background: #fff;
+        padding: rem(20px);
+        border-radius: rem(10px);
+        max-width: 100%;
+        width: rem(700px);
+        position: relative;
+        max-height: 96%;
+        overflow-y: scroll;
+    }
+
+    .popup-close {
+        position: absolute;
+        top: rem(8px);
+        right: rem(10px);
+        background: none;
+        border: none;
+        font-size: rem(22px);
+        cursor: pointer;
     }
 }

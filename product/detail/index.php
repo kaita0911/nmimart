@@ -128,7 +128,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                 <div class="p-product-detail__body">
                     <div class="p-product-detail__body__left">
                         <div class="p-product-detail__ttl"><span>Thông tin chi tiết</span></div>
-                        <div class="c-description --anchor" id="product-detail">
+                        <div class="c-description --anchor --product" id="product-detail">
                             THÔNG SỐ KỸ THUẬT :<br>
                             • Hệ thống tuần hoàn mạnh mẽ thiết kế mới cải tiến hoàn toàn 20<br>
                             • Phạm vi cung cấp không khí rộng hơn thiết kế chiều dài khe gió 510 mm<br>
@@ -154,6 +154,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                     <div class="p-product-detail__body__right">
                         <div class="product-specifications">
                             <div class="p-product-detail__ttl"><span>Thông số kĩ thuật</span></div>
+
                             <table>
                                 <tr>
                                     <td>Màu sắc</td>
@@ -175,61 +176,262 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                                     <td>Điều khiển</td>
                                     <td>Tự động</td>
                                 </tr>
-                                <tr>
-                                    <td>Khung lăn</td>
-                                    <td>Massage 4D</td>
-                                </tr>
-                                <tr>
-                                    <td>Công nghệ</td>
-                                    <td>Lưng – Chân</td>
-                                </tr>
-                                <tr>
-                                    <td>Nhiệt hồng ngoại</td>
-                                    <td>Toàn thân</td>
-                                </tr>
-                                <tr>
-                                    <td>Túi khí</td>
-                                    <td>8 bài</td>
-                                </tr>
-                                <tr>
-                                    <td>Tự động</td>
-                                    <td>Có zero</td>
-                                </tr>
-                                <tr>
-                                    <td>Chế độ lùi tường</td>
-                                    <td>Có</td>
-                                </tr>
-                                <tr>
-                                    <td>Chip AI</td>
-                                    <td>Có</td>
-                                </tr>
-                                <tr>
-                                    <td>Body Scan</td>
-                                    <td>Có</td>
-                                </tr>
-                                <tr>
-                                    <td>Âm thanh Hifi</td>
-                                    <td>Có</td>
-                                </tr>
-                                <tr>
-                                    <td>Hệ thống tạm ngưng</td>
-                                    <td>Có</td>
-                                </tr>
-                                <tr>
-                                    <td>Công nghệ giảm ồn</td>
-                                    <td>ANC < 48dB</td>
-                                </tr>
-                                <tr>
-                                    <td>Nhiệt hồng ngoại</td>
-                                    <td>Toàn thân</td>
-                                </tr>
                             </table>
+                            <div class="product-specifications__btn" id="btn-open-detail"><span>Xem chi tiết</span></div>
+                            <div class="popup-overlay" id="popup-detail">
+                                <div class="popup-box">
+                                    <button class="popup-close" id="btn-close">×</button>
+                                    <div class="popup-box__ttl">Thông số kỹ thuật</div>
+                                    <div class="product-specifications__detail">
+                                        <table>
+                                            <tr>
+                                                <td>Màu sắc</td>
+                                                <td>Đen vàng cam</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Điện thế</td>
+                                                <td>Đen vàng cam</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tần số</td>
+                                                <td>220V-240V</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Công suất</td>
+                                                <td>50Hz-60Hz</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Điều khiển</td>
+                                                <td>Tự động</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Khung lăn</td>
+                                                <td>Massage 4D</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Công nghệ</td>
+                                                <td>Lưng – Chân</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nhiệt hồng ngoại</td>
+                                                <td>Toàn thân</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Túi khí</td>
+                                                <td>8 bài</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tự động</td>
+                                                <td>Có zero</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chế độ lùi tường</td>
+                                                <td>Có</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chip AI</td>
+                                                <td>Có</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Body Scan</td>
+                                                <td>Có</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Âm thanh Hifi</td>
+                                                <td>Có</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hệ thống tạm ngưng</td>
+                                                <td>Có</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Công nghệ giảm ồn</td>
+                                                <td>ANC < 48dB</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nhiệt hồng ngoại</td>
+                                                <td>Toàn thân</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-product-hot">
+                            <div class="p-product-detail__ttl"><span>Thông số kĩ thuật</span></div>
+                            <a class="product-item hot" href="">
+                                <div class="product-item__img"><img class="img_cover" src="<?= BASE_URL ?>assets/images/product.jpg" alt=""
+                                        width="205" height="205">
+                                </div>
+                                <div class="product-item__meta">
+
+                                    <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
+                                    <div class="product-price hot">
+                                        <span class="new-price">1.045.000đ</span>
+                                        <span class="old-price">2.500.000đ</span>
+                                    </div>
+                                    <div class="product-item__rates">
+                                        <div class="product-item__rates__star">
+                                            <i class="ic_rates"></i>5.0
+                                        </div>
+                                        <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán: </span>40000</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="product-item hot" href="">
+                                <div class="product-item__img"><img class="img_cover" src="<?= BASE_URL ?>assets/images/product.jpg" alt=""
+                                        width="205" height="205">
+                                </div>
+                                <div class="product-item__meta">
+
+                                    <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
+                                    <div class="product-price hot">
+                                        <span class="new-price">1.045.000đ</span>
+                                        <span class="old-price">2.500.000đ</span>
+                                    </div>
+                                    <div class="product-item__rates">
+                                        <div class="product-item__rates__star">
+                                            <i class="ic_rates"></i>5.0
+                                        </div>
+                                        <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán: </span>40000</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="product-item hot" href="">
+                                <div class="product-item__img"><img class="img_cover" src="<?= BASE_URL ?>assets/images/product.jpg" alt=""
+                                        width="205" height="205">
+                                </div>
+                                <div class="product-item__meta">
+
+                                    <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
+                                    <div class="product-price hot">
+                                        <span class="new-price">1.045.000đ</span>
+                                        <span class="old-price">2.500.000đ</span>
+                                    </div>
+                                    <div class="product-item__rates">
+                                        <div class="product-item__rates__star">
+                                            <i class="ic_rates"></i>5.0
+                                        </div>
+                                        <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán: </span>40000</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="product-item hot" href="">
+                                <div class="product-item__img"><img class="img_cover" src="<?= BASE_URL ?>assets/images/product.jpg" alt=""
+                                        width="205" height="205">
+                                </div>
+                                <div class="product-item__meta">
+
+                                    <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
+                                    <div class="product-price hot">
+                                        <span class="new-price">1.045.000đ</span>
+                                        <span class="old-price">2.500.000đ</span>
+                                    </div>
+                                    <div class="product-item__rates">
+                                        <div class="product-item__rates__star">
+                                            <i class="ic_rates"></i>5.0
+                                        </div>
+                                        <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán: </span>40000</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="product-item hot" href="">
+                                <div class="product-item__img"><img class="img_cover" src="<?= BASE_URL ?>assets/images/product.jpg" alt=""
+                                        width="205" height="205">
+                                </div>
+                                <div class="product-item__meta">
+
+                                    <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
+                                    <div class="product-price hot">
+                                        <span class="new-price">1.045.000đ</span>
+                                        <span class="old-price">2.500.000đ</span>
+                                    </div>
+                                    <div class="product-item__rates">
+                                        <div class="product-item__rates__star">
+                                            <i class="ic_rates"></i>5.0
+                                        </div>
+                                        <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán: </span>40000</div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="product-reviews">
-                    <div class="ttl03">Đánh giá sản phẩm</div>
-                </div> -->
+                <div class="product-reviews">
+                    <div class="product-reviews__ttl">Đánh giá</div>
+                    <div class="product-reviews__top">
+                        <div class="c-stars product-reviews__top__item">
+                            <label class="num">4.8</label>
+                            <div class="star-rating" data-rating="4.5"></div>
+                        </div>
+                        <div class="product-reviews__top__item">
+                            <label class="num">50</label> Đánh giá
+                        </div>
+                        <div class="product-reviews__top__item">
+                            <label class="num">50</label> Đã bán
+                        </div>
+                    </div>
+                    <div class="product-reviews__lst">
+                        <div class="product-reviews__lst__item">
+                            <p class="product-reviews__lst__item__img"><img src="<?= BASE_URL ?>assets/images/logo_2.png" alt="nmimart" width="50" height="50"></p>
+                            <div class="product-reviews__lst__item__meta">
+                                <div class="product-reviews__lst__item__meta__top">
+                                    <h3 class="product-reviews__lst__item__meta__ttl">Nguyễn Quỳnh Anh</h3>
+                                    <label class="sticked">Đã mua hàng tại nmimart.com</label>
+                                </div>
+                                <div class="c-stars">
+                                    <div class="star-rating" data-rating="4.8"></div>
+                                </div>
+                                <div class="product-reviews__lst__item__meta__txt">
+                                    Tôi đã sử dụng sản phẩm cảm thấy rất hài lòng, hàng xịn các bạn tư vấn cũng rất nhiệt tình. sẽ ủng hộ và giới thiệu sản phẩm tới bạn bè của mình
+                                </div>
+                                <div class="product-reviews__lst__item__meta__bot">
+                                    <span class="news-item__date --noline"> 2022-09-08</span>
+                                    <span class="c-time">11:27</span>
+                                    <span class="c-like btn-like"><span id="like-count">14</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-reviews__lst__item">
+                            <p class="product-reviews__lst__item__img"><img src="<?= BASE_URL ?>assets/images/logo_2.png" alt="nmimart" width="50" height="50"></p>
+                            <div class="product-reviews__lst__item__meta">
+                                <div class="product-reviews__lst__item__meta__top">
+                                    <h3 class="product-reviews__lst__item__meta__ttl">Phạm Thị Lan</h3>
+                                    <label class="sticked">Đã mua hàng tại nmimart.com</label>
+                                </div>
+                                <div class="c-stars">
+                                    <div class="star-rating" data-rating="4.8"></div>
+                                </div>
+                                <div class="product-reviews__lst__item__meta__txt">
+                                    Tôi đã sử dụng sản phẩm cảm thấy rất hài lòng, hàng xịn các bạn tư vấn cũng rất nhiệt tình. sẽ ủng hộ và giới thiệu sản phẩm tới bạn bè của mình<br>
+                                    <img src="<?= BASE_URL ?>assets/images/img_06.jpg" alt="nmimart">
+                                </div>
+                                <div class="product-reviews__lst__item__meta__bot">
+                                    <span class="news-item__date --noline"> 2022-09-08</span>
+                                    <span class="c-time">11:27</span>
+                                    <span class="c-like btn-like"><span id="like-count">104</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="product-reviews__more" href="">Xem thêm đánh giá</a>
+                    <div class="product-reviews__comment">
+                        <div class="c-stars product-reviews__comment__top">Thêm điểm đánh giá
+                            <div class="star-rating --comment" data-rating="3"></div>
+                        </div>
+                        <div class="product-reviews__comment__form">
+                            <div class="fr-group">
+                                <textarea class="fr-field text --full" id="note" placeholder="Mời bạn để lại đánh giá tại đây. Xin cảm ơn!"></textarea>
+                            </div>
+                            <div class="fr-group">
+                                <input class="fr-field" type="text" placeholder="Họ tên" id="name">
+                                <input class="fr-field" type="text" placeholder="Số điện thoại" id="phone">
+                                <input class="fr-field" type="text" placeholder="Email" id="email">
+                                <button type="submit" class="btn-send">Gửi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="block-product no-bg">
                 <div class="c-title">
@@ -274,4 +476,28 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
             });
         });
     </script>
+    <script>
+        const btnOpen = document.getElementById("btn-open-detail");
+        const btnClose = document.getElementById("btn-close");
+        const popup = document.getElementById("popup-detail");
+
+        btnOpen.addEventListener("click", () => {
+            popup.classList.add("show");
+            document.documentElement.classList.add("noscroll");
+        });
+
+        btnClose.addEventListener("click", () => {
+            popup.classList.remove("show");
+            document.documentElement.classList.remove("noscroll");
+        });
+
+        // Click ra ngoài popup thì đóng
+        popup.addEventListener("click", (e) => {
+            if (e.target === popup) {
+                popup.classList.remove("show");
+                document.documentElement.classList.remove("noscroll");
+            }
+        });
+    </script>
+
 </body>

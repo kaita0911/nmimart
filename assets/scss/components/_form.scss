@@ -11,19 +11,19 @@
     background-color: $input-bg;
     background-clip: padding-box;
     border: rem($input-border-width) solid $input-border-color;
-  
+
     // Unstyle the caret on `<select>`s in IE10+.
     &::-ms-expand {
         background-color: transparent;
         border: 0;
     }
-  
+
     // Remove select outline from select box in FF
     &:-moz-focusring {
         color: transparent;
         text-shadow: 0 0 0 $input-color;
     }
-  
+
     // Placeholder
     &::placeholder {
         color: $input-placeholder-color;
@@ -43,5 +43,96 @@ input[type="datetime-local"],
 input[type="month"] {
     &.form-control {
         appearance: none; // Fix appearance for date inputs in Safari
+    }
+}
+
+.fr-group {
+    display: flex;
+    gap: rem(15px);
+    flex-direction: column;
+
+    @include mq("md", min) {
+        gap: rem(20px);
+        flex-direction: row;
+    }
+
+    .fr-field {
+        width: 100%;
+        border: 1px solid #EAEAEA;
+        height: rem(45px);
+        padding-left: rem(15px);
+        font-size: rem(14px);
+        color: #666;
+        box-shadow: 0 rem(4px) 0 0 #EDEDED;
+        border-radius: rem(5px);
+
+        @include mq("md", min) {
+            height: rem(60px);
+            padding-left: rem(23px);
+            font-size: rem(16px);
+            border-radius: rem(10px);
+        }
+
+        &.text {
+            min-height: rem(70px);
+
+            @include mq("md", min) {
+                min-height: rem(80px);
+                width: 90%;
+                padding: rem(16px) rem(22px);
+            }
+
+            &.--full {
+                width: 100%;
+                min-height: rem(128px);
+            }
+        }
+    }
+}
+
+.btn-send {
+    border: none;
+    background: $primary;
+    border-radius: rem(10px);
+    color: #FFF;
+    font-family: $font-Averta-bold;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: rem(8px);
+    cursor: pointer;
+    box-shadow: 0 rem(4px) 0 0 #001546;
+
+    @include mq("md") {
+        height: rem(45px);
+    }
+
+    @include mq("md", min) {
+        gap: rem(3px);
+        font-size: rem(20px);
+        flex-direction: column;
+        width: rem(115px);
+
+    }
+
+    &:hover {
+        background: #073CB2;
+    }
+
+    .ic-send {
+        display: inline-block;
+        width: rem(20px);
+        height: rem(20px);
+        background-image: url(../images/ic_paper.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include mq("md", min) {
+            width: rem(33px);
+            height: rem(25px);
+        }
     }
 }

@@ -56,16 +56,16 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                 <p class="p-contact__txt">Góp ý với chúng tôi. Các chuyên viên tư vấn của chúng tôi sẽ trả lời bạn trong thời gian sớm nhất.
 
                 <div class="p-contact-form">
-                    <div class="fr-field">
-                        <input type="text" placeholder="Họ tên" id="name">
-                        <input type="text" placeholder="Email" id="email">
+                    <div class="fr-group">
+                        <input class="fr-field" type="text" placeholder="Họ tên" id="name">
+                        <input class="fr-field" type="text" placeholder="Email" id="email">
                     </div>
-                    <div class="fr-field">
-                        <input type="text" placeholder="Số điện thoại" id="phone">
-                        <input type="text" placeholder="Tiêu đề (Không bắt buộc)" id="title">
+                    <div class="fr-group">
+                        <input class="fr-field" type="text" placeholder="Số điện thoại" id="phone">
+                        <input class="fr-field" type="text" placeholder="Tiêu đề (Không bắt buộc)" id="title">
                     </div>
-                    <div class="fr-field">
-                        <textarea id="note" placeholder="Nội dung liên hệ"></textarea>
+                    <div class="fr-group">
+                        <textarea class="fr-field text" id="note" placeholder="Nội dung liên hệ"></textarea>
                         <button type="submit" class="btn-send"><span class="ic-send"></span>Gửi đi</button>
                     </div>
                 </div>

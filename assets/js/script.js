@@ -19,6 +19,17 @@ app.init = function () {
   app.fontsize();
   app.popup();
   app.checkall();
+  app.liked();
+};
+app.liked = function () {
+  let like = 0;
+  const likeCount = document.getElementById("like-count");
+  document.querySelectorAll(".btn-like").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      let current = parseInt(likeCount.textContent, 10);
+      likeCount.textContent = current + 1;
+    });
+  });
 };
 app.checkall = function () {
   const checkAll = document.getElementById("checkAll");
