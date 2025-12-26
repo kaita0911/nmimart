@@ -114,7 +114,7 @@
             margin: 0;
             height: rem(63px);
             width: calc(100% + rem(30px));
-            top: rem(58px);
+            top: rem(55px);
             position: absolute;
             left: rem(-15px);
             z-index: 2;
@@ -160,14 +160,12 @@
                 text-align: center;
                 border: none;
                 appearance: none;
-                /* Chrome, Edge */
                 -webkit-appearance: none;
-                /* Safari */
                 -moz-appearance: none;
-                /* Firefox */
                 background: none;
                 padding-right: 10px;
-                /* tránh sát mép */
+                outline: none;
+
             }
         }
 
@@ -406,9 +404,11 @@
             opacity: 0;
             transform: translateY(10px);
             transition: opacity 0.3s ease, transform 0.3s ease;
+            visibility: hidden;
 
             &.show {
                 opacity: 1;
+                visibility: visible;
                 transform: translateY(0);
                 pointer-events: auto;
             }

@@ -468,6 +468,11 @@
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 766px) {
+  .p-cart-back {
+    margin-top: 2rem;
+  }
+}
 .p-cart-back .back-to-cart {
   display: inline-block;
   font-size: 1.6rem;
@@ -761,7 +766,7 @@
   display: flex;
   align-items: center;
   border: 1px solid #e3e3e3;
-  height: 2.5rem;
+  height: 3rem;
   overflow: hidden;
 }
 @media (min-width: 767px) {
@@ -771,6 +776,7 @@
 }
 .c-quantity.--detail {
   border-radius: 4.5rem;
+  height: 4rem;
 }
 @media (min-width: 767px) {
   .c-quantity.--detail {
@@ -778,12 +784,18 @@
   }
 }
 .c-quantity.--detail .ins {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
   border: none;
   border-radius: 50%;
   background: #E8E8E8;
   position: relative;
+}
+@media (min-width: 767px) {
+  .c-quantity.--detail .ins {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 .c-quantity.--detail .ins:before {
   position: absolute;
@@ -817,7 +829,7 @@
   border-bottom: none;
   height: 100%;
   text-align: center;
-  width: 3rem;
+  width: 4rem;
   font-size: 1.3rem;
 }
 @media (min-width: 767px) {
@@ -831,7 +843,7 @@
   margin: 0;
 }
 .c-quantity .ins {
-  width: 2.5rem;
+  width: 3rem;
   text-align: center;
   font-size: 1.4rem;
   cursor: pointer;

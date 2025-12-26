@@ -73,7 +73,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                         </div>
                         <div class="product-meta__sale">
                             <div class="product-meta__sale__ttl">flash deal</div>
-                            <div class="product-meta__sale__time">Kết thúc trong
+                            <div class="product-meta__sale__time"><span class="pc">Kết thúc trong</span>
                                 <div class="box-time">
                                     <span class="box-time-num" id="hours"></span>
                                     <span class="box-time-num" id="minutes"></span>

@@ -886,6 +886,11 @@ a {
         }
 
         .product-item__rates {
+            @include mq("md") {
+                justify-content: flex-start;
+                gap: rem(10px);
+            }
+
             &__star {
                 width: rem(44px);
                 height: rem(19px);
@@ -1539,19 +1544,12 @@ a {
         background-position: left center;
 
         &.--comment {
-            --star-size: 25px;
-        }
+            --star-size: 20px;
 
-        // &::before {
-        //     content: "";
-        //     color: transparent;
-        //     -webkit-text-stroke: 1px $primary-2;
-        //     letter-spacing: 0.2em;
-        //     background: url(../images/ic_star.svg) no-repeat top center;
-        //     background-size: contain;
-        //     width: rem(26px);
-        //     height: rem(26px);
-        // }
+            @include mq("md", min) {
+                --star-size: 25px;
+            }
+        }
 
         &::after {
             content: "";

@@ -66,7 +66,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                         </div>
                         <div class="news-content-section">
                             <div class="c-title">
-                                <div class="ttl01 txt-transform">Xu hướng nhà cửa</div>
+                                <h2 class="ttl01 txt-transform">Xu hướng nhà cửa</h2>
                                 <a class="view-more" href="#">Xem thêm</a>
                             </div>
                             <div class="news-content-section-content">
@@ -105,7 +105,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                         </div>
                         <div class="news-content-section">
                             <div class="c-title">
-                                <div class="ttl01 txt-transform">Xu hướng làm đẹp</div>
+                                <h2 class="ttl01 txt-transform">Xu hướng làm đẹp</h2>
                                 <a class="view-more" href="#">Xem thêm</a>
                             </div>
                             <div class="news-content-section-content">
@@ -144,7 +144,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                         </div>
                         <div class="block-product">
                             <div class="c-title">
-                                <div class="ttl01 txt-transform --liked">Sản phẩm được yêu thích</div>
+                                <h2 class="ttl01 txt-transform --liked">Sản phẩm được yêu thích</h2>
                                 <div class="slick-arrows-custome">
                                     <span class="slick-prev-product ic-new sl-prev"></span>
                                     <span class="slick-next-product ic-new"></span>
@@ -156,7 +156,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                         </div>
                         <div class="news-content-section">
                             <div class="c-title">
-                                <div class="ttl01 txt-transform">Review</div>
+                                <h2 class="ttl01 txt-transform">Review</h2>
                                 <a class="view-more" href="#">Xem thêm</a>
                             </div>
                             <div class="news-content-section-content">
@@ -195,7 +195,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                         </div>
                         <div class="news-content-section">
                             <div class="c-title">
-                                <div class="ttl01 txt-transform">Tin thế giới</div>
+                                <h2 class="ttl01 txt-transform">Tin thế giới</h2>
                                 <a class="view-more" href="#">Xem thêm</a>
                             </div>
                             <div class="news-content-section-content">
@@ -234,7 +234,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
                         </div>
                         <div class="news-content-section">
                             <div class="c-title">
-                                <div class="ttl01 txt-transform">Tin trong nước</div>
+                                <h2 class="ttl01 txt-transform">Tin trong nước</h2>
                                 <a class="view-more" href="#">Xem thêm</a>
                             </div>
                             <div class="news-content-section-content">
