@@ -31,7 +31,7 @@
             display: inline-block;
             width: rem(24px);
             height: rem(24px);
-            background: url(../images/ic_search.svg) no-repeat top center;
+            background: url(../images/ic-search.png) no-repeat top center;
             background-size: contain;
             filter: brightness(0) invert(1);
             position: absolute;
@@ -40,7 +40,7 @@
 
             &.show {
                 filter: inherit;
-                background: url(../images/ic_close_2.svg) no-repeat top center;
+                background: url(../images/ic-close-2.png) no-repeat top center;
             }
         }
 
@@ -48,7 +48,7 @@
             display: inline-block;
             width: rem(30px);
             height: rem(18px);
-            background: url(../images/ic_list.svg) no-repeat top center;
+            background: url(../images/ic-list.png) no-repeat top center;
             background-size: contain;
             filter: brightness(0) invert(1);
             position: absolute;
@@ -80,7 +80,7 @@
     }
 
     &__hotline {
-        background: url(../images/ic_call_4.svg) no-repeat left center;
+        background: url(../images/ic-call-4.png) no-repeat left center;
         background-size: rem(48px);
         padding-left: rem(65px);
 
@@ -148,7 +148,7 @@
                 top: 50%;
                 width: rem(12px);
                 height: rem(7px);
-                background: url(../images/ic_down.svg) no-repeat center;
+                background: url(../images/ic-down.png) no-repeat center;
                 background-size: contain;
                 transform: translateY(-50%);
                 pointer-events: none;
@@ -243,7 +243,7 @@
             display: inline-block;
             width: rem(48px);
             height: rem(48px);
-            background-image: url(../images/ic_cart.svg);
+            background-image: url(../images/ic-cart.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -269,264 +269,7 @@
             justify-content: center;
         }
 
-        .add-to-cart {
-            padding: rem(20px) rem(15px) rem(20px) rem(15px);
-            width: rem(376px);
-            position: fixed;
-            right: 0;
-            top: rem(20px);
-            background: #fff;
-            box-shadow: rem(3px) rem(6px) rem(10px) rgba($color: #000000, $alpha: 0.06);
-            -webkit-transition: 0.3s ease-in-out;
-            -moz-transition: 0.3s ease-in-out;
-            -o-transition: 0.3s ease-in-out;
-            right: rem(-400px);
-            z-index: 1;
 
-            &.is-show {
-                right: rem(20px);
-            }
-
-            &__ttl {
-                font-size: rem(18px);
-                font-family: $font-Averta-bold;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                border-bottom: 1px solid #dedede;
-                padding-bottom: rem(14px);
-                line-height: 1;
-
-                .ic_close_2 {
-                    display: inline-block;
-                    width: rem(13px);
-                    height: rem(22px);
-                    background-color: #fff;
-                    background-image: url(../images/ic_close.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    cursor: pointer;
-                }
-            }
-
-            &__item {
-                display: flex;
-                align-items: center;
-                margin: rem(10px) 0;
-                justify-content: space-between;
-                gap: rem(15px);
-
-                &__img {
-                    width: rem(80px);
-                    height: rem(80px);
-                    flex-shrink: 0;
-
-                }
-
-                &__ttl {
-                    font-size: rem(16px);
-                    line-height: 1.4;
-                    font-family: $font-Montserrat;
-                    font-weight: normal;
-                }
-
-                &__price {
-                    display: flex;
-                    align-items: flex-end;
-                    gap: rem(10px);
-                    margin-top: rem(5px);
-
-                    .new-price {
-                        font-family: $font-Averta-bold;
-                        font-size: rem(16px);
-                        color: $primary-4;
-                    }
-
-                    .old-price {
-                        text-decoration: line-through;
-                        font-size: rem(14px);
-                        color: #666;
-                    }
-                }
-            }
-
-            .btn-view-cart {
-                font-size: rem(16px);
-                font-family: $font-Averta-semibold;
-                color: #000;
-                text-transform: uppercase;
-                width: rem(195px);
-                height: rem(42px);
-                border-radius: rem(21px);
-                display: flex;
-                align-items: center;
-                border: 1px solid $primary;
-                padding-left: rem(26px);
-                position: relative;
-                transition: all 0.3s;
-
-                &:after {
-                    position: absolute;
-                    content: "";
-                    right: rem(25px);
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: rem(12px);
-                    height: rem(10px);
-                    background: url(../images/ic_right.svg) no-repeat top center;
-                    background-size: contain;
-                    transition: all 0.3s;
-                }
-
-                &:hover {
-                    color: #fff;
-                    background: $primary;
-
-                    &:after {
-                        filter: brightness(0) invert(1);
-                        right: rem(20px);
-                    }
-                }
-            }
-        }
-
-        .box-cart {
-            position: absolute;
-            right: 0;
-            top: rem(56px);
-            background: #EAF1FF;
-            box-shadow: 0 rem(4px) rem(2px) 0 rgba($color: #000000, $alpha: 0.1);
-            width: rem(386px);
-            z-index: 6;
-            padding: rem(9px);
-            animation: fadeInUp 0.4s ease;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            visibility: hidden;
-
-            &.show {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-                pointer-events: auto;
-            }
-
-            &-wrap {
-                background: #FFF;
-                padding: rem(9px);
-            }
-
-            &__item {
-                display: flex;
-                align-items: center;
-                gap: rem(9px);
-
-                &__img {
-                    width: rem(53px);
-                    height: rem(53px);
-                    flex-shrink: 0;
-                }
-
-                &__info {
-                    display: flex;
-                    flex-direction: column;
-                    gap: rem(5px);
-
-
-                    &__ttl {
-                        font-size: rem(15px);
-                        font-family: $font-Montserrat;
-                        font-weight: normal;
-                        color: #000;
-                    }
-                }
-
-                &__qty {
-                    width: rem(35px);
-
-                    input {
-                        width: rem(35px);
-                        border: 1px solid #E3E3E3;
-
-                        &::-webkit-outer-spin-button,
-                        &::-webkit-inner-spin-button {
-                            -webkit-appearance: auto;
-                            margin: 0;
-                        }
-
-                        & {
-                            -moz-appearance: number-input;
-                            appearance: auto;
-                        }
-                    }
-                }
-
-                &__price {
-                    display: flex;
-                    flex-direction: column;
-                    gap: rem(5px);
-
-                    .new-price {
-                        font-size: rem(18px);
-                        font-family: $font-Averta-bold;
-                        color: $primary;
-                    }
-                }
-            }
-
-            &__total {
-                border-top: 1px solid #EAF1FF;
-                font-size: rem(18px);
-                text-align: right;
-
-                strong {
-                    color: $primary;
-                    font-size: rem(25px);
-                    font-family: $font-Averta-bold;
-                }
-            }
-
-            &-action {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: rem(9px);
-
-                &__continue {
-                    font-size: rem(15px);
-                    background: url(../images/ic_prev.svg) no-repeat left rem(7px);
-                    background-size: rem(12px);
-                    padding-left: rem(20px);
-                    transition: all 0.3s;
-
-                    &:hover {
-                        color: $primary;
-                        padding-left: rem(18px);
-                    }
-                }
-
-                &__view {
-                    background: $primary-2;
-                    color: $primary;
-                    font-family: $font-Averta-bold;
-                    font-size: rem(18px);
-                    width: rem(141px);
-                    height: rem(38px);
-                    border-radius: rem(5px);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.3s;
-
-                    &:hover {
-                        background: $primary;
-                        color: #FFF;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -579,7 +322,7 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                background: url(../images/ic_down.svg) no-repeat center center;
+                background: url(../images/ic-down.png) no-repeat center center;
                 background-size: rem(14px);
                 width: rem(40px);
                 height: rem(37px);
@@ -594,7 +337,7 @@
 
                 li {
                     a {
-                        background: url(../images/ic_right.svg) no-repeat left center;
+                        background: url(../images/ic-right.png) no-repeat left center;
                         background-size: rem(10px);
                         padding-left: rem(15px);
                     }
@@ -662,7 +405,7 @@
                 cursor: pointer;
 
                 &:before {
-                    background: url(../images/ic_list.svg) no-repeat top center;
+                    background: url(../images/ic-list.png) no-repeat top center;
                     background-size: contain;
                     content: "";
                     width: rem(23px);
@@ -795,7 +538,7 @@
                     content: "";
                     width: rem(12px);
                     height: rem(10px);
-                    background: url(../images/ic_down.svg) no-repeat top center;
+                    background: url(../images/ic-down.png) no-repeat top center;
                     background-size: contain;
                     filter: brightness(0) invert(1);
 

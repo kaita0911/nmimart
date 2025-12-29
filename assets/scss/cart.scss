@@ -80,7 +80,7 @@
                     top: 50%;
                     transform: translateY(-50%);
                     content: "";
-                    background: url(../images/ic_down.svg) no-repeat top center;
+                    background: url(../images/ic-down.png) no-repeat top center;
                     background-size: contain;
                     width: rem(13px);
                     height: rem(8px);
@@ -262,7 +262,7 @@
                 bottom: -1px;
                 width: rem(21px);
                 height: rem(21px);
-                background: url(../images/ic_check_3.svg) no-repeat center;
+                background: url(../images/ic-check-3.png) no-repeat center;
                 background-size: contain;
                 display: none;
             }
@@ -372,37 +372,6 @@
             font-size: rem(15px);
             color: #666;
         }
-
-        // &__delete {
-
-        //     cursor: pointer;
-        //     background: url(../images/ic_delete.svg) no-repeat left center;
-        //     background-size: rem(12px) rem(12px);
-        //     padding-left: rem(15px);
-        //     margin-top: rem(5px);
-        //     display: inline-block;
-
-        //     @include mq("md", min) {
-        //         margin-top: rem(10px);
-        //         padding-left: rem(25px);
-        //         background-size: rem(18px) rem(18px);
-        //         font-size: rem(15px);
-        //     }
-        // }
-
-        // &__prqua {
-        //     display: flex;
-        //     align-items: center;
-        //     gap: rem(10px);
-        //     margin-top: rem(5px);
-        //     justify-content: space-between;
-
-        //     @include mq("md", min) {
-        //         gap: rem(20px);
-        //         justify-content: flex-end;
-        //         margin-top: 0;
-        //     }
-        // }
 
         &__price {
 
@@ -537,7 +506,7 @@
         .back-to-cart {
             display: inline-block;
             font-size: rem(16px);
-            background: url(../images/ic_prev.svg) no-repeat left center;
+            background: url(../images/ic-prev.png) no-repeat left center;
             background-size: rem(12px);
             padding-left: rem(20px);
             transition: all 0.3s;
@@ -706,7 +675,7 @@
 
             &__tel {
                 font-size: rem(16px);
-                background: url(../images/ic_call_2.png) no-repeat left center;
+                background: url(../images/ic-call-2.png) no-repeat left center;
                 background-size: rem(57px) rem(57px);
 
                 padding: rem(10px) 0 rem(10px) rem(58px);
@@ -1019,7 +988,7 @@
 
             &.btn-minus {
                 &:before {
-                    background: url(../images/ic_minus_2.svg) no-repeat top center;
+                    background: url(../images/ic-minus-2.png) no-repeat top center;
                     background-size: contain;
                     height: rem(2px);
 
@@ -1030,7 +999,7 @@
                 background: $primary;
 
                 &:before {
-                    background: url(../images/ic_plus_2.svg) no-repeat top center;
+                    background: url(../images/ic-plus-2.png) no-repeat top center;
                     background-size: contain;
                     filter: brightness(0) invert(1);
                     height: rem(13px);
@@ -1075,6 +1044,128 @@
         @include mq("md", min) {
             width: rem(40px);
             font-size: rem(25px);
+        }
+    }
+}
+
+.add-to-cart {
+    padding: rem(20px) rem(15px) rem(20px) rem(15px);
+    width: rem(376px);
+    position: fixed;
+    right: 0;
+    top: rem(20px);
+    background: #fff;
+    box-shadow: rem(3px) rem(6px) rem(10px) rgba($color: #000000, $alpha: 0.06);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    right: rem(-400px);
+    z-index: 1;
+
+    &.is-show {
+        right: rem(20px);
+    }
+
+    &__ttl {
+        font-size: rem(18px);
+        font-family: $font-Averta-bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #dedede;
+        padding-bottom: rem(14px);
+        line-height: 1;
+
+        .ic_close_2 {
+            display: inline-block;
+            width: rem(13px);
+            height: rem(22px);
+            background-color: #fff;
+            background-image: url(../images/ic-close.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: rem(10px) 0;
+        justify-content: space-between;
+        gap: rem(15px);
+
+        &__img {
+            width: rem(80px);
+            height: rem(80px);
+            flex-shrink: 0;
+
+        }
+
+        &__ttl {
+            font-size: rem(16px);
+            line-height: 1.4;
+            font-family: $font-Montserrat;
+            font-weight: normal;
+        }
+
+        &__price {
+            display: flex;
+            align-items: flex-end;
+            gap: rem(10px);
+            margin-top: rem(5px);
+
+            .new-price {
+                font-family: $font-Averta-bold;
+                font-size: rem(16px);
+                color: $primary-4;
+            }
+
+            .old-price {
+                text-decoration: line-through;
+                font-size: rem(14px);
+                color: #666;
+            }
+        }
+    }
+
+    .btn-view-cart {
+        font-size: rem(16px);
+        font-family: $font-Averta-semibold;
+        color: #000;
+        text-transform: uppercase;
+        width: rem(195px);
+        height: rem(42px);
+        border-radius: rem(21px);
+        display: flex;
+        align-items: center;
+        border: 1px solid $primary;
+        padding-left: rem(26px);
+        position: relative;
+        transition: all 0.3s;
+
+        &:after {
+            position: absolute;
+            content: "";
+            right: rem(25px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: rem(12px);
+            height: rem(10px);
+            background: url(../images/ic-right.png) no-repeat top center;
+            background-size: contain;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            color: #fff;
+            background: $primary;
+
+            &:after {
+                filter: brightness(0) invert(1);
+                right: rem(20px);
+            }
         }
     }
 }

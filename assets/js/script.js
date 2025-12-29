@@ -9,17 +9,15 @@ app.init = function () {
   app.inscrease();
   app.boxanchor();
   app.viewmore();
-  app.viewmoreproduct();
   app.quality();
   app.addtocart();
-  app.faq();
   app.countdown();
-  app.video();
   app.copycode();
   app.fontsize();
   app.popup();
   app.checkall();
   app.liked();
+  app.rating();
 };
 app.liked = function () {
   let like = 0;
@@ -89,28 +87,6 @@ app.popup = function () {
   }
 };
 
-app.video = function () {
-  const popup = document.getElementById("videoPopup");
-  const videoFrame = document.getElementById("videoFrame");
-  if (popup != null) {
-    document.querySelectorAll(".video-item").forEach((item) => {
-      item.addEventListener("click", () => {
-        const url = item.getAttribute("data-video") + "?autoplay=1";
-        videoFrame.src = url;
-        popup.style.display = "flex";
-      });
-    });
-    document.querySelector(".video-close").addEventListener("click", () => {
-      popup.style.display = "none";
-      videoFrame.src = "";
-    });
-
-    document.querySelector(".video-overlay").addEventListener("click", () => {
-      popup.style.display = "none";
-      videoFrame.src = "";
-    });
-  }
-};
 app.countdown = function () {
   const targetDate = new Date("2026-8-31 23:59:59").getTime();
   function updateCountdown() {
@@ -365,55 +341,7 @@ app.slick = function () {
     $(window).on("resize", mobileOnlySlider);
   });
 };
-app.faq = function () {
-  const ques = document.querySelectorAll(".faq-item-head");
-  const ans = document.querySelectorAll(".faq-item-body");
-  ques.forEach((t, i) => {
-    if (t.classList.contains("active")) {
-      ans[i].style.height = ans[i].scrollHeight + "px";
-    }
-  });
-  ques.forEach((t) => {
-    t.addEventListener("click", () => {
-      // Đóng tất cả
-      ans.forEach((c) => (c.style.height = 0));
-      ques.forEach((x) => x.classList.remove("active"));
 
-      const c = t.nextElementSibling;
-      const isOpen = c.style.height && c.style.height !== "0px";
-
-      if (!isOpen) {
-        c.style.height = c.scrollHeight + "px";
-        //ans.style.paddingTop = '12px'; // bỏ padding khi đóng
-        t.classList.add("active");
-      }
-    });
-  });
-};
-app.viewmoreproduct = function () {
-  const product_detail = document.getElementById("product-detail");
-  const btn_more_detail = document.getElementById("view-more-detail");
-  let expanded = false;
-  const collapsedHeight = 500;
-  if (btn_more_detail != null) {
-    btn_more_detail.addEventListener("click", () => {
-      btn_more_detail.classList.add("hide");
-      if (!expanded) {
-        product_detail.classList.add("show");
-        const fullHeight = product_detail.scrollHeight;
-        product_detail.style.maxHeight = fullHeight + "px";
-        $(".c-reduce").show();
-        $(".c-more").hide();
-      } else {
-        product_detail.classList.remove("show");
-        product_detail.style.maxHeight = collapsedHeight + "px";
-        $(".c-reduce").hide();
-        $(".c-more").show();
-      }
-      expanded = !expanded;
-    });
-  }
-};
 app.boxanchor = function () {
   const btnAnchor = document.querySelector(".btn-anchor");
   if (btnAnchor) {
@@ -514,21 +442,24 @@ app.copycode = function () {
   }
 };
 const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 300) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
-});
-
-backToTop.addEventListener("click", function (e) {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+if (backToTop) {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
   });
-});
+
+  backToTop.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
+
 const currentUrl = window.location.pathname;
 document.querySelectorAll(".menu-item a").forEach((link) => {
   if (link.getAttribute("href") === currentUrl) {
@@ -547,9 +478,29 @@ document.querySelectorAll(".num-price").forEach((input) => {
     this.value = Number(value).toLocaleString("vi-VN");
   });
 });
-document.querySelectorAll(".star-rating").forEach((el) => {
-  el.style.setProperty("--rating", el.dataset.rating);
-});
+app.rating = function () {
+  document.querySelectorAll(".star-rating").forEach((el) => {
+    el.style.setProperty("--rating", el.dataset.rating);
+  });
+  document.querySelectorAll(".star-rating span").forEach((star) => {
+    star.addEventListener("mouseenter", function () {
+      const rating = this.dataset.star;
+      this.parentElement.style.setProperty("--rating", rating);
+    });
+
+    star.addEventListener("mouseleave", function () {
+      const rating = this.parentElement.dataset.rating || 0;
+      this.parentElement.style.setProperty("--rating", rating);
+    });
+
+    // Click để chọn
+    star.addEventListener("click", function () {
+      const rating = this.dataset.star;
+      this.parentElement.dataset.rating = rating;
+      this.parentElement.style.setProperty("--rating", rating);
+    });
+  });
+};
 
 $(document).ready(function () {
   $(".gt_selected").click(function () {
@@ -607,26 +558,6 @@ $(document).ready(function () {
     btnclose.addEventListener("click", function () {
       boxcart.classList.remove("is-show");
       // Nếu muốn chỉ add (không toggle), dùng: target.classList.add('active');
-    });
-  }
-  const btn_show_cart = document.getElementById("btn-show-cart");
-  const box_cart = document.getElementById("box-cart");
-
-  if (btn_show_cart && box_cart) {
-    // Mở cart
-    btn_show_cart.addEventListener("click", function (e) {
-      e.stopPropagation(); // chặn lan sự kiện
-      box_cart.classList.add("show");
-    });
-
-    // Click bên trong cart -> không đóng
-    box_cart.addEventListener("click", function (e) {
-      e.stopPropagation();
-    });
-
-    // Click bên ngoài -> đóng
-    document.addEventListener("click", function () {
-      box_cart.classList.remove("show");
     });
   }
 

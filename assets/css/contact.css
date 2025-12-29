@@ -295,17 +295,17 @@
   font-size: 1.8rem;
 }
 .p-contact .store-wrap .store-list-scroll .store-item__address {
-  background: url(../images/ic_address_2.svg) no-repeat left 0.6rem;
+  background: url(../images/ic-address-2.png) no-repeat left 0.6rem;
   background-size: 1.3rem 1.5rem;
   padding-left: 2rem;
 }
 .p-contact .store-wrap .store-list-scroll .store-item__tel {
-  background: url(../images/ic_phone_2.svg) no-repeat left 0.6rem;
+  background: url(../images/ic-phone-2.png) no-repeat left 0.6rem;
   background-size: 1.5rem 1.5rem;
   padding-left: 2rem;
 }
 .p-contact .store-wrap .store-list-scroll .store-item__time {
-  background: url(../images/ic_time_2.svg) no-repeat left 0.5rem;
+  background: url(../images/ic-time-2.png) no-repeat left 0.5rem;
   background-size: 1.4rem 1.4rem;
   padding-left: 2rem;
 }

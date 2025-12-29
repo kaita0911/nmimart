@@ -48,7 +48,7 @@
                     display: inline-block;
                     width: rem(20px);
                     height: rem(20px);
-                    background: url(../images/ic_close.svg) no-repeat center;
+                    background: url(../images/ic-close.png) no-repeat center;
                     background-size: contain;
                 }
             }
@@ -318,7 +318,7 @@
                         text-transform: uppercase;
                         font-size: rem(17px);
                         font-family: $font-Averta-bold;
-                        background: url(../images/ic_time_sale.svg) no-repeat left center;
+                        background: url(../images/ic-time-sale.png) no-repeat left center;
                         background-size: rem(25px) rem(21px);
                         padding-left: rem(35px);
 
@@ -505,7 +505,7 @@
                         list-style: none;
 
                         li {
-                            background: url(../images/ic_check.svg);
+                            background: url(../images/ic-check.png);
                             background-repeat: no-repeat;
                             background-position: left rem(8px);
                             background-size: rem(12px) rem(12px);
@@ -615,7 +615,7 @@
                                 content: "";
                                 width: rem(8px);
                                 height: rem(8px);
-                                background: url(../images/ic_down_2.svg) no-repeat top center;
+                                background: url(../images/ic-down-2.png) no-repeat top center;
                                 background-size: contain;
                             }
                         }
@@ -770,7 +770,7 @@
                         .sticked {
                             color: $primary;
                             font-size: rem(15px);
-                            background: url(../images/ic_check_2.svg) no-repeat left center;
+                            background: url(../images/ic-check-2.png) no-repeat left center;
                             background-size: rem(15px);
                             padding-left: rem(22px);
                         }
@@ -823,7 +823,7 @@
                     content: "";
                     width: rem(18px);
                     height: rem(15px);
-                    background: url(../images/ic_right_2.svg) no-repeat;
+                    background: url(../images/ic-right-2.png) no-repeat;
                     background-position: right rem(3px);
                     background-size: contain;
 
@@ -963,7 +963,7 @@
         filter: brightness(0) invert(1);
         width: rem(24px);
         height: rem(24px);
-        background: url(../images/filter-com.svg) no-repeat center;
+        background: url(../images/filter-com.png) no-repeat center;
         background-size: contain;
     }
 }

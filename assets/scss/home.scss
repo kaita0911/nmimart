@@ -32,6 +32,7 @@
                 height: rem(10px);
                 border: 1px solid #fff;
                 background: none;
+                border-radius: 50%;
 
                 &:before {
                     display: none;
@@ -82,7 +83,7 @@
             font-size: rem(23px);
             font-family: $font-Averta-bold;
             text-transform: uppercase;
-            background: url(../images/ic_time_sale.svg) no-repeat;
+            background: url(../images/ic-time-sale.png) no-repeat;
             background-position: left top;
             background-size: rem(37px) rem(27px);
             padding-left: rem(40px);
@@ -115,7 +116,7 @@
 
             &:before {
                 content: "";
-                background: url(../images/ic_sale.svg) no-repeat top center;
+                background: url(../images/ic-sale.png) no-repeat top center;
                 background-size: contain;
                 width: rem(17px);
                 height: rem(17px);
@@ -403,7 +404,7 @@
             .view-more-new {
                 font-size: rem(16px);
                 color: #666;
-                background: url(../images/ic_right.svg) no-repeat right center;
+                background: url(../images/ic-right.png) no-repeat right center;
                 background-size: rem(10px);
                 padding-right: rem(15px);
                 transition: all 0.3s;

@@ -85,6 +85,7 @@
     &__contact {
         p {
             display: flex;
+            align-items: center;
             gap: rem(12px);
             margin-bottom: rem(5px);
 
@@ -92,6 +93,8 @@
                 margin-left: rem(-5px);
                 max-width: rem(29px);
                 margin-right: rem(-5px);
+                width: rem(29px);
+                height: rem(11px);
             }
 
 
@@ -133,6 +136,7 @@
 
                         width: rem(39px);
                         height: rem(39px);
+                        padding: rem(7px);
                         background: #FFF;
                         border-radius: 50%;
                         display: inline-flex;
