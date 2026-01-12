@@ -700,11 +700,37 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script>
-        fetch("inc/header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header").innerHTML = data);
+        function initCart() {
+            const btn_show_cart = document.getElementById("btn-show-cart");
+            const box_cart = document.getElementById("box-cart");
 
-        fetch("inc/footer.html")
+            if (btn_show_cart && box_cart) {
+                // Mở cart
+                btn_show_cart.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    box_cart.classList.add("show");
+                });
+
+                // Click trong cart không đóng
+                box_cart.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                });
+
+                // Click ngoài thì đóng
+                document.addEventListener("click", function () {
+                    box_cart.classList.remove("show");
+                });
+            }
+        }
+        fetch("../inc/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                initCart(); // 🔥 gọi JS sau khi header đã có
+            });
+
+        fetch("../inc/footer.html")
             .then(res => res.text())
             .then(data => document.getElementById("footer").innerHTML = data);
     </script>

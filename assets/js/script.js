@@ -560,62 +560,21 @@ $(document).ready(function () {
       // Nếu muốn chỉ add (không toggle), dùng: target.classList.add('active');
     });
   }
+  // document
+  //   .getElementById("view-more-detail")
+  //   .addEventListener("click", function () {
+  //     const desc = document.getElementById("product-detail");
 
+  //     desc.classList.add("show");
+  //     this.style.display = "none"; // ẩn nút xem thêm
+  //   });
+  const btn = document.getElementById("view-more-detail");
+  const desc = document.getElementById("product-detail");
+
+  btn.addEventListener("click", function () {
+    desc.style.maxHeight = desc.scrollHeight + "px";
+    desc.classList.add("show");
+    this.style.display = "none";
+  });
   app.init();
 });
-
-// $(function () {
-//   $("include").each(function () {
-//     var file = $(this).attr("src");
-//     $(this).load(file, function () {
-//
-//       $(".button-support").click(function () {
-//         $(".support-content").toggleClass("is-show");
-//       });
-
-//       $(".support-btn-close").click(function () {
-//         $(".support-content").removeClass("is-show");
-//       });
-//       $(".new-related-js").slick({
-//         dots: false,
-//         arrows: true,
-//         speed: 1000,
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 4000,
-//         responsive: [
-//           {
-//             breakpoint: 767,
-//             settings: {
-//               slidesToShow: 1,
-//               dots: true,
-//               arrows: false,
-//               slidesToScroll: 1,
-//             },
-//           },
-//         ],
-//       });
-//       window.addEventListener("scroll", function () {
-//         const fixedBox = document.getElementById("pos-pay");
-//         const footer = document.getElementById("footer");
-
-//         const footerRect = footer.getBoundingClientRect();
-//         const windowHeight = window.innerHeight;
-//         if (fixedBox != null) {
-//           if (footerRect.top <= windowHeight) {
-//             // Đã chạm footer -> gỡ fixed, đặt lên ngay trên footer
-//             fixedBox.style.position = "absolute";
-//             fixedBox.style.bottom =
-//               document.body.offsetHeight - footer.offsetTop + "px";
-//           } else {
-//             // Chưa chạm footer -> giữ fixed
-//             fixedBox.style.position = "fixed";
-//             fixedBox.style.bottom = "0";
-//           }
-//         }
-//       });
-//
-//     });
-//   });
-// });
