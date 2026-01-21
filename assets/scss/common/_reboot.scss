@@ -12,7 +12,7 @@ body {
 html {
     font-size: $font-size-reset;
     font-size: calc(10 / 4.4)*1vw;
-    overflow-y: scroll !important;
+    //overflow-y: scroll !important;
 
     @include mq('md', min) {
         font-size: calc(10 / 16)*1vw;

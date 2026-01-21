@@ -44,161 +44,101 @@
         <div class="container">
             <div class="p-cart --view">
                 <div class="p-cart-tbl">
-                    <table class="pc">
-                        <tr>
-                            <th class="w-check">
-                                <label class="c-checkbox">
-                                    <input id="checkAll" type="checkbox" class="item">
-                                    <span class="checkmark --cuz"></span>
-                                </label>
-                            </th>
-                            <th class="w-ttl">Thông tin sản phẩm</th>
-                            <th class="w-price">Đơn giá</th>
-                            <th class="w-qty">Số lượng</th>
-                            <th class="w-qty">Thành tiền</th>
-                            <th class="w-check">Xoá</th>
-                        </tr>
-                        <tr class="cart-info-item">
-                            <td class="txt-center">
-                                <label class="c-checkbox">
-                                    <input type="checkbox" class="item">
-                                    <span class="checkmark center border"></span>
-                                </label>
-                            </td>
-                            <td>
-                                <div class="p-cart-tbl__img-ttl">
-                                    <div class="p-cart-tbl__img-ttl__img"><img class="img_cover"
-                                            src="../assets/images/product.jpg" alt="" width="85" height="85"></div>
-                                    <div class="p-cart-tbl__img-ttl__ttl">82X Shiharu Collagen - Hộp 10 lon</div>
-                                </div>
-                            </td>
-                            <td class="txt-center">
-                                <div class="p-cart-tbl__price">
-                                    <span class="new-price">790.000 vnđ</span>
-                                    <span class="old-price">1.100.000 vnđ</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="c-quantity">
-                                    <span class="ins btn-minus">-</span>
-                                    <input class="qty" type="number" min="1" max="100" value="1">
-                                    <span class="ins btn-plus">+</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="p-cart-tbl__total">1.580.000 vnđ</div>
-                            </td>
-                            <td class="txt-center">
-                                <div class="p-cart-tbl__del">
-                                    <img class="img_cover" src="../assets/images/ic-close.png" alt="" width="15"
-                                        height="15">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="cart-info-item">
-                            <td class="txt-center">
-                                <label class="c-checkbox">
-                                    <input type="checkbox" class="item">
-                                    <span class="checkmark center border"></span>
-                                </label>
-                            </td>
-                            <td>
-                                <div class="p-cart-tbl__img-ttl">
-                                    <div class="p-cart-tbl__img-ttl__img"><img class="img_cover"
-                                            src="../assets/images/product.jpg" alt="" width="85" height="85"></div>
-                                    <div class="p-cart-tbl__img-ttl__ttl">82X Shiharu Collagen - Hộp 10 lon</div>
-                                </div>
-                            </td>
-                            <td class="txt-center">
-                                <div class="p-cart-tbl__price">
-                                    <span class="new-price">790.000 vnđ</span>
-                                    <span class="old-price">1.100.000 vnđ</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="c-quantity">
-                                    <span class="ins btn-minus">-</span>
-                                    <input class="qty" type="number" min="1" max="100" value="1">
-                                    <span class="ins btn-plus">+</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="p-cart-tbl__total">1.580.000 vnđ</div>
-                            </td>
-                            <td class="txt-center">
-                                <div class="p-cart-tbl__del">
-                                    <img class="img_cover" src="../assets/images/ic-close.png" alt="" width="15"
-                                        height="15">
-                                </div>
-                            </td>
-                        </tr>
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th class="w-check col-check">
+                                    <label class="c-checkbox">
+                                        <input id="checkAll" type="checkbox" class="item">
+                                        <span class="checkmark --cuz"></span>
+                                        <span class="txt-check-all sp">Chọn tất cả</span>
+                                    </label>
+                                </th>
+                                <th class="w-ttl">Thông tin sản phẩm</th>
+                                <th class="w-price">Đơn giá</th>
+                                <th class="w-qty">Số lượng</th>
+                                <th class="w-qty">Thành tiền</th>
+                                <th class="w-check">Xoá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cart-info-item">
+                                <td class="txt-center" data-label="Chọn">
+                                    <label class="c-checkbox">
+                                        <input type="checkbox" class="item">
+                                        <span class="checkmark center border"></span>
+                                    </label>
+                                </td>
+                                <td data-label="Sản phẩm">
+                                    <div class="p-cart-tbl__img-ttl">
+                                        <div class="p-cart-tbl__img-ttl__img"><img class="img_cover"
+                                                src="../assets/images/product.jpg" alt="" width="85" height="85"></div>
+                                        <div class="p-cart-tbl__img-ttl__ttl">82X Shiharu Collagen - Hộp 10 lon</div>
+                                    </div>
+                                </td>
+                                <td class="txt-center" data-label="Đơn giá">
+                                    <div class="p-cart-tbl__price">
+                                        <span class="new-price">790.000 vnđ</span>
+                                        <span class="old-price">1.100.000 vnđ</span>
+                                    </div>
+                                </td>
+                                <td data-label="Số lượng">
+                                    <div class="c-quantity">
+                                        <span class="ins btn-minus">-</span>
+                                        <input class="qty" type="number" min="1" max="100" value="1">
+                                        <span class="ins btn-plus">+</span>
+                                    </div>
+                                </td>
+                                <td data-label="Thành tiền">
+                                    <div class="p-cart-tbl__total">1.580.000 vnđ</div>
+                                </td>
+                                <td class="txt-center" data-label="Xoá">
+                                    <div class="p-cart-tbl__del">
+                                        <img class="img_cover" src="../assets/images/ic-close.png" alt="" width="15"
+                                            height="15">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="cart-info-item">
+                                <td class="txt-center" data-label="Chọn">
+                                    <label class="c-checkbox">
+                                        <input type="checkbox" class="item">
+                                        <span class="checkmark center border"></span>
+                                    </label>
+                                </td>
+                                <td data-label="Sản phẩm">
+                                    <div class="p-cart-tbl__img-ttl">
+                                        <div class="p-cart-tbl__img-ttl__img"><img class="img_cover"
+                                                src="../assets/images/product.jpg" alt="" width="85" height="85"></div>
+                                        <div class="p-cart-tbl__img-ttl__ttl">82X Shiharu Collagen - Hộp 10 lon</div>
+                                    </div>
+                                </td>
+                                <td class="txt-center" data-label="Đơn giá">
+                                    <div class="p-cart-tbl__price">
+                                        <span class="new-price">790.000 vnđ</span>
+                                        <span class="old-price">1.100.000 vnđ</span>
+                                    </div>
+                                </td>
+                                <td data-label="Số lượng">
+                                    <div class="c-quantity">
+                                        <span class="ins btn-minus">-</span>
+                                        <input class="qty" type="number" min="1" max="100" value="1">
+                                        <span class="ins btn-plus">+</span>
+                                    </div>
+                                </td>
+                                <td data-label="Thành tiền">
+                                    <div class="p-cart-tbl__total">1.580.000 vnđ</div>
+                                </td>
+                                <td class="txt-center" data-label="Xoá">
+                                    <div class="p-cart-tbl__del">
+                                        <img class="img_cover" src="../assets/images/ic-close.png" alt="" width="15"
+                                            height="15">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
-                    <div class="sp p-cart-lst">
-                        <label class="c-checkbox">
-                            <input id="checkAllSp" type="checkbox" class="item">
-                            <span class="checkmark border"></span> Chọn tất cả
-                        </label>
-                        <div class="p-cart-lst__item">
-                            <label class="c-checkbox">
-                                <input type="checkbox" class="item">
-                                <span class="checkmark border"></span>
-                            </label>
-                            <div class="p-cart-lst__item__img">
-                                <img class="img_cover" src="../assets/images/product.jpg" alt="" width="85" height="85">
-                            </div>
-                            <div class="p-cart-lst__item__meta">
-                                <div class="p-cart-lst__item__meta__head">
-                                    <div class="p-cart-lst__item__meta__head__ttl">82X Shiharu Collagen - Hộp 10 lon
-                                    </div>
-                                    <div class="p-cart-tbl__del">
-                                        <img class="img_cover" src="../assets/images/ic-close.png" alt="" width="15"
-                                            height="15">
-                                    </div>
-                                </div>
-                                <div class="p-cart-lst__item__meta__bot">
-                                    <div class="c-quantity">
-                                        <span class="ins btn-minus">-</span>
-                                        <input class="qty" type="number" min="1" max="100" value="1">
-                                        <span class="ins btn-plus">+</span>
-                                    </div>
-                                    <div class="p-cart-tbl__price">
-                                        <span class="new-price">790.000 vnđ</span>
-                                        <span class="old-price">1.100.000 vnđ</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-cart-lst__item">
-                            <label class="c-checkbox">
-                                <input type="checkbox" class="item">
-                                <span class="checkmark border"></span>
-                            </label>
-                            <div class="p-cart-lst__item__img">
-                                <img class="img_cover" src="../assets/images/product.jpg" alt="" width="85" height="85">
-                            </div>
-                            <div class="p-cart-lst__item__meta">
-                                <div class="p-cart-lst__item__meta__head">
-                                    <div class="p-cart-lst__item__meta__head__ttl">82X Shiharu Collagen - Hộp 10 lon
-                                    </div>
-                                    <div class="p-cart-tbl__del">
-                                        <img class="img_cover" src="../assets/images/ic-close.png" alt="" width="15"
-                                            height="15">
-                                    </div>
-                                </div>
-                                <div class="p-cart-lst__item__meta__bot">
-                                    <div class="c-quantity">
-                                        <span class="ins btn-minus">-</span>
-                                        <input class="qty" type="number" min="1" max="100" value="1">
-                                        <span class="ins btn-plus">+</span>
-                                    </div>
-                                    <div class="p-cart-tbl__price">
-                                        <span class="new-price">790.000 vnđ</span>
-                                        <span class="old-price">1.100.000 vnđ</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="p-cart-tbl-bot pc">
                         <div class="p-cart-tbl-bot__tel">
                             Hotline <strong>0356858885</strong> để được giải đáp<br>

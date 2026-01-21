@@ -551,13 +551,19 @@
         border-radius: rem(5px);
         box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.05);
 
-        table {
+        .cart-table {
+            thead {
+                tr {
+                    background: $primary;
+                    color: #FFF;
+                }
+            }
+
             tr {
                 border-bottom: 1px solid #E3E3FF;
 
-                &:first-child {
-                    background: $primary;
-                    color: #FFF;
+                &:last-child {
+                    border-bottom: none;
                 }
 
                 th {
@@ -593,6 +599,114 @@
 
                 }
             }
+        }
+
+        @include mq("md") {
+            .cart-table {
+                display: block;
+                width: 100%;
+
+                thead {
+                    display: block;
+
+                    tr {
+                        display: block;
+                        margin-bottom: 0;
+                        background: none;
+                        color: #000;
+                    }
+
+                    th {
+                        &:not(.col-check) {
+                            display: none !important;
+                        }
+
+                        &.w-check {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+                tbody {
+                    display: block;
+                    width: 100%;
+
+                    tr {
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: 2rem 1fr;
+                        grid-template-areas:
+                            "check product"
+                            "check priceqty"
+                            "check total";
+                        row-gap: 1rem;
+                        -moz-column-gap: 1rem;
+                        column-gap: 1rem;
+                        padding: 1rem;
+                        margin-bottom: 1rem;
+
+                        td {
+                            &[data-label="Chọn"] {
+                                grid-area: check;
+                                display: flex;
+                                justify-content: center;
+                                padding-top: 0;
+
+                                .checkmark {
+                                    margin-top: 3.4rem;
+                                }
+                            }
+
+                            &:not([data-label="Chọn"]) {
+                                border: none;
+                                padding: 0;
+                            }
+
+                            &[data-label="Sản phẩm"] {
+                                grid-area: product;
+                                display: flex;
+                                gap: 1rem;
+                                align-items: flex-start;
+                                padding-right: 3rem;
+                            }
+
+                            &[data-label="Đơn giá"],
+                            &[data-label="Số lượng"] {
+                                grid-area: priceqty;
+                                display: inline-flex;
+                                align-items: center;
+                            }
+
+                            &[data-label="Đơn giá"] {
+                                margin-top: -5rem;
+                                margin-left: 10rem;
+                            }
+
+                            &[data-label="Số lượng"] {
+                                margin-left: auto;
+                                margin-top: -5rem;
+                            }
+
+                            &[data-label="Thành tiền"] {
+                                grid-area: total;
+                                font-weight: 600;
+                                text-align: right;
+                            }
+
+                            &[data-label="Xoá"] {
+                                position: absolute;
+                                top: 1rem;
+                                right: 1rem;
+                            }
+                        }
+                    }
+                }
+
+            }
+
         }
 
         &__img-ttl {

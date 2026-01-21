@@ -570,11 +570,12 @@ $(document).ready(function () {
   //   });
   const btn = document.getElementById("view-more-detail");
   const desc = document.getElementById("product-detail");
-
-  btn.addEventListener("click", function () {
-    desc.style.maxHeight = desc.scrollHeight + "px";
-    desc.classList.add("show");
-    this.style.display = "none";
-  });
+  if (btn) {
+    btn.addEventListener("click", function () {
+      desc.style.maxHeight = desc.scrollHeight + "px";
+      desc.classList.add("show");
+      this.style.display = "none";
+    });
+  }
   app.init();
 });

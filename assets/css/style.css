@@ -39,7 +39,6 @@ body {
 html {
   font-size: 10px;
   font-size: 2.2727272727vw;
-  overflow-y: scroll !important;
 }
 @media (min-width: 767px) {
   html {
