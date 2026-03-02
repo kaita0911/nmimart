@@ -1,275 +1,334 @@
 @import "common/variables";
 @import "common/mixin";
 
-.mv-js {
-    margin-bottom: rem(15px);
+.banner-home {
+    display: flex;
+    gap: 2rem;
 
-    @include mq("md", min) {
-        margin-bottom: rem(40px);
+    @include mq("md") {
+        margin-top: 1rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
     }
 
-    .slick-dots {
+    @include mq("md", min) {
+        margin-top: 2rem;
+    }
 
-        bottom: rem(40px);
+    .menu-left {
+        width: 20%;
+        background: #FFF;
+        border-radius: 1rem;
+        box-shadow: rgb(60 64 67 / .1) 0 1px 2px 0, rgb(60 64 67 / .15) 0 2px 6px 2px;
+        position: relative;
+        z-index: 1;
 
-        li {
-            width: rem(10px);
-            height: rem(10px);
-            transition: all 0.3s;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
 
-            &.slick-active {
-                width: rem(24px);
+            li {
+                position: relative;
 
-                button {
-                    width: rem(24px);
-                    background: #FFF;
-                    border-radius: rem(9px);
+                &.has-sub {
+                    &:after {
+                        content: "\f105";
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        position: absolute;
+                        right: 1rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 1.2rem;
+                    }
                 }
-            }
 
-            button {
-                width: rem(10px);
-                height: rem(10px);
-                border: 1px solid #fff;
-                background: none;
-                border-radius: 50%;
+                a {
+                    display: flex;
+                    padding: 0.5rem 1rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
 
-                &:before {
+                &:hover {
+                    .submenu {
+                        display: block;
+                    }
+                }
+
+                .submenu {
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    margin: 0;
+                    min-width: 26rem;
+                    background: #fff;
+                    border-left: 1px solid #ddd;
+                    box-shadow: 0 .5rem 1rem rgb(0 0 0 / .15);
                     display: none;
+
+                    li {
+                        a {
+                            text-transform: none;
+                        }
+                    }
                 }
             }
         }
-
-    }
-}
-
-.slick-track {
-    display: flex !important;
-}
-
-
-.p-sale {
-    background: $primary;
-    position: relative;
-    border-radius: rem(20px);
-    overflow: hidden;
-    margin-top: rem(17px);
-    margin-bottom: rem(33px);
-
-    @include mq("md", min) {
-        margin-top: rem(25px);
     }
 
-    &__head {
-        background: $primary-2;
-        display: flex;
+    .main-banner {
+        border-radius: 1rem;
 
-        padding: rem(20px) rem(16px) rem(16px);
-        justify-content: space-between;
-        position: relative;
+        overflow: hidden;
+        box-shadow: rgb(60 64 67 / .1) 0 1px 2px 0, rgb(60 64 67 / .15) 0 2px 6px 2px;
 
         @include mq("md", min) {
-            height: rem(77px);
-            padding: 0 rem(26px);
-            align-items: center;
+            width: 57%;
         }
+
+        &.mv-js {
+            .slick-dots {
+
+                bottom: rem(10px);
+
+                li {
+                    width: rem(10px);
+                    height: rem(10px);
+                    transition: all 0.3s;
+
+                    &.slick-active {
+                        width: rem(24px);
+
+                        button {
+                            width: rem(24px);
+                            background: #FFF;
+                            border-radius: rem(9px);
+                        }
+                    }
+
+                    button {
+                        width: rem(10px);
+                        height: rem(10px);
+                        border: 1px solid #fff;
+                        background: none;
+                        border-radius: 50%;
+                        padding: 0;
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .right-banners {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        img {
+            border-radius: 1rem;
+            object-fit: inherit;
+        }
+    }
+}
+
+.cate-home {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+
+    .cate-item {
+        text-align: center;
+        cursor: pointer;
+
+        &__img {
+            width: 100%;
+            height: 7rem;
+            margin-bottom: 1.5rem;
+            border-radius: 1rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: rgb(60 64 67 / .1) 0 1px 2px 0, rgb(60 64 67 / .15) 0 2px 6px 2px;
+            background: #f5f5f5;
+
+            &.--b1 {
+                background: #FEE2E2;
+            }
+
+            &.--b2 {
+                background: #f5f5f5;
+            }
+
+            &.--b3 {
+                background: #FEF9C3;
+            }
+
+            &.--b4 {
+                background: #ECFCCB;
+            }
+
+            &.--b5 {
+                background: #D1FAE5;
+            }
+
+            &.--b6 {
+                background: #CCFBF1;
+            }
+
+            &.--b7 {
+                background: #E0F2FE;
+            }
+
+            &.--b8 {
+                background: #E0E7FF;
+            }
+
+            &.--b9 {
+                background: #EDE9FE;
+            }
+
+            &.--b10 {
+                background: #CCFBF1;
+            }
+
+            &.--b11 {
+                background: #FAE8FF;
+            }
+
+            &.--b12 {
+                background: #FCE7F3;
+            }
+        }
+
+        &__ttl {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+    }
+}
+
+.about-home {
+    padding: 2rem 0 5rem;
+
+    @include mq("md", min) {
+        padding: 5rem 0;
+    }
+
+    .about-title {
+        text-align: center;
+        color: $primary;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+        @include mq("md", min) {
+            font-size: 2.4rem;
+        }
+    }
+
+    .about-desc {
+        text-align: center;
+    }
+
+    .about-features {
+        margin-top: 4rem;
+
+        .feature-item {
+            margin: 0 1rem;
+
+            @include mq("md", min) {
+                margin: 0 2rem;
+            }
+        }
+
+        &:hover {
+            .slick-arrow {
+                opacity: 1;
+            }
+        }
+
+
+    }
+}
+
+.car-search {
+    background: #000;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    @include mq("md") {
+        margin: 0 -1.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .car-search__title {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .car-search__form {
+        display: flex;
+        gap: 1.5rem;
+        flex: 1;
 
         @include mq("md") {
             flex-direction: column;
         }
 
-        &__ttl {
-            color: $primary;
-            font-size: rem(23px);
-            font-family: $font-Averta-bold;
-            text-transform: uppercase;
-            background: url(../images/ic-time-sale.png) no-repeat;
-            background-position: left top;
-            background-size: rem(37px) rem(27px);
-            padding-left: rem(40px);
-            line-height: calc(24/23);
+        select {
+
+            height: 4.5rem;
+            padding: 0 1.5rem;
+            border-radius: 0.6rem;
+            border: none;
+            font-size: 1.5rem;
+
+            &t:disabled {
+                background: #e5e5e5;
+                color: #999;
+                cursor: not-allowed;
+            }
 
             @include mq("md", min) {
-                font-size: rem(26px);
-                padding-left: rem(45px);
-                background-size: contain;
-                background-position: left center;
+                flex: 1;
             }
         }
 
-        &__notice {
-            background: #FFF8D8;
-            margin-top: rem(20px);
-            color: $primary;
-            font-size: rem(13px);
-            position: relative;
-            padding: rem(7px) rem(26px) rem(7px) rem(32px);
-            border-radius: rem(32px);
-            line-height: calc(18/13);
-
-            @include mq("md", min) {
-                padding: rem(10px) rem(26px) rem(10px) rem(53px);
-                display: flex;
-                align-items: center;
-                margin-top: 0;
-            }
-
-            &:before {
-                content: "";
-                background: url(../images/ic-sale.png) no-repeat top center;
-                background-size: contain;
-                width: rem(17px);
-                height: rem(17px);
-                position: absolute;
-                left: rem(10px);
-                top: rem(10px);
-
-                @include mq("md", min) {
-                    left: rem(30px);
-                    top: rem(10px);
-                }
-            }
-
-            strong {
-                text-transform: uppercase;
-                font-family: $font-Averta-bold;
-
-            }
-        }
-
-        &__time {
-            display: flex;
-            gap: rem(24px);
-
-            @include mq("md") {
-                position: absolute;
-                right: rem(16px);
-                top: rem(16px);
-            }
-
-            .box-count {
-                line-height: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                font-size: rem(14px);
-                text-transform: capitalize;
-                gap: rem(5px);
-                position: relative;
-
-                &:not(:last-child) {
-                    &:after {
-                        position: absolute;
-                        font-family: $font-Averta-bold;
-                        right: rem(-15px);
-                        top: rem(5px);
-                        content: ":";
-                        font-size: rem(26px);
-                    }
-                }
-
-                .sale-num {
-                    font-size: rem(26px);
-                    font-weight: $font-weight-semibold;
-                    line-height: 1;
-                    background: #Fff;
-                    width: rem(45px);
-                    height: rem(40px);
-                    border-radius: rem(7px);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    @include mq("md", min) {
-                        width: rem(42px);
-                        height: rem(37px);
-                    }
-                }
-            }
-        }
-    }
-
-    &__content {
-        position: relative;
-        padding: rem(20px) rem(10px);
-        margin-bottom: 2rem;
-
-        .product-item {
-            margin: 0 rem(10px) rem(10px);
-        }
-    }
-
-    .slick-dots {
-        z-index: 1;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 95%;
-        bottom: rem(-5px);
-
-        li {
-            width: rem(14px);
-            height: rem(14px);
-            overflow: hidden;
-            border-radius: 50%;
-            margin: 0 rem(3px);
-
-            &.slick-active button {
-                background: #fff;
-            }
-
-            button {
-                width: rem(14px);
-                height: rem(14px);
-                background: #0B3DAE;
-            }
-        }
-    }
-}
-
-
-.p-cate {
-    margin-bottom: rem(27px);
-
-    @include mq("md", min) {
-        margin-bottom: rem(40px);
-    }
-
-    &-wrap {
-        margin: rem(20px) rem(-7.5px) 0;
-
-        .cate-item {
-            border-radius: rem(15px);
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 0 rem(7.5px) 0 rgba($color: #000000, $alpha: 0.15);
-            margin: rem(10px) rem(8.5px);
-            text-align: center;
-            padding: rem(5px) rem(10px) rem(20px);
-
-            &__ttl {
-                font-size: rem(18px);
-                line-height: calc(24/18);
-                margin-top: rem(15px);
-            }
-
-            img {
-                height: rem(80px);
-                width: rem(80px);
-                margin: auto;
-                transition: all 0.3s;
-            }
+        .btn-search {
+            background: $primary;
+            color: #fff;
+            border: none;
+            padding: 0 3rem;
+            height: 4.5rem;
+            border-radius: 0.6rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
 
             &:hover {
-                .cate-item__ttl {
-                    color: $primary;
-                }
-
-                img {
-                    transform: scale(1.1);
-                }
+                background: #c80000;
             }
+
         }
     }
 }
@@ -277,160 +336,282 @@
 .product-home {
     position: relative;
     margin-bottom: rem(30px);
+    margin-top: 4rem;
+
+    &__bnr {
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    &__cate {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .cate-item {
+            padding: 0.7rem 1rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 1rem;
+            background: #F3F4F6;
+            color: #444;
+            font-size: 1.4rem;
+            transition: all 0.3s;
+
+
+
+            &:hover {
+                background: $primary;
+                color: #FFF;
+            }
+        }
+    }
 
     &-wrap {
         margin-top: rem(20px);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+        @include mq("md", min) {
+            margin-top: rem(20px);
+            grid-template-columns: repeat(5, 1fr);
+            gap: rem(20px);
+
+            &.--col-04 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            &.--col-06 {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+    }
+
+}
+
+.car-accessories {
+    .access-js {
+        margin-top: 2rem;
+
+        &:hover {
+            .slick-arrow {
+                opacity: 1;
+            }
+        }
+
+        .slick-slide>div {
+
+            @include mq("md") {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+
+                .thumb {
+                    height: 15rem;
+                    display: block;
+                    width: 100% !important;
+                }
+
+                .ttl {
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    .ttl {
+        text-align: center;
+        display: block;
+    }
+
+
+    .access-item {
+        text-align: center;
+        display: block;
+        height: auto;
+
+
+
+        &__img {
+            display: block;
+
+            @include mq("md", min) {
+                padding: 2rem;
+                height: 30rem;
+            }
+
+
+        }
+
+        &__ttl {
+            font-size: 1.5rem;
+            display: block;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        &:hover {
+            .access-item__ttl {
+                color: $primary;
+            }
+        }
+    }
+
+
+}
+
+.p-utility {
+    padding: 5rem 0;
+
+    &-scroll {
+        @include mq("md") {
+            overflow-x: auto;
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+
+            &::-webkit-scrollbar {
+                height: 0;
+                /* ⚠️ dùng height */
+            }
+
+            /* Nền track */
+            &::-webkit-scrollbar-track {
+                background: transparent;
+                border-radius: 0;
+            }
+        }
+    }
+
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1.5rem;
+        margin-top: 3rem;
 
         @include mq("md") {
-            margin-left: rem(-5px);
+            width: 130rem;
         }
+    }
+
+
+
+    /* Card */
+    .utility-item {
+        height: 10rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        box-shadow: rgba(60, 64, 67, 0.1) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+        transition: 0.3s;
 
         @include mq("md", min) {
-            margin-top: rem(30px);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: rem(30px);
+            height: 14rem;
         }
 
-        .slick-list {
-            overflow: visible;
+        &:hover {
+            transform: translateY(-6px);
         }
 
-        .product-item {
-            @include mq("md") {
-                width: rem(180px);
-                margin-left: rem(13px);
-            }
+        /* Tiêu đề */
+        &__ttl {
+            font-size: 1.4rem;
+            padding-right: 1rem;
+            line-height: 1.6;
+            display: block;
+            font-weight: 600;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        /* Ảnh */
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: scale-down;
+        }
+
+        &.--c1 {
+            background: #FCA5A5;
+        }
+
+        &.--c2 {
+            background: #FDA4AF;
+        }
+
+        &.--c3 {
+            background: #F9A8D4;
+        }
+
+        &.--c4 {
+            background: #C4B5FD;
+        }
+
+        &.--c5 {
+            background: #A5B4FC;
+        }
+
+        &.--c6 {
+            background: #93C5FD;
+        }
+
+        &.--c7 {
+            background: #6EE7B7;
+        }
+
+        &.--c8 {
+            background: #FCD34D;
+        }
+
+        &.--c9 {
+            background: #FDBA74;
+        }
+
+        &.--c10 {
+            background: #D1D5DB;
         }
     }
-
 }
 
-.p-bnr {
-    margin-bottom: rem(23px);
-
-    @include mq("md", min) {
-        margin-bottom: rem(49px);
-    }
-}
 
 .p-news {
-    margin-bottom: rem(40px);
+    margin-bottom: rem(50px);
 
     &-home {
-        margin-top: rem(25px);
-        display: flex;
-        gap: rem(15px);
-        flex-direction: column;
+        display: grid;
+        margin-top: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
 
         @include mq("md", min) {
-            gap: rem(18px);
-            flex-direction: row;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+    }
+}
+
+.p-partner {
+    .partner-js {
+        margin-top: 2rem;
+
+        &:hover {
+            .slick-arrow {
+                opacity: 1;
+            }
         }
 
-        .main-news {
-
-            position: relative;
-            box-shadow: 0 0 rem(16px) 0 rgba($color: #000000, $alpha: 0.1);
-
-            @include mq("md", min) {
-                width: rem(676px);
-            }
-
-            &__img {
-                display: block;
-                overflow: hidden;
-                height: rem(246px);
-
-                @include mq("md", min) {
-                    height: rem(403px);
-                }
-            }
-
-            &__meta {
-
-                padding: rem(18px) rem(20px);
-
-                @include mq("md", min) {
-                    padding: rem(30px) rem(30px) rem(20px) rem(30px);
-                }
-            }
-
-            &__ttl {
-                font-size: rem(25px);
-                font-family: $font-Averta-bold;
-                line-height: 1.22;
-                transition: all 0.3s ease;
-                display: block;
-
-                @include mq("md") {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    margin-bottom: rem(13px);
-                }
-
-                @include mq("md", min) {
-                    line-height: 1.3;
-                    margin-bottom: rem(20px);
-                    display: -webkit-box;
-                    -webkit-line-clamp: 4;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                }
-
-                &:hover {
-                    color: $primary;
-                }
-            }
-
-            &__txt {
-                font-size: rem(18px);
-            }
-
-            &__bot {
-                display: flex;
-                justify-content: space-between;
-                padding-top: rem(10px);
-                margin-top: rem(20px);
-                border-top: 1px solid #E9E9E9;
-
-                @include mq("md", min) {
-                    padding-top: rem(20px);
-                }
-            }
-
-            .view-more-new {
-                font-size: rem(16px);
-                color: #666;
-                background: url(../images/ic-right.png) no-repeat right center;
-                background-size: rem(10px);
-                padding-right: rem(15px);
-                transition: all 0.3s;
-
-                @include mq("md", min) {
-                    padding-right: rem(22px);
-                    background-size: rem(12px);
-                }
-
-                &:hover {
-                    color: $primary;
-                }
-            }
-
-
-        }
-
-        .second-news {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: rem(14px);
-
-            @include mq("md", min) {
-                gap: rem(18px);
-            }
+        .item {
+            height: 10rem;
         }
     }
 }

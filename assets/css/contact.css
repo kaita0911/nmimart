@@ -1,37 +1,10 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Averta";
-  src: url("../fonts/Averta-Regular.woff2") format("woff2"), url("../fonts/Averta-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Averta-bold";
-  src: url("../fonts/Averta-Bold.woff2") format("woff2"), url("../fonts/Averta-Bold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Averta-semibold";
-  src: url("../fonts/Averta-Semibold.woff2") format("woff2"), url("../fonts/Averta-Semibold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "UTM-Impact";
-  src: url("../fonts/UTM-Impact.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .p-contact {
   margin-top: 2rem;
   margin-bottom: -6rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact {
     margin-top: 4rem;
   }
@@ -41,7 +14,7 @@
   position: relative;
   margin-bottom: 3rem;
 }
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .p-contact-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -55,12 +28,12 @@
   text-align: center;
   position: relative;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-item {
     width: 25%;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-item:not(:last-child):before {
     border-top: 1px solid #EAEAEA;
     top: 4.4rem;
@@ -70,9 +43,9 @@
     content: "";
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-item:not(:last-child):after {
-    background: #00267C;
+    background: #b20110;
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
@@ -83,7 +56,7 @@
   }
 }
 .p-contact-item__icon {
-  background: #00267C;
+  background: #b20110;
   position: relative;
   width: 6rem;
   height: 6rem;
@@ -95,7 +68,7 @@
   z-index: 1;
   padding: 1.7rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-item__icon {
     width: 8.4rem;
     height: 8.4rem;
@@ -114,9 +87,9 @@
 .p-contact-item__txt {
   margin-top: 1rem;
   font-size: 1.6rem;
-  font-family: "Averta-bold", sans-serif;
+  font-family: 700;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-item__txt {
     margin-top: 2.5rem;
     font-size: 1.8rem;
@@ -129,7 +102,7 @@
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-form {
     margin-top: 2rem;
     margin-bottom: 5.7rem;
@@ -144,18 +117,18 @@
 .p-contact-finish img {
   max-width: 7rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-finish img {
     max-width: 11rem;
   }
 }
 .p-contact-finish__ttl {
   font-size: 2.2rem;
-  color: #00267C;
-  font-family: "Averta-bold", sans-serif;
+  color: #b20110;
+  font-family: 700;
   margin: 1.5rem 0 1rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact-finish__ttl {
     font-size: 2.8rem;
     margin: 2.5rem 0 1rem;
@@ -166,20 +139,20 @@
   margin-bottom: 1rem;
 }
 .p-contact-finish__txt strong {
-  font-family: "Averta-bold", sans-serif;
+  font-family: 700;
 }
 .p-contact-finish__txt .order-code {
-  color: #00267C;
+  color: #b20110;
 }
 .p-contact-finish__txt .tel {
   color: #B90C0C;
-  font-family: "Averta-bold", sans-serif;
+  font-family: 700;
   font-size: 2rem;
 }
 .p-contact-finish .btn-back {
   background: #F9CA00;
-  color: #00267C;
-  font-family: "Averta-bold", sans-serif;
+  color: #b20110;
+  font-family: 700;
   text-transform: uppercase;
   border-radius: 0.5rem;
   width: 22.9rem;
@@ -192,7 +165,7 @@
   margin-top: 2rem;
 }
 .p-contact-finish .btn-back:hover {
-  background: #00267C;
+  background: #b20110;
   color: #FFF;
 }
 .p-contact .store-wrap {
@@ -200,7 +173,7 @@
   margin-bottom: 10rem;
   flex-direction: column;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact .store-wrap {
     margin-bottom: 12rem;
     flex-direction: row;
@@ -212,7 +185,7 @@
   flex-shrink: 0;
   padding: 1.5rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact .store-wrap .store-list {
     width: 47.5rem;
     border-radius: 1rem 0 0 1rem;
@@ -221,12 +194,12 @@
 }
 .p-contact .store-wrap .store-list__ttl {
   text-align: center;
-  font-family: "Averta-bold", sans-serif;
+  font-family: 700;
   font-size: 2.5rem;
-  color: #00267C;
+  color: #b20110;
   margin-bottom: 1.8rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact .store-wrap .store-list__ttl {
     font-size: 3.5rem;
   }
@@ -242,7 +215,7 @@
   width: 100%;
   box-shadow: 0 0.4rem 0 0 #CBCBFF;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact .store-wrap .store-list__search input {
     padding-left: 2rem;
     height: 5.6rem;
@@ -256,7 +229,7 @@
   width: 1.9rem;
   height: 1.9rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .p-contact .store-wrap .store-list__search #store-search {
     right: 1.8rem;
   }
@@ -267,17 +240,21 @@
   max-height: 53rem;
   padding-right: 1.5rem;
   /* width của scrollbar */
-  /* background của scrollbar */
-  /* thanh kéo */
 }
 .p-contact .store-wrap .store-list-scroll::-webkit-scrollbar {
   width: 0.5rem;
 }
+.p-contact .store-wrap .store-list-scroll {
+  /* background của scrollbar */
+}
 .p-contact .store-wrap .store-list-scroll::-webkit-scrollbar-track {
   background: #EDEDED;
 }
+.p-contact .store-wrap .store-list-scroll {
+  /* thanh kéo */
+}
 .p-contact .store-wrap .store-list-scroll::-webkit-scrollbar-thumb {
-  background: #00267C;
+  background: #b20110;
   border-radius: 0.5rem;
 }
 .p-contact .store-wrap .store-list-scroll .store-item {
@@ -290,8 +267,8 @@
   gap: 0.7rem;
 }
 .p-contact .store-wrap .store-list-scroll .store-item__ttl {
-  font-family: "Averta-bold", sans-serif;
-  color: #00267C;
+  font-family: 700;
+  color: #b20110;
   font-size: 1.8rem;
 }
 .p-contact .store-wrap .store-list-scroll .store-item__address {

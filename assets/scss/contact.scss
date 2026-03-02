@@ -97,7 +97,7 @@
         &__txt {
             margin-top: rem(10px);
             font-size: rem(16px);
-            font-family: $font-Averta-bold;
+            font-family: 700;
 
             @include mq("md", min) {
                 margin-top: rem(25px);
@@ -137,7 +137,7 @@
         &__ttl {
             font-size: rem(22px);
             color: $primary;
-            font-family: $font-Averta-bold;
+            font-family: 700;
             margin: rem(15px) 0 rem(10px);
 
             @include mq("md", min) {
@@ -151,7 +151,7 @@
             margin-bottom: rem(10px);
 
             strong {
-                font-family: $font-Averta-bold;
+                font-family: 700;
             }
 
             .order-code {
@@ -160,7 +160,7 @@
 
             .tel {
                 color: #B90C0C;
-                font-family: $font-Averta-bold;
+                font-family: 700;
                 font-size: rem(20px);
             }
         }
@@ -168,7 +168,7 @@
         .btn-back {
             background: $primary-2;
             color: $primary;
-            font-family: $font-Averta-bold;
+            font-family: 700;
             text-transform: uppercase;
             border-radius: rem(5px);
             width: rem(229px);
@@ -212,7 +212,7 @@
 
             &__ttl {
                 text-align: center;
-                font-family: $font-Averta-bold;
+                font-family: 700;
                 font-size: rem(25px);
                 color: $primary;
                 margin-bottom: rem(18px);
@@ -285,7 +285,7 @@
                     gap: rem(7px);
 
                     &__ttl {
-                        font-family: $font-Averta-bold;
+                        font-family: 700;
                         color: $primary;
                         font-size: rem(18px);
                     }

@@ -7,28 +7,27 @@ app.init = function () {
   app.anchorLink();
   app.slick();
   app.inscrease();
-  app.boxanchor();
   app.viewmore();
   app.quality();
   app.addtocart();
-  app.countdown();
+  // app.countdown();
   app.copycode();
   app.fontsize();
-  app.popup();
+  // app.popup();
   app.checkall();
-  app.liked();
-  app.rating();
+  // app.liked();
+  // app.rating();
 };
-app.liked = function () {
-  let like = 0;
-  const likeCount = document.getElementById("like-count");
-  document.querySelectorAll(".btn-like").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      let current = parseInt(likeCount.textContent, 10);
-      likeCount.textContent = current + 1;
-    });
-  });
-};
+// app.liked = function () {
+//   let like = 0;
+//   const likeCount = document.getElementById("like-count");
+//   document.querySelectorAll(".btn-like").forEach((btn) => {
+//     btn.addEventListener("click", function () {
+//       let current = parseInt(likeCount.textContent, 10);
+//       likeCount.textContent = current + 1;
+//     });
+//   });
+// };
 app.checkall = function () {
   const checkAll = document.getElementById("checkAll");
   const checkAllsp = document.getElementById("checkAllSp");
@@ -58,79 +57,79 @@ app.checkall = function () {
   });
 };
 
-app.popup = function () {
-  const openBtn = document.getElementById("open-filter");
-  const popup = document.getElementById("sidebar-popup");
-  //const closeBtn = popup.querySelector(".filter-close");
-  if (popup) {
-    const closeBtn = popup.querySelector(".filter-close");
-    if (closeBtn) {
-      closeBtn.addEventListener("click", closePopup);
-    }
-  }
-  if (openBtn && popup) {
-    openBtn.addEventListener("click", () => {
-      popup.classList.add("show");
-      document.body.style.overflow = "hidden";
-    });
+// app.popup = function () {
+//   const openBtn = document.getElementById("open-filter");
+//   const popup = document.getElementById("sidebar-popup");
+//   //const closeBtn = popup.querySelector(".filter-close");
+//   if (popup) {
+//     const closeBtn = popup.querySelector(".filter-close");
+//     if (closeBtn) {
+//       closeBtn.addEventListener("click", closePopup);
+//     }
+//   }
+//   if (openBtn && popup) {
+//     openBtn.addEventListener("click", () => {
+//       popup.classList.add("show");
+//       document.body.style.overflow = "hidden";
+//     });
 
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        closePopup();
-      }
-    });
-  }
+//     popup.addEventListener("click", (e) => {
+//       if (e.target === popup) {
+//         closePopup();
+//       }
+//     });
+//   }
 
-  function closePopup() {
-    popup.classList.remove("show");
-    document.body.style.overflow = "";
-  }
-};
+//   function closePopup() {
+//     popup.classList.remove("show");
+//     document.body.style.overflow = "";
+//   }
+// };
 
-app.countdown = function () {
-  const targetDate = new Date("2026-8-31 23:59:59").getTime();
-  function updateCountdown() {
-    const c_countdown = document.getElementById("countdown");
+// app.countdown = function () {
+//   const targetDate = new Date("2026-8-31 23:59:59").getTime();
+//   function updateCountdown() {
+//     const c_countdown = document.getElementById("countdown");
 
-    const now = new Date().getTime();
-    const distance = targetDate - now;
+//     const now = new Date().getTime();
+//     const distance = targetDate - now;
 
-    if (distance <= 0) {
-      if (c_countdown != null) {
-        document.getElementById("countdown").innerHTML = "Hết giờ!";
-        clearInterval(timer);
-        return;
-      }
-    }
+//     if (distance <= 0) {
+//       if (c_countdown != null) {
+//         document.getElementById("countdown").innerHTML = "Hết giờ!";
+//         clearInterval(timer);
+//         return;
+//       }
+//     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    const c_days = document.getElementById("days");
-    const c_hours = document.getElementById("hours");
-    const c_minutes = document.getElementById("minutes");
-    const c_seconds = document.getElementById("seconds");
-    if (c_days != null) {
-      c_days.innerText = days.toString().padStart(2, "0");
-    }
-    if (c_hours != null) {
-      c_hours.innerText = hours.toString().padStart(2, "0");
-    }
-    if (c_minutes != null) {
-      c_minutes.innerText = minutes.toString().padStart(2, "0");
-    }
-    if (c_seconds != null) {
-      c_seconds.innerText = seconds.toString().padStart(2, "0");
-    }
-  }
+//     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     const hours = Math.floor(
+//       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+//     );
+//     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//     const c_days = document.getElementById("days");
+//     const c_hours = document.getElementById("hours");
+//     const c_minutes = document.getElementById("minutes");
+//     const c_seconds = document.getElementById("seconds");
+//     if (c_days != null) {
+//       c_days.innerText = days.toString().padStart(2, "0");
+//     }
+//     if (c_hours != null) {
+//       c_hours.innerText = hours.toString().padStart(2, "0");
+//     }
+//     if (c_minutes != null) {
+//       c_minutes.innerText = minutes.toString().padStart(2, "0");
+//     }
+//     if (c_seconds != null) {
+//       c_seconds.innerText = seconds.toString().padStart(2, "0");
+//     }
+//   }
 
-  // Cập nhật mỗi giây
-  const timer = setInterval(updateCountdown, 1000);
-  updateCountdown(); // Gọi ngay để không bị delay 1 giây đầu tiên
-};
+//   // Cập nhật mỗi giây
+//   const timer = setInterval(updateCountdown, 1000);
+//   updateCountdown(); // Gọi ngay để không bị delay 1 giây đầu tiên
+// };
 app.tab = function () {
   const tabBtns = document.querySelectorAll(".tab-btn");
   const tabContents = document.querySelectorAll(".tab-content");
@@ -181,175 +180,216 @@ app.inscrease = function () {
   });
 };
 app.slick = function () {
-  $(".cate-js").slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    infinite: true,
-    //autoplay: true,
-    //autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
-  });
-
   $(".mv-js").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     dots: true,
     infinite: true,
+    autoplay: true, // 🔥 bật tự chạy
+    autoplaySpeed: 3000, // ⏱️ 3 giây / slide
+    speed: 600, // tốc độ hiệu ứng
   });
-  $(".sale-js").slick({
-    slidesToShow: 4,
+  $(".features-js").slick({
+    slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false,
+    centerPadding: "80px", // ⭐ phần ảnh thò ra 2 bên
+    infinite: true,
+    arrows: true,
+    dots: false,
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "20px", // ⭐ phần ảnh thò ra 2 bên
+        },
+      },
+    ],
+  });
+  $(".access-js").slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
     dots: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    rows: 1,
+
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          dots: true,
-          //variableWidth: true,
+          rows: 2,
+          slidesPerRow: 2,
         },
       },
     ],
   });
-  $(".js-sale-code").slick({
-    slidesToShow: 3,
+
+  $(".partner-js").slick({
+    slidesToShow: 6,
     slidesToScroll: 1,
     arrows: true,
     dots: false,
-    //infinite: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
-          variableWidth: true,
-          arrows: false,
+          slidesToShow: 4,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          variableWidth: true,
-          arrows: false,
-          //variableWidth: true,
-        },
-      },
-    ],
-  });
-  $(".js-product-like").slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    infinite: true,
-    prevArrow: $(".slick-prev-product"),
-    nextArrow: $(".slick-next-product"),
-    responsive: [
-      {
-        breakpoint: 768, // dưới 768px (tablet)
-        settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480, // dưới 480px (mobile)
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          //variableWidth: true, // kích hoạt width linh hoạt
         },
       },
     ],
   });
-  $(".js-news-related").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    infinite: true,
-    prevArrow: $(".slick-prev-news"),
-    nextArrow: $(".slick-next-news"),
-    responsive: [
-      {
-        breakpoint: 768, // dưới 768px (tablet)
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480, // dưới 480px (mobile)
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          //variableWidth: true, // kích hoạt width linh hoạt
-        },
-      },
-    ],
-  });
+  // $(".sale-js").slick({
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   dots: false,
+  //   infinite: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         dots: true,
+  //         //variableWidth: true,
+  //       },
+  //     },
+  //   ],
+  // });
+  // $(".js-sale-code").slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   dots: false,
+  //   //infinite: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         variableWidth: true,
+  //         arrows: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         variableWidth: true,
+  //         arrows: false,
+  //         //variableWidth: true,
+  //       },
+  //     },
+  //   ],
+  // });
+  // $(".js-product-like").slick({
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   dots: false,
+  //   infinite: true,
+  //   prevArrow: $(".slick-prev-product"),
+  //   nextArrow: $(".slick-next-product"),
+  //   responsive: [
+  //     {
+  //       breakpoint: 768, // dưới 768px (tablet)
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480, // dưới 480px (mobile)
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         //variableWidth: true, // kích hoạt width linh hoạt
+  //       },
+  //     },
+  //   ],
+  // });
+  // $(".js-news-related").slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   dots: false,
+  //   infinite: true,
+  //   prevArrow: $(".slick-prev-news"),
+  //   nextArrow: $(".slick-next-news"),
+  //   responsive: [
+  //     {
+  //       breakpoint: 768, // dưới 768px (tablet)
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480, // dưới 480px (mobile)
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         //variableWidth: true, // kích hoạt width linh hoạt
+  //       },
+  //     },
+  //   ],
+  // });
 
-  function mobileOnlySlider() {
-    if ($(window).width() < 768) {
-      if (!$(".js-product-home").hasClass("slick-initialized")) {
-        $(".js-product-home").slick({
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-          variableWidth: true,
-          autoplay: true,
-          autoplaySpeed: 2000, // 2s
-          speed: 600,
-        });
-      }
-    } else {
-      if ($(".js-product-home").hasClass("slick-initialized")) {
-        $(".js-product-home").slick("unslick");
-      }
-    }
-  }
+  // function mobileOnlySlider() {
+  //   if ($(window).width() < 768) {
+  //     if (!$(".js-product-home").hasClass("slick-initialized")) {
+  //       $(".js-product-home").slick({
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         arrows: false,
+  //         dots: false,
+  //         variableWidth: true,
+  //         autoplay: true,
+  //         autoplaySpeed: 2000, // 2s
+  //         speed: 600,
+  //       });
+  //     }
+  //   } else {
+  //     if ($(".js-product-home").hasClass("slick-initialized")) {
+  //       $(".js-product-home").slick("unslick");
+  //     }
+  //   }
+  // }
 
-  $(document).ready(function () {
-    mobileOnlySlider();
-    $(window).on("resize", mobileOnlySlider);
-  });
+  // $(document).ready(function () {
+  //   mobileOnlySlider();
+  //   $(window).on("resize", mobileOnlySlider);
+  // });
 };
 
-app.boxanchor = function () {
-  const btnAnchor = document.querySelector(".btn-anchor");
-  if (btnAnchor) {
-    btnAnchor.addEventListener("click", function () {
-      $(".box-anchor__lst").slideToggle(300);
-    });
-  }
-};
 app.fontsize = function () {
   let fontSize = 1.6; // rem
   const minSize = 0.75; // 12px
@@ -478,70 +518,76 @@ document.querySelectorAll(".num-price").forEach((input) => {
     this.value = Number(value).toLocaleString("vi-VN");
   });
 });
-app.rating = function () {
-  document.querySelectorAll(".star-rating").forEach((el) => {
-    el.style.setProperty("--rating", el.dataset.rating);
+// app.rating = function () {
+//   document.querySelectorAll(".star-rating").forEach((el) => {
+//     el.style.setProperty("--rating", el.dataset.rating);
+//   });
+//   document.querySelectorAll(".star-rating span").forEach((star) => {
+//     star.addEventListener("mouseenter", function () {
+//       const rating = this.dataset.star;
+//       this.parentElement.style.setProperty("--rating", rating);
+//     });
+
+//     star.addEventListener("mouseleave", function () {
+//       const rating = this.parentElement.dataset.rating || 0;
+//       this.parentElement.style.setProperty("--rating", rating);
+//     });
+
+//     // Click để chọn
+//     star.addEventListener("click", function () {
+//       const rating = this.dataset.star;
+//       this.parentElement.dataset.rating = rating;
+//       this.parentElement.style.setProperty("--rating", rating);
+//     });
+//   });
+// };
+document.querySelectorAll(".ic-sub").forEach((icon) => {
+  icon.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    const li = this.closest(".has-sub");
+
+    // đóng tất cả menu khác
+    document.querySelectorAll(".has-sub").forEach((item) => {
+      if (item !== li) item.classList.remove("open");
+    });
+
+    li.classList.toggle("open");
   });
-  document.querySelectorAll(".star-rating span").forEach((star) => {
-    star.addEventListener("mouseenter", function () {
-      const rating = this.dataset.star;
-      this.parentElement.style.setProperty("--rating", rating);
-    });
-
-    star.addEventListener("mouseleave", function () {
-      const rating = this.parentElement.dataset.rating || 0;
-      this.parentElement.style.setProperty("--rating", rating);
-    });
-
-    // Click để chọn
-    star.addEventListener("click", function () {
-      const rating = this.dataset.star;
-      this.parentElement.dataset.rating = rating;
-      this.parentElement.style.setProperty("--rating", rating);
-    });
-  });
-};
-
+});
 $(document).ready(function () {
+  const brand = document.getElementById("brand");
+  const model = document.getElementById("model");
+  if (brand) {
+    brand.addEventListener("change", function () {
+      if (this.value === "") {
+        model.disabled = true; // chưa chọn → khóa
+      } else {
+        model.disabled = false; // chọn rồi → mở khóa
+      }
+    });
+  }
+
   $(".gt_selected").click(function () {
     $(".gt_selected span").toggleClass("is-active");
     $(".gt_option").toggleClass("is-active");
   });
-  $(".ic_search").click(function () {
-    $(this).toggleClass("show");
-    $(".p-header__search").slideToggle();
-  });
-  $(".ic_menu").click(function () {
-    $(".menu-sp").addClass("show");
+  ///open menu
+  $(".ic-menu").click(function () {
+    $(".menu-top__lst").addClass("show");
     $(".bg-close-menu").addClass("show");
     document.documentElement.classList.add("noscroll");
   });
 
   $(".bg-close-menu").click(function () {
-    $(".menu-sp").removeClass("show");
-    $(".cart-content").removeClass("show");
+    $(".menu-top__lst").removeClass("show");
     $(this).removeClass("show");
     document.documentElement.classList.remove("noscroll");
   });
+  ///openmneu con
 
-  $(".menu-sp .ic-sub").on("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+  ///addcart
 
-    const li = $(this).closest("li");
-
-    // Đóng các menu khác, TRỪ menu mặc định
-    $(".menu-sp li")
-      .not(li)
-      .not(".product")
-      .removeClass("active")
-      .children("ul")
-      .slideUp();
-
-    // Toggle menu hiện tại
-    li.toggleClass("active");
-    li.children("ul").slideToggle();
-  });
   const btnaddcart = document.getElementById("add-to-cart");
   const boxcart = document.getElementById("box-add-cart");
   if (btnaddcart != null) {
@@ -560,14 +606,6 @@ $(document).ready(function () {
       // Nếu muốn chỉ add (không toggle), dùng: target.classList.add('active');
     });
   }
-  // document
-  //   .getElementById("view-more-detail")
-  //   .addEventListener("click", function () {
-  //     const desc = document.getElementById("product-detail");
-
-  //     desc.classList.add("show");
-  //     this.style.display = "none"; // ẩn nút xem thêm
-  //   });
   const btn = document.getElementById("view-more-detail");
   const desc = document.getElementById("product-detail");
   if (btn) {
@@ -577,5 +615,124 @@ $(document).ready(function () {
       this.style.display = "none";
     });
   }
+  ///backtotop
+
+  const backToTopBtn = document.getElementById("backToTop");
+  if (!backToTopBtn) return; // không có thì thoát luôn
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+      backToTopBtn.style.display = "flex";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  ////popup
+
+  const btncontact = document.getElementById("contactBtn");
+  const popup = document.getElementById("contactPopup");
+  const close = document.querySelector(".close");
+  if (btncontact) {
+    // Mở popup
+    btncontact.onclick = () => {
+      popup.classList.add("show");
+      document.body.classList.add("no-scroll");
+    };
+
+    // Đóng popup
+    close.onclick = () => {
+      popup.classList.remove("show");
+      document.body.classList.remove("no-scroll");
+    }; // Click nền ngoài
+    popup.onclick = (e) => {
+      if (e.target === popup) {
+        popup.classList.remove("show");
+        document.body.classList.remove("no-scroll");
+      }
+    };
+  }
+
+  ////open cart
+  const openCart = document.getElementById("openCart");
+  const closeCart = document.getElementById("closeCart");
+  const cartPanel = document.getElementById("cartPanel");
+  const overlay = document.getElementById("cartOverlay");
+
+  function showCart() {
+    cartPanel.classList.add("show");
+    overlay.classList.add("show");
+    document.body.classList.add("no-scroll");
+  }
+
+  function hideCart() {
+    cartPanel.classList.remove("show");
+    overlay.classList.remove("show");
+    document.body.classList.remove("no-scroll");
+  }
+  if (openCart) {
+    openCart.onclick = showCart;
+    closeCart.onclick = hideCart;
+    overlay.onclick = hideCart;
+  }
+
+  ////fixheader
+
+  const header = document.querySelector(".p-header-content");
+
+  if (header) {
+    const headerOffset = header.offsetTop;
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > headerOffset) {
+        header.classList.add("is-fixed");
+      } else {
+        header.classList.remove("is-fixed");
+      }
+    });
+  }
+
+  ///catefootersp
+  const btnCategory = document.getElementById("btnCategory");
+  const panel = document.getElementById("categoryPanel");
+  if (btnCategory) {
+    btnCategory.onclick = () => {
+      panel.classList.toggle("show");
+      if (panel.classList.contains("show")) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+    };
+  }
+
+  const parents = document.querySelectorAll(".parent-item");
+  const groups = document.querySelectorAll(".child-group");
+
+  parents.forEach((parent) => {
+    parent.onclick = () => {
+      // bỏ active cũ
+      parents.forEach((p) => p.classList.remove("active"));
+      groups.forEach((g) => g.classList.remove("active"));
+
+      // active mới
+      parent.classList.add("active");
+
+      const id = parent.dataset.id;
+
+      document
+        .querySelector('.child-group[data-id="' + id + '"]')
+        .classList.add("active");
+    };
+  });
+  //toc
+  $("#tocToggle").on("click", function () {
+    $("#tocBody").slideToggle(250);
+  });
+
   app.init();
 });

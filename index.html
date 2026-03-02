@@ -13,7 +13,7 @@
 
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Fancybox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -22,717 +22,1956 @@
 </head>
 
 <body>
-    <div id="header"></div>
-    <main>
-        <div class="mv-js">
-            <a href="">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./assets/images/mv-sp.jpg" alt="">
-                    <img class="img_scale" src="./assets/images/mv.jpg">
-                </picture>
-            </a>
-            <a href="">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./assets/images/mv-sp.jpg" alt="">
-                    <img class="img_scale" src="./assets/images/mv.jpg">
-                </picture>
-            </a>
-            <a href="">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./assets/images/mv-sp.jpg" alt="">
-                    <img class="img_scale" src="./assets/images/mv.jpg">
-                </picture>
-            </a>
 
+    <header>
+        <div class="top-mb d-md-none">
+            <span class="top-mb__ic"></span>
         </div>
+        <div class="p-header">
+            <div class="p-header-top pc">
+                <div class="container">
+                    <div class="p-header-top-wrap">
+                        <p>Địa chỉ: 678 Trường Chinh, Phường Tân Bình, Hồ Chí Minh</p>
+                        <p>Địa chỉ: 36 Nguyễn Hữu Cảnh, Phường Thạnh Mỹ Tây, Hồ Chí Minh
+                        </p>
+                        <div class="p-header-top-right">
+                            <ul class="menu-top">
+                                <li><a href="#" title="">giới thiệu</a></li>
+                                <li><a href="#" title="">Kiến thức ô tô</a></li>
+                                <li><a href="#" title="">khuyến mãi</a></li>
+                            </ul>
+                            <ul class="social-top">
+                                <li><a class="social-link --facebook" href="#" title="">
+                                        <i class="fa-brands fa-facebook-f"></i></a>
+                                </li>
+                                <li><a class="social-link --tiktok" href="#" title="">
+                                        <i class="fa-brands fa-tiktok"></i></a>
+                                </li>
+                                <li><a class="social-link --phone" href="#" title="">
+                                        <i class="fa-solid fa-phone"></i></a></li>
+                                <li><a class="social-link --youtube" href="#" title="">
+                                        <i class="fa-brands fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="p-header-content">
+                <div class="container">
+                    <div class="p-header-content-wrap">
+                        <div class="p-header-content__left">
+                            <a class="logo" href="/">
+                                <img src="assets/images/logo.jpg" alt="akauto">
+                            </a>
+                            <div class="menu-wrapper">
+                                <div class="menu-top">
+                                    <span class="ic-menu sp"><i class="fa-solid fa-list"></i></span>
+                                    <span class="menu-top__ttl pc">Danh mục</span>
+
+                                    <div class="menu-top__lst">
+                                        <ul class="menu-cate">
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a href="#">MÀN HÌNH
+                                                    Ô TÔ</a>
+                                                <ul class="menu-sub">
+                                                    <li><a class="hover" href="#">Màn hình Zestech</a></li>
+                                                    <li><a class="hover" href="#">Màn hình T’Eyes</a></li>
+                                                    <li><a class="hover" href="#">Màn hình Safeview</a></li>
+                                                    <li><a class="hover" href="#">Màn hình Utour</a></li>
+                                                    <li><a class="hover" href="#">Màn hình Flyaudio</a></li>
+                                                    <li><a class="hover" href="#">Màn hình liên camera 360</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">ANDROID BOX Ô TÔ</a>
+                                                <ul class="menu-sub">
+                                                    <li><a class="hover" href="#">Màn hình Zestech</a></li>
+                                                    <li><a class="hover" href="#">Màn hình T’Eyes</a></li>
+                                                    <li><a class="hover" href="#">Màn hình Safeview</a></li>
+                                                    <li><a class="hover" href="#">Màn hình Utour</a></li>
+                                                    <li><a class="hover" href="#">Màn hình Flyaudio</a></li>
+                                                    <li><a class="hover" href="#">Màn hình liên camera 360</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">PHIM CÁCH NHIỆT Ô TÔ</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">CAMERA HÀNH TRÌNH</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">CAMERA 360 Ô TÔ</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">CHĂM SÓC Ô TÔ</a></li>
+                                            <li><a class="hover" href="#">DÁN PPF Ô TÔ</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">ĐỔI MÀU NỘI THẤT</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">ĐỘ ĐÈN Ô TÔ</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">CẢM BIẾN ÁP SUẤT LỐP</a></li>
+                                            <li><a class="hover" href="#">PHỤ KIỆN AN TOÀN</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">PHỤ KIỆN THEO DÒNG XE</a></li>
+                                            <li class="has-sub"><span class="ic-sub"><i
+                                                        class="fa-solid fa-angle-right"></i></span><a class="hover"
+                                                    href="#">HOT SALE GIÁ TỐT</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-close-menu"></div>
+                            <div class="overlay"></div>
+                            <div class="box-search">
+                                <input type="text" placeholder="Bạn cần tìm gì ?">
+                                <span class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="p-header-content__right">
+                            <div class="hotline pc">
+                                <span class="hotline__label">Tư vấn miễn phí</span>
+                                <span class="hotline__num">0903939683</span>
+                            </div>
+                            <a class="branch pc" href="">
+                                Hệ thống<br>chi nhánh
+                            </a>
+                            <div class="cart">
+                                <div id="openCart" class="btn-cart">
+                                    <div class="ic-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="cart-num">1</span>
+                                    </div>
+
+                                    <div class="pc">Giỏ hàng /<strong> 1.500.000₫</strong></div>
+                                </div>
+                            </div>
+                            <div class="cart-overlay" id="cartOverlay"></div>
+                            <!-- CART PANEL -->
+                            <div class="cart-panel" id="cartPanel">
+
+                                <div class="cart-header">
+                                    <h3>GIỎ HÀNG</h3>
+                                    <span class="close-cart" id="closeCart">&times;</span>
+                                </div>
+
+                                <div class="cart-body">
+                                    <div class="cart-item">
+                                        <a href="cart-item__img"><img width="60" height="60" class="img-cover"
+                                                src="assets/images/sp-1.jpg" alt=""></a>
+                                        <div class="cart-item__info">
+                                            <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                                                TS-2K
+                                                Lite</a>
+                                            <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                                        </div>
+                                        <span class="cart-item__remove">&times;</span>
+                                    </div>
+                                    <div class="cart-item">
+                                        <a href="cart-item__img"><img width="60" height="60" class="img-cover"
+                                                src="assets/images/sp-1.jpg" alt=""></a>
+                                        <div class="cart-item__info">
+                                            <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                                                TS-2K
+                                                Lite</a>
+                                            <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                                        </div>
+                                        <span class="cart-item__remove">&times;</span>
+                                    </div>
+                                    <div class="cart-item">
+                                        <a href="cart-item__img"><img width="60" height="60" class="img-cover"
+                                                src="assets/images/sp-1.jpg" alt=""></a>
+                                        <div class="cart-item__info">
+                                            <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                                                TS-2K
+                                                Lite</a>
+                                            <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                                        </div>
+                                        <span class="cart-item__remove">&times;</span>
+                                    </div>
+                                    <div class="cart-item">
+                                        <a href="cart-item__img"><img width="60" height="60" class="img-cover"
+                                                src="assets/images/sp-1.jpg" alt=""></a>
+                                        <div class="cart-item__info">
+                                            <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                                                TS-2K
+                                                Lite</a>
+                                            <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                                        </div>
+                                        <span class="cart-item__remove">&times;</span>
+                                    </div>
+
+                                    <div class="cart-total">
+                                        <span>Tổng số phụ:</span>
+                                        <strong>19.257.000đ</strong>
+                                    </div>
+                                    <button class="cart-btn view-cart">Xem giỏ hàng</button>
+                                    <button class="cart-btn checkout">Thanh toán</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
         <div class="container">
-            <div class="box-sale js-sale-code">
-                <div class="box-sale__item">
-                    <div class="box-sale__item__code">Nhập mã: <span class="c-code">NMIMART50</span></div>
-                    <p class="box-sale__item__txt">Mã giảm 50K cho đơn hàng từ 500K</p>
-                    <div class="box-sale__item__copy">Điều kiện: <span class="btn-copy" data-copy="NMIMART50">Sao
-                            chép</span></div>
+            <div class="banner-home">
+                <div class="menu-left pc">
+                    <ul>
+
+                        <li class="has-sub">
+                            <a class="hover" href="#">MÀN HÌNH Ô TÔ</a>
+                            <ul class="submenu">
+                                <li><a class="hover" href="#">Màn hình Zestech</a></li>
+                                <li><a class="hover" href="#">Màn hình T’Eyes</a></li>
+                                <li><a class="hover" href="#">Màn hình Safeview</a></li>
+                                <li><a class="hover" href="#">Màn hình Utour</a></li>
+                                <li><a class="hover" href="#">Màn hình Flyaudio</a></li>
+                                <li><a class="hover" href="#">Màn hình liên camera 360</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub"><a class="hover" href="#">ANDROID BOX Ô TÔ</a></li>
+                        <li class="has-sub"><a class="hover" href="#">PHIM CÁCH NHIỆT Ô TÔ</a></li>
+                        <li class="has-sub"><a class="hover" href="#">CAMERA HÀNH TRÌNH</a></li>
+                        <li class="has-sub"><a class="hover" href="#">CAMERA 360 Ô TÔ</a></li>
+                        <li><a class="hover" href="#">CHĂM SÓC Ô TÔ</a></li>
+                        <li class="has-sub"><a class="hover" href="#">DÁN PPF Ô TÔ</a></li>
+                        <li class="has-sub"><a class="hover" href="#">ĐỔI MÀU NỘI THẤT</a></li>
+                        <li class="has-sub"><a class="hover" href="#">ĐỘ ĐÈN Ô TÔ</a></li>
+                        <li><a class="hover" href="#">CẢM BIẾN ÁP SUẤT LỐP</a></li>
+                        <li class="has-sub"><a class="hover" href="#">PHỤ KIỆN AN TOÀN</a></li>
+                        <li class="has-sub"><a class="hover" href="#">PHỤ KIỆN THEO DÒNG XE</a>
+                            <ul class="submenu">
+                                <li><a class="hover" href="#">Màn hình Zestech</a></li>
+                                <li><a class="hover" href="#">Màn hình T’Eyes</a></li>
+                                <li><a class="hover" href="#">Màn hình Safeview</a></li>
+                                <li><a class="hover" href="#">Màn hình Utour</a></li>
+                                <li><a class="hover" href="#">Màn hình Flyaudio</a></li>
+                                <li><a class="hover" href="#">Màn hình liên camera 360</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub"><a class="hover" href="#">HOT SALE GIÁ TỐT</a></li>
+
+                    </ul>
                 </div>
-                <div class="box-sale__item">
-                    <div class="box-sale__item__code">Nhập mã: <span class="c-code">NMIMART20</span></div>
-                    <p class="box-sale__item__txt">Mã giảm 50K cho đơn hàng từ 500K</p>
-                    <div class="box-sale__item__copy">Điều kiện: <span class="btn-copy" data-copy="NMIMART20">Sao
-                            chép</span></div>
+                <div class="main-banner mv-js">
+                    <a href=""><img class="img_cover" src="./assets/images/banner-1.jpg" alt="" width="700"
+                            height="420">
+                    </a>
+                    <a href=""><img class="img_cover" src="./assets/images/banner-2.jpg" alt="" width="700"
+                            height="420">
+                    </a>
+                    <a href=""><img class="img_cover" src="./assets/images/banner-3.jpg" alt="" width="700"
+                            height="420">
+                    </a>
+                    <a href=""><img class="img_cover" src="./assets/images/banner-4.jpg" alt="" width="700"
+                            height="420">
+                    </a>
                 </div>
-                <div class="box-sale__item">
-                    <div class="box-sale__item__code">Nhập mã: <span class="c-code">NMIMART30</span></div>
-                    <p class="box-sale__item__txt">Mã giảm 50K cho đơn hàng từ 500K</p>
-                    <div class="box-sale__item__copy">Điều kiện: <span class="btn-copy" data-copy="NMIMART30">Sao
-                            chép</span></div>
-                </div>
-                <div class="box-sale__item">
-                    <div class="box-sale__item__code">Nhập mã: <span class="c-code">NMIMART40</span></div>
-                    <p class="box-sale__item__txt">Mã giảm 50K cho đơn hàng từ 500K</p>
-                    <div class="box-sale__item__copy">Điều kiện: <span class="btn-copy" data-copy="NMIMART40">Sao
-                            chép</span></div>
+                <div class="right-banners pc">
+                    <img class="img_cover" src="./assets/images/banner-phu-1.jpg" alt="">
+                    <img class="img_cover" src="./assets/images/banner-phu-2.jpg" alt="">
+                    <img class="img_cover" src="./assets/images/banner-phu-3.jpg" alt="">
                 </div>
             </div>
-            <div class="p-sale">
-                <div class="p-sale__head">
-                    <div class="p-sale__head__ttl">FLASH SALE<br class="sp"> GIỜ VÀNG</div>
-                    <div class="p-sale__head__notice"><strong>NMI MART</strong> - Hỗ trợ thanh toán trực tuyến giảm ngay
-                        <strong> 20k </strong> cho đơn hàng 299k
-                    </div>
-                    <div class="p-sale__head__time">
-                        <!-- <div class="box-count"><span class="sale-num" id="days">00</span> ngày</div> -->
-                        <div class="box-count"> <span class="sale-num" id="hours">00</span> giờ</div>
-                        <div class="box-count"><span class="sale-num" id="minutes">00</span> phút</div>
-                        <div class="box-count"><span class="sale-num" id="seconds">00</span> giây</div>
-                    </div>
-                </div>
-                <div class="p-sale__content sale-js">
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                            <div class="product-item__remaining">
-                                <div class="product-item__remaining__bar" style="width: 80%;">Còn 10 sản phẩm</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                            <div class="product-item__remaining">
-                                <div class="product-item__remaining__bar" style="width: 80%;">Còn 10 sản phẩm</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                            <div class="product-item__remaining">
-                                <div class="product-item__remaining__bar" style="width: 80%;">Còn 10 sản phẩm</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                            <div class="product-item__remaining">
-                                <div class="product-item__remaining__bar" style="width: 80%;">Còn 10 sản phẩm</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                            <div class="product-item__remaining">
-                                <div class="product-item__remaining__bar" style="width: 80%;">Còn 10 sản phẩm</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="p-commit">
-                <div class="commit-item">
-                    <div class="commit-item__img"><img class="img_scale" src="../assets/images/ic-ship.png" alt=""
-                            width="73" height="73"></div>
-                    <div class="commit-item__meta">
-                        <h3 class="commit-item__meta__ttl">Ship hoả tốc 2H</h3>
-                        <p class="commit-item__meta__txt">nội thành hà nội</p>
-                    </div>
-                </div>
-                <div class="commit-item">
-                    <div class="commit-item__img"><img class="img_scale" src="../assets/images/ic-trans.png" alt=""
-                            width="73" height="73"></div>
-                    <div class="commit-item__meta">
-                        <h3 class="commit-item__meta__ttl">Miễn phí giao hàng</h3>
-                        <p class="commit-item__meta__txt">đơn từ 599k</p>
+            <div class="cate-home sp">
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b1"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
 
                     </div>
-                </div>
-                <div class="commit-item">
-                    <div class="commit-item__img"><img class="img_scale" src="../assets/images/ic-sale-3.png" alt=""
-                            width="73" height="73"></div>
-                    <div class="commit-item__meta">
-                        <h3 class="commit-item__meta__ttl">Hậu mãi trọn đời</h3>
-                        <p class="commit-item__meta__txt">14 ngày đổi mới</p>
+                    <h2 class="cate-item__ttl">Màn Hình Android Ôh2Tô</h2>
+                </a>
+
+                <a class="cate-item" href="" title="">
+                    <div class="cate-item__img  --b2"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
 
                     </div>
-                </div>
-                <div class="commit-item">
-                    <div class="commit-item__img"><img class="img_scale" src="../assets/images/ic-quality.png" alt=""
-                            width="73" height="73"></div>
-                    <div class="commit-item__meta">
-                        <h3 class="commit-item__meta__ttl">An tâm chất lượng</h3>
-                        <p class="commit-item__meta__txt">nhận hàng trước thanh toán sau</p>
+                    <h2 class="cate-item__ttl">Android Box Ô Tô</h2>
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b3"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Phim Cách Nhiệt Ô h2ô</h2>
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b4"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Camera Hành Trình</h2>
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b5"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Camera 360 Ô Tô</h2>
+                </a>
+                <a class="cate-item " href="" title="">
+                    <div class=" cate-item__img --b6"><img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+                    </div>
+                    <h2 class="cate-item__ttl">Chăm Sóc Xe</h2>
+                </a>
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b7"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Dán PPF Ô Tô</h2>
+
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b8"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Đổi Màu Nội Thất</h2>
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b9"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Độ Đèn</h2>
+
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b10"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Cốp Điện Ô Tô</h2>
+
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b11"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Cảm Biến Áp Suất Lh2p</h2>
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img --b12"> <img class="img_scale" src="./assets/images/icon-cat-1.png"
+                            alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Cảm Biến Lùi</h2>
+
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img"> <img class="img_scale" src="./assets/images/icon-cat-1.png" alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Cảnh Báo Điểm Mù</h2>
+                </a>
+
+                <a class="cate-item " href="" title="">
+                    <div class="cate-item__img"> <img class="img_scale" src="./assets/images/icon-cat-1.png" alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Độ Loa</h2>
+
+                </a>
+
+                <a class="cate-item" href="" title="">
+                    <div class="cate-item__img"> <img class="img_scale" src="./assets/images/icon-cat-1.png" alt="">
+
+                    </div>
+                    <h2 class="cate-item__ttl">Cách âm chống ồn ôtô</h2>
+                </a>
+
+            </div>
+            <div class="about-home">
+                <h2 class="about-title">
+                    AKAUTO – TRUNG TÂM ĐỒ CHƠI Ô TÔ, PHỤ KIỆN Ô TÔ CAO CẤP
+                </h2>
+                <p class="about-desc">
+                    Hơn 12 năm đồng hành cùng chủ xe, <b>AKauto</b> khẳng định vị thế trung tâm nâng cấp phụ kiện ô
+                    tô,
+                    đồ chơi ô tô cao cấp và dịch vụ chăm sóc xe toàn diện hàng đầu tại TPHCM.
+                    Từ 2019, chúng tôi tiên phong <b>“Akauto Home Service”</b> – lắp đặt phụ kiện ô tô tận nhà,
+                    giúp Quý khách tiết kiệm thời gian, an tâm về kỹ thuật và bảo hành tại chỗ.
+                    Đội ngũ kỹ thuật viên tay nghề cao, trang thiết bị hiện đại, quy trình chuẩn chỉnh,
+                    cửa hàng phụ tùng ô tô cung cấp đầy đủ các sản phẩm từ màn hình android ô tô,
+                    android box cho ô tô, phim cách nhiệt, camera hành trình, PPF ô tô bảo vệ sơn,
+                    bọc ghế da,… Tất cả nhằm nâng tầm trải nghiệm lái xe của Quý khách được trọn vẹn
+                    “Thoải Mái, An Toàn, Tiện Nghi”.
+                </p>
+                <div class="about-features features-js">
+                    <div class="feature-item">
+                        <img src="./assets/images/about-1.jpg" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <img src="./assets/images/about-2.jpg" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <img src="./assets/images/about-3.jpg" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <img src="./assets/images/about-4.jpg" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <img src="./assets/images/about-5.jpg" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <img src="./assets/images/about-6.jpg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="p-cate">
-                <div class="ttl01 txt-transform">Danh mục nổi bật</div>
-                <div class="p-cate-wrap cate-js">
-                    <a class="cate-item" href="">
-                        <img class="img_cover" width="80" height="80" src="./assets/images/img-cate.png">
-                        <div class="cate-item__ttl">Đồ gia dụng</div>
-                    </a>
-                    <a class="cate-item" href="">
-                        <img class="img_cover" width="80" height="80" src="./assets/images/img-cate.png">
-                        <div class="cate-item__ttl">Thiết bị nhà bếp</div>
-                    </a>
-                    <a class="cate-item" href="">
-                        <img class="img_cover" width="80" height="80" src="./assets/images/img-cate.png">
-                        <div class="cate-item__ttl">Thiết bị làm mát</div>
-                    </a>
-                    <a class="cate-item" href="">
-                        <img class="img_cover" width="80" height="80" src="./assets/images/img-cate.png">
-                        <div class="cate-item__ttl">Đồ gia dụng</div>
-                    </a>
-                    <a class="cate-item" href="">
-                        <img class="img_cover" width="80" height="80" src="./assets/images/img-cate.png">
-                        <div class="cate-item__ttl">Thiết bị nhà bếp</div>
-                    </a>
-                    <a class="cate-item" href="">
-                        <img class="img_cover" width="80" height="80" src="./assets/images/img-cate.png">
-                        <div class="cate-item__ttl">Thiết bị làm mát</div>
-                    </a>
+            <div class="car-search">
+                <div class="car-search__title">
+                    Tìm màn hình android<br> ô tô theo dòng xe
+                </div>
+                <div class="car-search__form">
+                    <select id="brand">
+                        <option>Chọn hãng xe...</option>
+                        <option>Toyota</option>
+                        <option>Honda</option>
+                        <option>Ford</option>
+                    </select>
+                    <select id="model" disabled>
+                        <option>Chọn dòng xe...</option>
+                        <option>Vios</option>
+                        <option>City</option>
+                        <option>Ranger</option>
+                    </select>
+                    <button class="btn-search">TÌM KIẾM</button>
                 </div>
             </div>
-            <div class="p-bnr">
-                <img class="img_cover" width="1200" height="344" src="./assets/images/banner.jpg">
+        </div>
+
+        <div class="container">
+            <div class="product-home">
+                <p class="product-home__bnr">
+                    <img class="img_cover" src="./assets/images/cate-1.jpg" alt="" width="1200" height="460">
+                </p>
+                <div class="c-title --wrap">
+                    <div class="ttl01 txt-transform">CAMERA Ô TÔ</div>
+                    <div class="product-home__cate">
+                        <a class="cate-item" href="#" title="">Camera Vietmap</a>
+                        <a class="cate-item" href="#" title="">Camera 70mai</a>
+                        <a class="cate-item" href="#" title="">Camera Utour</a>
+                    </div>
+
+                </div>
+                <div class="product-home-wrap">
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-1.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="c-view">
+                    <a class="view-more" href="#">Xem tất cả</a>
+                </div>
             </div>
             <div class="product-home">
-                <div class="c-title">
-                    <div class="ttl01 txt-transform">Quạt</div>
-                    <a class="view-more" href="#">Xem thêm</a>
-                </div>
-                <div class="product-home-wrap js-product-home">
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
-                                </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <p class="product-home__bnr">
+                    <img class="img_cover" src="./assets/images/cate-2.jpg" alt="" width="1200" height="460">
+                </p>
+                <div class="c-title --wrap">
+                    <div class="ttl01 txt-transform">màn hình Ô TÔ</div>
+                    <div class="product-home__cate">
+                        <a class="cate-item" href="#" title="">Màn hình Zestech</a>
+                        <a class="cate-item" href="#" title="">Màn hình T’eyes</a>
+                        <a class="cate-item" href="#" title="">Màn hình Safeview</a>
+                        <a class="cate-item" href="#" title="">Màn hình Utour</a>
+                        <a class="cate-item" href="#" title="">Màn hình Flyaudio</a>
+                    </div>
 
-            </div>
-            <div class="p-bnr">
-                <img class="img_cover" src="./assets/images/banner.jpg">
+                </div>
+                <div class="product-home-wrap">
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-2.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="c-view">
+                    <a class="view-more" href="#">Xem tất cả</a>
+                </div>
             </div>
             <div class="product-home">
+                <p class="product-home__bnr">
+                    <img class="img_cover" src="./assets/images/cate-3.jpg" alt="" width="1200" height="460">
+                </p>
                 <div class="c-title">
-                    <div class="ttl01 txt-transform">Đồ gia dụng</div>
-                    <a class="view-more" href="#">Xem thêm</a>
+                    <div class="ttl01 txt-transform">ANDROIBOX Ô TÔ</div>
+                    <div class="product-home__cate">
+                        <a class="cate-item" href="#" title="">Xem tất cả</a>
+                    </div>
                 </div>
-                <div class="product-home-wrap js-product-home">
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
+                <div class="product-home-wrap --col-04">
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
                             </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
                             </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
-                            </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <span class="sale-badge">-58%</span>
+                        <a class="product-item" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-3.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                                <div class="product-item__des">
+                                    <strong>Màn hình</strong>: LCD 0.96″<br>
+                                    <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                    <strong>Tính năng nổi bật</strong> :<br>
+                                    Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                    Ghi hình GPS tốc độ, tọa độ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-            </div>
-            <div class="p-bnr">
-                <img class="img_cover" src="./assets/images/banner.jpg">
+
+                </div>
+                <div class="c-view">
+                    <a class="view-more" href="#">Xem tất cả</a>
+                </div>
             </div>
             <div class="product-home">
+                <p class="product-home__bnr">
+                    <img class="img_cover" src="./assets/images/cate-4.jpg" alt="" width="1200" height="460">
+                </p>
                 <div class="c-title">
-                    <div class="ttl01 txt-transform">Thiết bị làm mát</div>
-                    <a class="view-more" href="#">Xem thêm</a>
+                    <div class="ttl01 txt-transform">CHĂM SÓC Ô TÔ</div>
+                    <div class="product-home__cate">
+                        <a class="cate-item" href="#" title="">Xem tất cả</a>
+                    </div>
                 </div>
-                <div class="product-home-wrap js-product-home">
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
+                <div class="product-home-wrap --col-06">
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
                             </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
                             </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
                             </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="product-item" href="">
-                        <span class="product-item__sale">-58%</span>
-                        <div class="product-item__img"><img class="img_cover" src="./assets/images/product.jpg" alt=""
-                                width="274" height="274">
-                        </div>
-                        <div class="product-item__meta">
-                            <div class="product-item__label">NMIMART</div>
-                            <h3 class="product-item__ttl">Quạt phun sương NMIMART - QCT01</h3>
-                            <div class="product-price">
-                                <span class="new-price">1.045.000đ</span>
-                                <span class="old-price">2.500.000đ</span>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
                             </div>
-                            <div class="product-item__rates">
-                                <div class="product-item__rates__star">
-                                    <i class="ic_rates"></i>5.0
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
                                 </div>
-                                <div class="product-item__buyed"><span class="product-item__buyed__ttl">Đã bán:
-                                    </span>40000</div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-01" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-4.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">1.045.000₫</span>
+                                    <span class="old-price">2.500.000₫</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="c-view">
+                    <a class="view-more" href="#">Xem tất cả</a>
                 </div>
             </div>
-            <div class="p-bnr">
-                <img class="img_cover" src="./assets/images/banner.jpg">
+            <div class="product-home">
+                <p class="product-home__bnr">
+                    <img class="img_cover" src="./assets/images/cate-5.jpg" alt="" width="1200" height="460">
+                </p>
+                <div class="c-title">
+                    <div class="ttl01 txt-transform">ĐỔI MÀU NỘI THẤT Ô TÔ</div>
+                    <div class="product-home__cate">
+                        <a class="cate-item" href="#" title="">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="product-home-wrap --col-04">
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-box">
+                        <a class="product-item --cuz-02" href="">
+                            <div class="product-item__img"><img class="img_cover" src="./assets/images/sp-5.jpg" alt=""
+                                    width="274" height="274">
+                            </div>
+                            <div class="product-item__meta">
+                                <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                                <div class="product-price">
+                                    <span class="new-price">Liên hệ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="c-view">
+                    <a class="view-more" href="#">Xem tất cả</a>
+                </div>
+            </div>
+            <div class="car-accessories">
+                <div class="ttl01 txt-transform">TƯ VẤN ĐỘ XE VÀ NÂNG CẤP PHỤ KIỆN Ô TÔ</div>
+                <div class="access-js">
+                    <div>
+                        <div class="access-item__img"><a class="thumb" href="" title=""><img class="img_scale"
+                                    width="200" height="200" src="./assets/images/dx-1.jpg"></a></div>
+                        <h3 class="access-item__ttl"><a class="ttl" href="" title=""> Phụ kiện Honda Civic</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <div class="access-item__img"><a class="thumb" href="" title=""><img class="img_scale"
+                                    width="200" height="200" src="./assets/images/dx-1.jpg"></a></div>
+                        <h3 class="access-item__ttl"><a class="ttl" href="" title=""> Phụ kiện Honda Civic</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <div class="access-item__img"><a class="thumb" href="" title=""><img class="img_scale"
+                                    width="200" height="200" src="./assets/images/dx-1.jpg"></a></div>
+                        <h3 class="access-item__ttl"><a class="ttl" href="" title=""> Phụ kiện Honda Civic</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <div class="access-item__img"><a class="thumb" href="" title=""><img class="img_scale"
+                                    width="200" height="200" src="./assets/images/dx-1.jpg"></a></div>
+                        <h3 class="access-item__ttl"><a class="ttl" href="" title=""> Phụ kiện Honda Civic</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <div class="access-item__img"><a class="thumb" href="" title=""><img class="img_scale"
+                                    width="200" height="200" src="./assets/images/dx-1.jpg"></a></div>
+                        <h3 class="access-item__ttl"><a class="ttl" href="" title=""> Phụ kiện Honda Civic</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <div class="access-item__img"><a class="thumb" href="" title=""><img class="img_scale"
+                                    width="200" height="200" src="./assets/images/dx-1.jpg"></a></div>
+                        <h3 class="access-item__ttl"><a class="ttl" href="" title=""> Phụ kiện Honda Civic</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="p-utility">
+                <div class="ttl01 txt-transform">Phụ kiện tiện ích</div>
+                <div class="p-utility-scroll">
+                    <div class="p-utility-wrap">
+                        <a href="#" class="utility-item --c1">
+                            <span class="utility-item__ttl">Bộ kích bình</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c2">
+                            <span class="utility-item__ttl">Bom lốp</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c3">
+                            <span class="utility-item__ttl">Máy hút bụi<br>cầm tay</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c4">
+                            <span class="utility-item__ttl">Máy lọc không khí</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c5">
+                            <span class="utility-item__ttl">Nước hoa</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c6">
+                            <span class="utility-item__ttl">Móc khóa</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c7">
+                            <span class="utility-item__ttl">Sạc điện thoại</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c8">
+                            <span class="utility-item__ttl">Giá đỡ điện thoại</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c9">
+                            <span class="utility-item__ttl">Camera 360 ô tô</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c10">
+                            <span class="utility-item__ttl">Gối tựa đầu,<br>tựa lưng</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+                        <!---->
+                        <a href="#" class="utility-item --c10">
+                            <span class="utility-item__ttl">Bộ kích bình</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c9">
+                            <span class="utility-item__ttl">Bom lốp</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c8">
+                            <span class="utility-item__ttl">Máy hút bụi<br>cầm tay</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c7">
+                            <span class="utility-item__ttl">Máy lọc không khí</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c6">
+                            <span class="utility-item__ttl">Nước hoa</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c5">
+                            <span class="utility-item__ttl">Móc khóa</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c4">
+                            <span class="utility-item__ttl">Sạc điện thoại</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c3">
+                            <span class="utility-item__ttl">Giá đỡ điện thoại</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c2">
+                            <span class="utility-item__ttl">Camera 360 ô tô</span>
+                            <img src="./assets/images/pk-1.png" alt="" width="200" height="229">
+                        </a>
+
+                        <a href="#" class="utility-item --c1">
+                            <span class="utility-item__ttl">Gối tựa đầu,<br>tựa lưng</span>
+                            <img src="./assets/images/pk-2.png" alt="" width="200" height="229">
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="p-news">
-                <div class="c-title">
-                    <div class="ttl01 txt-transform">Tin tức nổi bật</div>
-                    <a class="view-more" href="#">Xem thêm</a>
+                <div class="c-title --wrap">
+                    <div class="ttl01 txt-transform">KIẾN THỨC Ô TÔ TỪ CHUYÊN GIA</div>
+                    <div class="product-home__cate">
+                        <a class="cate-item" href="#" title="">Xem thêm kiến thức xe</a>
+                    </div>
                 </div>
 
                 <div class="p-news-home">
-                    <div class="main-news">
-                        <a class="main-news__img" href="">
-                            <img class="main-news__img img_scale" src="./assets/images/main-new.jpg" alt="" width="676"
-                                height="403">
-                        </a>
-                        <div class="main-news__meta">
-                            <h3><a class="main-news__ttl" href="#">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết
-                                    Đón Lộc Đầu Năm
-                                </a></h3>
-                            <div class="main-news__txt">Chọn người xông đất đầu năm là một phong tục truyền thống đẹp
-                                của người Việt, mang ý nghĩa cầu chúc cho gia đình một năm mới đầy bình an, thịnh vượng
-                                và thành công. Năm 2025, với sự chuyển giao năng lượng từ năm Quý Mão sang năm Ất Tỵ ...
-                            </div>
-                            <div class="main-news__bot">
-                                <div class="news-item__date --noline">19 Tháng 4 năm 2025</div>
-                                <a href="#" title="" class="view-more-new">Xem thêm</a>
-                            </div>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
                         </div>
-                    </div>
-                    <div class="second-news">
-                        <a class="news-item" href="">
-                            <div class="news-item__img">
-                                <img class="img_scale" src="./assets/images/new-2.jpg" alt="" width="244" height="153">
-                            </div>
-                            <div class="news-item__meta">
-                                <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
-                                    Đầu Năm</h3>
-                                <div class="news-item__date">19 Tháng 4 năm 2025</div>
-                            </div>
-                        </a>
-                        <a class="news-item" href="">
-                            <div class="news-item__img">
-                                <img class="img_scale" src="./assets/images/new-3.jpg" alt="" width="244" height="153">
-                            </div>
-                            <div class="news-item__meta">
-                                <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
-                                    Đầu Năm</h3>
-                                <div class="news-item__date">19 Tháng 4 năm 2025</div>
-                            </div>
-                        </a>
-                        <a class="news-item" href="">
-                            <div class="news-item__img">
-                                <img class="img_scale" src="./assets/images/new-4.jpg" alt="" width="244" height="153">
-                            </div>
-                            <div class="news-item__meta">
-                                <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
-                                    Đầu Năm</h3>
-                                <div class="news-item__date">19 Tháng 4 năm 2025</div>
-                            </div>
-                        </a>
-                        <a class="news-item" href="">
-                            <div class="news-item__img">
-                                <img class="img_scale" src="./assets/images/new-5.jpg" alt="" width="244" height="153">
-                            </div>
-                            <div class="news-item__meta">
-                                <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
-                                    Đầu Năm</h3>
-                                <div class="news-item__date">19 Tháng 4 năm 2025</div>
-                            </div>
-                        </a>
-                    </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item" href="" title="">
+                        <div class="news-item__img">
+                            <img class="img_cover" src="./assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+                            <div class="news-item__cate">Kiến thức ô tô</div>
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+                            <div class="news-item__date">09/02/2026</div>
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="c-description justify">
-                <h2>NMIMART Tiện ích thông minh</h2>
-                NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các sản phẩm gia dụng
-                chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người tiêu dùng những
-                giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản phẩm và nâng
-                cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các sản phẩm gia
-                dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người tiêu dùng
-                những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản phẩm và
-                nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các sản phẩm
-                gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người tiêu
-                dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản phẩm
-                và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các sản
-                phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.NMI MART là một trong những tổng kho gia dụng uy tín tại Việt Nam, chuyên cung cấp các
-                sản phẩm gia dụng chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Với sứ mệnh mang đến cho người
-                tiêu dùng những giải pháp tiện ích cho cuộc sống hiện đại, NMI MART không ngừng đa dạng hóa danh mục sản
-                phẩm và nâng cao.
+            <div class="p-partner">
+                <div class="c-title">
+                    <div class="ttl01 txt-transform">ĐỐI TÁC CHIẾN LƯỢC</div>
+                </div>
+                <div class="partner-js">
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-1.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-2.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-3.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-4.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-5.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-6.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-7.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-8.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-9.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-10.png" alt=""></p>
+                    <p class="item"><img class="img-scale" src="./assets/images/dt-11.png" alt=""></p>
+                </div>
             </div>
         </div>
     </main>
-    <div id="footer"></div>
-    <div class="box-support">
-        <div class="support-content">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
 
-            <a class="btn-support" href="https://zalo.me/">
-                <img src="./assets/images/ic-zalo.png" alt="">
-            </a>
-            <a class="btn-support" href="">
-                <img src="./assets/images/ic-messenger.png" alt="">
-            </a>
-            <a class="btn-support --tel" href="tel:">
-                <img src="./assets/images/ic-call-3.png" alt="">
-            </a>
-            <div class="btn-top" id="backToTop">
-                <img src="./assets/images/ic-top.png" alt="">
+                <!-- LEFT -->
+                <div class="footer-col">
+                    <h2>HỆ THỐNG SHOWROOM AKAUTO<br>TRUNG TÂM CHĂM SÓC, PHỤ KIỆN Ô TÔ CAO CẤP</h2>
+                    <ul class="address">
+                        <li>Showroom 1: 678 Trường Chinh, phường Tân Bình, TP.HCM</li>
+                        <li>Showroom 2: 34-36 Nguyễn Hữu Cảnh, phường Thạnh Mỹ Tây, TP.HCM</li>
+                        <li>Hotline: 090 3939 683</li>
+                    </ul>
+
+                    <h2>CÔNG TY TNHH TMDV KINH DOANH PHỤ TÙNG Ô TÔ ANH KHÔI</h2>
+                    <ul class="company f-lst">
+                        <li>Trụ Sở: 27J5 Đường DN12, Khu Phố 4, Khu dân cư An Sương, Phường Tân Hưng Thuận, Quận
+                            12,Thành phố Hồ Chí Minh</li>
+                        <li>MST: 0315458241</li>
+                        <li>Ngày cấp: 04/01/2019</li>
+                        <li>Nơi cấp: Sở KH & ĐT TP.HCM</li>
+                        <li>Email: akauto.com.vn@gmail.com</li>
+                    </ul>
+
+                    <h2>SẢN PHẨM / DỊCH VỤ</h2>
+                    <ul class="service f-lst">
+                        <li><a class="hover" href="">Màn hình Android ô tô</a></li>
+                        <li><a class="hover" href="">Android box ô tô</a></li>
+                        <li><a class="hover" href="">Phim cách nhiệt ô tô</a></li>
+                        <li><a class="hover" href="">Camera hành trình</a></li>
+                        <li><a class="hover" href="">Camera 360 ô tô</a></li>
+                        <li><a class="hover" href="">Bọc ghế da ô tô</a></li>
+                        <li><a class="hover" href="">Chăm sóc ô tô</a></li>
+                        <li><a class="hover" href="">Dán PPF ô tô</a></li>
+                        <li><a class="hover" href="">Cảm biến áp suất lốp</a></li>
+                        <li><a class="hover" href="">Cửa hít ô tô</a></li>
+                        <li><a class="hover" href="">Độ cốp điện ô tô</a></li>
+                        <li><a class="hover" href="">Đổi màu nội thất ô tô</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- CENTER -->
+                <div class="footer-col --flex">
+                    <div class="consulting">
+                        <h2>HỖ TRỢ KHÁCH HÀNG</h2>
+                        <ul class="f-lst">
+                            <li><a class="hover" href="#">Bảo hành - Đổi trả - Hoàn tiền</a></li>
+                            <li><a class="hover" href="#">Giao hàng - Vận chuyển</a></li>
+                            <li><a class="hover" href="#">Thanh toán</a></li>
+                        </ul>
+
+                        <h2>DỊCH VỤ TIỆN ÍCH</h2>
+                        <ul class="f-lst">
+                            <li><a class="hover" href="#">Trả góp lãi suất 0%</a></li>
+                            <li><a class="hover" href="#">Quẹt thẻ tín dụng</a></li>
+                            <li><a class="hover" href="#">Lắp đặt tận nơi miễn phí</a></li>
+                        </ul>
+
+                        <h2>THÔNG TIN HỢP TÁC</h2>
+                        <ul class="f-lst">
+                            <li><a class="hover" href="#">Định hướng kinh doanh</a></li>
+                            <li><a class="hover" href="#">Hợp tác kinh doanh</a></li>
+                            <li><a class="hover" href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-more">
+                        <div class="bct">
+                            <a target="_blank"
+                                href="https://www.dmca.com/Protection/Status.aspx?ID=0680f3d7-abcd-4890-b90e-be2069e57cfd&refurl=https://akauto.com.vn/"><img
+                                    width="135" height="44" src="./assets/images/DMCA-akaut-1.png" alt=""></a>
+                            <a target="_blank" href="http://online.gov.vn/Home/WebDetails/138323"><img width="173"
+                                    height="66" src="./assets/images/dang-ky-bo-cong-thuong-akauto-1.png" alt=""></a>
+                        </div>
+                        <div class="f-social">
+                            <a class="social-item" href="#"><img src="./assets/images/ic-facebook.png" alt=""></a>
+                            <a class="social-item" href="#"><img src="./assets/images/ic-tiktok.png" alt=""></a>
+                            <a class="social-item" href="#"><img src="./assets/images/ic-instagram.png" alt=""></a>
+                            <a class="social-item" href="#"><img src="./assets/images/ic-pinterest.png" alt=""></a>
+                            <a class="social-item" href="#"><img src="./assets/images/ic-youtube.png" alt=""></a>
+                            <a class="social-item" href="#"><img src="./assets/images/ic-paper.png" alt=""></a>
+                            <a class="social-item" href="#"><img src="./assets/images/ic-zalo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="footer-col">
+                    <h3>Cửa Hàng Tân Bình</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62705.12078302356!2d106.63533!3d10.805947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529f26167c1e3%3A0x971bf4ec49da52!2zQUthdXRvIC0gVHJ1bmcgdMOibSBjaMSDbSBzw7NjICYgcGjhu6Uga2nhu4duIMO0IHTDtCBjYW8gY-G6pXA!5e0!3m2!1svi!2sus!4v1772379557782!5m2!1svi!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <br>
+                    <h3 class="mrg-top">Cửa Hàng Bình Thạnh</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.172336321359!2d106.715051!3d10.788850000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294e535bc393%3A0x6d733de6709bb3ab!2sAKauto%20-%20Binh%20Thanh%20District!5e0!3m2!1sen!2sus!4v1772379575923!5m2!1sen!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
             </div>
         </div>
+
+        <div class="copyright">
+            Copyright 2025 © <strong>AKauto</strong> |
+            Chịu trách nhiệm nội dung: <strong>Trần Phú Quý</strong>
+        </div>
+    </footer>
+    <div id="backToTop"><i class="fa-solid fa-angle-up"></i></div>
+    <!-- Nút liên hệ góc trái -->
+    <button id="contactBtn"><img width="186" height="61" class="img-scale" src="./assets/images/ic-contact.gif"
+            alt=""></button>
+
+    <!-- Popup -->
+    <div id="contactPopup" class="popup">
+        <div class="popup-box">
+
+            <span class="close">&times;</span>
+
+            <div class="popup-left">
+                <h2>NHẬN TƯ VẤN</h2>
+
+                <p>
+                    Cảm ơn Quý khách đã lựa chọn Akauto<br>
+                    Bắt đầu cuộc trò chuyện theo các cách sau:
+                </p>
+
+                <div class="popup-contact">
+                    <a href="https://zalo.me/0903939683" class="c-contact"><img width="186" height="61"
+                            class="img-scale" src="./assets/images/ic-zalo-2.png" alt=""> Zalo</a>
+                    <a href="tel:0903939683" class="c-contact"><img width="186" height="61" class="img-scale"
+                            src="./assets/images/ic-phone.png" alt=""> Hotline</a>
+                </div>
+                <p class="sp"><img width="240" height="183" class="img-scale" src="./assets/images/support-sp.jpg"
+                        alt="">
+                </p>
+                <div class="popup-form">
+                    <input type="text" name="fullname" placeholder="Họ và tên">
+                    <input type="text" name="phone" placeholder="Số điện thoại">
+
+                    <button class="submit">GỬI YÊU CẦU</button>
+                </div>
+            </div>
+
+            <div class="popup-right pc">
+                <img width="240" height="183" class="img-scale" src="./assets/images/support.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="fix-footer sp">
+        <a class="f-link" href="#" title=""><span class="ic-link home"></span>AKauto</a>
+        <a class="f-link" href="#" title=""><span class="ic-link sale"></span>Khuyến mãi</a>
+        <div id="btnCategory" class="f-link" href="#" title=""><span class="ic-link cate"></span>Danh mục</div>
+        <a class="f-link" href="#" title=""><span class="ic-link new"></span>Kiến thức</a>
+    </div>
+    <div class="category-panel" id="categoryPanel">
+        <!-- CỘT TRÁI — DANH MỤC CHA -->
+        <div class="cat-parent">
+            <div class="parent-item active" data-id="1"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">MÀN HÌNH Ô TÔ</div>
+            <div class="parent-item" data-id="2"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">ANDROID BOX Ô TÔ</div>
+            <div class="parent-item" data-id="3"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">DÁN PHIM CÁCH NHIỆT</div>
+            <div class="parent-item" data-id="4"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">CAMERA HÀNH TRÌNH</div>
+            <div class="parent-item" data-id="5"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">CAMERA 360 ôtô</div>
+            <div class="parent-item" data-id="6"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">Chăm sóc ôtô</div>
+            <div class="parent-item" data-id="7"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">DÁN PPF Ô TÔ</div>
+            <div class="parent-item" data-id="8"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">ĐỔI MÀU NỘI THẤT</div>
+            <div class="parent-item" data-id="9"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">ĐỘ ĐÈN Ô TÔ</div>
+            <div class="parent-item" data-id="10"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">Cảm biến áp suất lốp</div>
+            <div class="parent-item" data-id="11"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">Phụ kiện an toàn</div>
+            <div class="parent-item" data-id="12"><img width="40" height="40" src="./assets/images/icon-cat-1.png"
+                    alt="">SALE GIÁ TỐT</div>
+        </div>
+
+        <!-- CỘT PHẢI — DANH MỤC CON -->
+        <div class="cat-child">
+
+            <div class="child-group active" data-id="1">
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Màn
+                    hình
+                    android ô tô</div>
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Màn
+                    hình Zestech</div>
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Màn
+                    hình T’Eyes</div>
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Màn
+                    hình Safeview</div>
+            </div>
+
+            <div class="child-group" data-id="2">
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg"
+                        alt="">Android box Carlinkit</div>
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg"
+                        alt="">Android box TBox</div>
+            </div>
+
+            <div class="child-group" data-id="3">
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Phim
+                    3M</div>
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Phim
+                    Llumar</div>
+            </div>
+
+            <div class="child-group" data-id="4">
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Camera
+                    Vietmap</div>
+                <div class="child-item"><img width="40" height="40" src="./assets/images/icon-cat-con.jpg" alt="">Camera
+                    Xiaomi</div>
+            </div>
+
+        </div>
+
     </div>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <script>
-        function initCart() {
-            const btn_show_cart = document.getElementById("btn-show-cart");
-            const box_cart = document.getElementById("box-cart");
-
-            if (btn_show_cart && box_cart) {
-                // Mở cart
-                btn_show_cart.addEventListener("click", function (e) {
-                    e.stopPropagation();
-                    box_cart.classList.add("show");
-                });
-
-                // Click trong cart không đóng
-                box_cart.addEventListener("click", function (e) {
-                    e.stopPropagation();
-                });
-
-                // Click ngoài thì đóng
-                document.addEventListener("click", function () {
-                    box_cart.classList.remove("show");
-                });
-            }
-        }
-        fetch("../inc/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-
-                initCart(); // 🔥 gọi JS sau khi header đã có
-            });
-
-        fetch("../inc/footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
-    </script>
     <script src="./assets/js/script.js"></script>
 </body>
