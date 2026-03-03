@@ -7,12 +7,12 @@ app.init = function () {
   app.anchorLink();
   app.slick();
   app.inscrease();
-  app.viewmore();
+  // app.viewmore();
   app.quality();
   app.addtocart();
   // app.countdown();
-  app.copycode();
-  app.fontsize();
+  // app.copycode();
+  // app.fontsize();
   // app.popup();
   app.checkall();
   // app.liked();
@@ -260,6 +260,83 @@ app.slick = function () {
       },
     ],
   });
+  $(".news-reviews-js").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  $(".why-js").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  function initServiceSlider() {
+    if ($(window).width() < 768) {
+      // nếu chưa có slick thì mới init
+      if (!$(".service-js").hasClass("slick-initialized")) {
+        $(".service-js").slick({
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+        });
+      }
+    } else {
+      // nếu đang là slick thì destroy
+      if ($(".service-js").hasClass("slick-initialized")) {
+        $(".service-js").slick("unslick");
+      }
+    }
+  }
+
+  // chạy khi load
+  initServiceSlider();
+
+  // chạy khi resize
+  $(window).on("resize", function () {
+    initServiceSlider();
+  });
+
   // $(".sale-js").slick({
   //   slidesToShow: 4,
   //   slidesToScroll: 1,
@@ -390,41 +467,41 @@ app.slick = function () {
   // });
 };
 
-app.fontsize = function () {
-  let fontSize = 1.6; // rem
-  const minSize = 0.75; // 12px
-  const maxSize = 5.5; // 24px
-  const step = 0.1;
-  const fontPlus = document.querySelector(".font-plus");
-  const fontMinus = document.querySelector(".font-minus");
-  const changeFont = document.querySelector(".change-font");
+// app.fontsize = function () {
+//   let fontSize = 1.6; // rem
+//   const minSize = 0.75; // 12px
+//   const maxSize = 5.5; // 24px
+//   const step = 0.1;
+//   const fontPlus = document.querySelector(".font-plus");
+//   const fontMinus = document.querySelector(".font-minus");
+//   const changeFont = document.querySelector(".change-font");
 
-  if (fontPlus && fontMinus && changeFont) {
-    fontPlus.addEventListener("click", () => {
-      if (fontSize < maxSize) {
-        fontSize = +(fontSize + step).toFixed(2);
-        changeFont.style.fontSize = fontSize + "rem";
-      }
-    });
+//   if (fontPlus && fontMinus && changeFont) {
+//     fontPlus.addEventListener("click", () => {
+//       if (fontSize < maxSize) {
+//         fontSize = +(fontSize + step).toFixed(2);
+//         changeFont.style.fontSize = fontSize + "rem";
+//       }
+//     });
 
-    fontMinus.addEventListener("click", () => {
-      if (fontSize > minSize) {
-        fontSize = +(fontSize - step).toFixed(2);
-        changeFont.style.fontSize = fontSize + "rem";
-      }
-    });
-  }
-};
-app.viewmore = function () {
-  document.querySelectorAll(".progress").forEach((p) => {
-    let num = parseInt(p.dataset.num);
-    let total = parseInt(p.dataset.total);
-    let percent = Math.round((num / total) * 100);
+//     fontMinus.addEventListener("click", () => {
+//       if (fontSize > minSize) {
+//         fontSize = +(fontSize - step).toFixed(2);
+//         changeFont.style.fontSize = fontSize + "rem";
+//       }
+//     });
+//   }
+// };
+// app.viewmore = function () {
+//   document.querySelectorAll(".progress").forEach((p) => {
+//     let num = parseInt(p.dataset.num);
+//     let total = parseInt(p.dataset.total);
+//     let percent = Math.round((num / total) * 100);
 
-    // set width cho thanh
-    p.querySelector(".bar").style.width = percent + "%";
-  });
-};
+//     // set width cho thanh
+//     p.querySelector(".bar").style.width = percent + "%";
+//   });
+// };
 app.quality = function () {
   document.querySelectorAll(".c-quantity").forEach((product) => {
     const input = product.querySelector(".qty");
@@ -443,44 +520,44 @@ app.quality = function () {
   });
 };
 app.addtocart = function () {};
-app.copycode = function () {
-  document.querySelectorAll(".btn-copy").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const textToCopy = btn.dataset.copy || btn.innerText;
+// app.copycode = function () {
+//   document.querySelectorAll(".btn-copy").forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       const textToCopy = btn.dataset.copy || btn.innerText;
 
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          changeCopyText(btn);
-        });
-      } else {
-        fallbackCopy(textToCopy);
-        changeCopyText(btn);
-      }
-    });
-  });
+//       if (navigator.clipboard && window.isSecureContext) {
+//         navigator.clipboard.writeText(textToCopy).then(() => {
+//           changeCopyText(btn);
+//         });
+//       } else {
+//         fallbackCopy(textToCopy);
+//         changeCopyText(btn);
+//       }
+//     });
+//   });
 
-  function fallbackCopy(text) {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    textarea.style.position = "fixed";
-    textarea.style.opacity = 0;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-  }
+//   function fallbackCopy(text) {
+//     const textarea = document.createElement("textarea");
+//     textarea.value = text;
+//     textarea.style.position = "fixed";
+//     textarea.style.opacity = 0;
+//     document.body.appendChild(textarea);
+//     textarea.select();
+//     document.execCommand("copy");
+//     document.body.removeChild(textarea);
+//   }
 
-  function changeCopyText(btn) {
-    const oldText = btn.innerText;
-    btn.innerText = "Đã sao chép";
-    btn.classList.add("copied");
+//   function changeCopyText(btn) {
+//     const oldText = btn.innerText;
+//     btn.innerText = "Đã sao chép";
+//     btn.classList.add("copied");
 
-    setTimeout(() => {
-      btn.innerText = oldText;
-      btn.classList.remove("copied");
-    }, 2000);
-  }
-};
+//     setTimeout(() => {
+//       btn.innerText = oldText;
+//       btn.classList.remove("copied");
+//     }, 2000);
+//   }
+// };
 const backToTop = document.getElementById("backToTop");
 if (backToTop) {
   window.addEventListener("scroll", function () {
@@ -518,29 +595,7 @@ document.querySelectorAll(".num-price").forEach((input) => {
     this.value = Number(value).toLocaleString("vi-VN");
   });
 });
-// app.rating = function () {
-//   document.querySelectorAll(".star-rating").forEach((el) => {
-//     el.style.setProperty("--rating", el.dataset.rating);
-//   });
-//   document.querySelectorAll(".star-rating span").forEach((star) => {
-//     star.addEventListener("mouseenter", function () {
-//       const rating = this.dataset.star;
-//       this.parentElement.style.setProperty("--rating", rating);
-//     });
 
-//     star.addEventListener("mouseleave", function () {
-//       const rating = this.parentElement.dataset.rating || 0;
-//       this.parentElement.style.setProperty("--rating", rating);
-//     });
-
-//     // Click để chọn
-//     star.addEventListener("click", function () {
-//       const rating = this.dataset.star;
-//       this.parentElement.dataset.rating = rating;
-//       this.parentElement.style.setProperty("--rating", rating);
-//     });
-//   });
-// };
 document.querySelectorAll(".ic-sub").forEach((icon) => {
   icon.addEventListener("click", function (e) {
     e.stopPropagation();
@@ -606,15 +661,7 @@ $(document).ready(function () {
       // Nếu muốn chỉ add (không toggle), dùng: target.classList.add('active');
     });
   }
-  const btn = document.getElementById("view-more-detail");
-  const desc = document.getElementById("product-detail");
-  if (btn) {
-    btn.addEventListener("click", function () {
-      desc.style.maxHeight = desc.scrollHeight + "px";
-      desc.classList.add("show");
-      this.style.display = "none";
-    });
-  }
+
   ///backtotop
 
   const backToTopBtn = document.getElementById("backToTop");
@@ -732,6 +779,49 @@ $(document).ready(function () {
   //toc
   $("#tocToggle").on("click", function () {
     $("#tocBody").slideToggle(250);
+  });
+  ///load more
+
+  const btnmore = document.getElementById("view-more-detail");
+  const content = document.getElementById("contentText");
+  const fade = document.querySelector(".fade-overlay");
+  if (btnmore && content) {
+    btnmore.addEventListener("click", function () {
+      content.classList.toggle("active");
+      btnmore.style.display = "none";
+      fade.style.display = "none";
+    });
+  }
+
+  ///faq
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach((item) => {
+    item.querySelector(".faq-question").addEventListener("click", () => {
+      items.forEach((i) => {
+        if (i !== item) i.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+  //rate
+
+  $(".star-rating").each(function () {
+    let rating = parseInt($(this).data("rating")) || 0;
+    let html = "";
+
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        // sao vàng đặc
+        html += '<i class="fa-solid fa-star"></i>';
+      } else {
+        // sao viền vàng
+        html += '<i class="fa-regular fa-star"></i>';
+      }
+    }
+
+    $(this).html(html);
   });
 
   app.init();

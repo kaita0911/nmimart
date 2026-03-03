@@ -1,7 +1,9 @@
 @import "common/variables";
 @import "common/mixin";
 
+
 .p-news {
+    margin-top: 2rem;
 
     @include mq("md", min) {
         padding-bottom: rem(16px);
@@ -73,11 +75,11 @@
         }
 
         .sidebar-news {
-            margin-top: rem(30px);
+
 
             @include mq("md", min) {
                 margin-top: 0;
-                width: rem(340px);
+                width: rem(400px);
                 flex-shrink: 0;
             }
 
@@ -118,6 +120,7 @@
             &__categories {
                 padding: 0;
                 list-style: none;
+                margin: 0;
 
                 li {
 
@@ -151,45 +154,32 @@
                 align-items: center;
                 margin-bottom: rem(15px);
 
-                @include mq("md", min) {
-                    padding: 0 rem(15px);
-                }
+
 
                 &__img {
                     overflow: hidden;
-                    width: rem(100px);
-                    height: rem(70px);
+                    width: rem(80px);
+                    height: rem(80px);
                     flex-shrink: 0;
 
                     @include mq("md", min) {
-                        width: rem(100px);
-                        height: rem(75px);
+                        width: 8rem;
+                        height: 8rem;
                     }
                 }
 
                 &__ttl {
 
-                    line-height: 1.3;
+                    line-height: 1.5;
                     text-transform: capitalize;
                     display: -webkit-box;
                     -webkit-line-clamp: 3;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
-                    font-size: rem(15px);
-                }
-
-                &__date {
-                    color: #888888;
-                    font-size: rem(12px);
-                    background: url(../images/ic-calendar-3.png) no-repeat left center;
-                    background-size: rem(12px) rem(12px);
-
-                    padding-left: rem(17px);
+                    font-size: rem(14px);
 
                     @include mq("md", min) {
-                        font-size: rem(14px);
-                        padding-left: rem(15px);
-                        background-size: rem(10px);
+                        font-size: rem(15px);
                     }
                 }
 
@@ -201,9 +191,9 @@
             }
         }
 
-        .sidebar-bnr {
-            margin-bottom: rem(52px);
-        }
+        // .sidebar-bnr {
+        //     margin-bottom: rem(52px);
+        // }
     }
 
     // .new-grid-item {

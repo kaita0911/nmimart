@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.p-news {
+  margin-top: 2rem;
+}
 @media (min-width: 768px) {
   .p-news {
     padding-bottom: 1.6rem;
@@ -62,13 +65,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.p-news-wrap .sidebar-news {
-  margin-top: 3rem;
-}
 @media (min-width: 768px) {
   .p-news-wrap .sidebar-news {
     margin-top: 0;
-    width: 34rem;
+    width: 40rem;
     flex-shrink: 0;
   }
 }
@@ -78,7 +78,7 @@
 }
 .p-news-wrap .sidebar-news__ttl {
   font-size: 1.8rem;
-  color: #b20110;
+  color: #d80019;
   position: relative;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
@@ -94,7 +94,7 @@
   content: "";
   width: 4rem;
   height: 0.3rem;
-  background: #b20110;
+  background: #d80019;
   left: 0;
   bottom: 0;
 }
@@ -107,6 +107,7 @@
 .p-news-wrap .sidebar-news__categories {
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 .p-news-wrap .sidebar-news__categories li a {
   display: flex;
@@ -123,7 +124,7 @@
   background: #111;
 }
 .p-news-wrap .sidebar-news__categories li a.active, .p-news-wrap .sidebar-news__categories li a:hover {
-  color: #b20110;
+  color: #d80019;
 }
 .p-news-wrap .sidebar-news-items {
   display: flex;
@@ -131,49 +132,32 @@
   align-items: center;
   margin-bottom: 1.5rem;
 }
-@media (min-width: 768px) {
-  .p-news-wrap .sidebar-news-items {
-    padding: 0 1.5rem;
-  }
-}
 .p-news-wrap .sidebar-news-items__img {
   overflow: hidden;
-  width: 10rem;
-  height: 7rem;
+  width: 8rem;
+  height: 8rem;
   flex-shrink: 0;
 }
 @media (min-width: 768px) {
   .p-news-wrap .sidebar-news-items__img {
-    width: 10rem;
-    height: 7.5rem;
+    width: 8rem;
+    height: 8rem;
   }
 }
 .p-news-wrap .sidebar-news-items__ttl {
-  line-height: 1.3;
+  line-height: 1.5;
   text-transform: capitalize;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 1.5rem;
-}
-.p-news-wrap .sidebar-news-items__date {
-  color: #888888;
-  font-size: 1.2rem;
-  background: url(../images/ic-calendar-3.png) no-repeat left center;
-  background-size: 1.2rem 1.2rem;
-  padding-left: 1.7rem;
+  font-size: 1.4rem;
 }
 @media (min-width: 768px) {
-  .p-news-wrap .sidebar-news-items__date {
-    font-size: 1.4rem;
-    padding-left: 1.5rem;
-    background-size: 1rem;
+  .p-news-wrap .sidebar-news-items__ttl {
+    font-size: 1.5rem;
   }
 }
 .p-news-wrap .sidebar-news-items:hover .sidebar-news-items__ttl {
-  color: #b20110;
-}
-.p-news-wrap .sidebar-bnr {
-  margin-bottom: 5.2rem;
+  color: #d80019;
 }/*# sourceMappingURL=news.css.map */

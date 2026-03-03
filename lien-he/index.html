@@ -9,11 +9,11 @@
     <meta name="description" content="{[#SITE_DESCRIPTION#]}">
     <meta name="keywords" content="{[#SITE_KEYWORDS#]}">
     <link rel="shortcut icon" href="" type="image/x-icon" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Fancybox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -22,106 +22,60 @@
 
 
 <body>
-    <div id="header"></div>
     <main>
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="container">
-                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
-                        <meta itemprop="position" content="1" />
-                    </li>
-                    <!-- <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="/shop"><span itemprop="name">Liên hệ</span></a>
-                        <meta itemprop="position" content="2" />
-                    </li> -->
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
-                        <span itemprop="name">Liên hệ</span>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                </ol>
-            </div>
-        </nav>
-
         <div class="p-contact">
             <div class="container">
-                <h1 class="ttl01 txt-center" style="display: none;">Liên Hệ</h1>
-                <div class="p-contact-info">
-                    <div class="p-contact-item">
-                        <div class="p-contact-item__icon --address"><img src="../assets/images/ic-address-3.png" alt=""
-                                width="35" height="42"></div>
-                        <div class="p-contact-item__txt">14 Hồ Linh Quang, Văn Chương, Đống Đa, Hà Nội</div>
+                <h1 class="ttl01 txt-center --contact"><span>Liên Hệ</span></h1>
+                <div class="p-contact-wrap">
+                    <div class="p-contact-form">
+                        <h3 class="p-contact__ttl">ĐÓNG GÓP Ý KIẾN/ TƯ VẤN NHANH</h3>
+                        <p>Đội ngũ chuyên gia tại AKauto sẽ liên hệ cho anh/ chị ngay ạ!</p>
+                        <input class="fr-field" type="text" placeholder="Cho em xin tên của anh/ chị..." id="name">
+                        <input class="fr-field" type="text" placeholder="Số điện thoại của anh/ chị..." id="phone">
+                        <button type="submit" class="btn-send">Gửi yêu cầu</button>
                     </div>
-                    <div class="p-contact-item">
-                        <div class="p-contact-item__icon --tel"><img src="../assets/images/ic-phone.png" alt=""
-                                width="37" height="37"></div>
-                        <div class="p-contact-item__txt">0356.858.885</div>
-                    </div>
-                    <div class="p-contact-item">
-                        <div class="p-contact-item__icon --email"><img src="../assets/images/ic-mail.png" alt=""
-                                width="41" height="28"></div>
-                        <div class="p-contact-item__txt">info@nmimart.com</div>
-                    </div>
-                    <div class="p-contact-item">
-                        <div class="p-contact-item__icon --global"><img src="../assets/images/ic-global.png" alt=""
-                                width="39" height="41"></div>
-                        <div class="p-contact-item__txt">www.nmimart.com</div>
+                    <div class="p-contact-info">
+                        <h3 class="p-contact__ttl --primary">PHỤ KIỆN, ĐỒ CHƠI Ô TÔ AKAUTO</h3>
+                        <ul>
+                            <li><strong>Chi nhánh:</strong> 678 Trường Chinh, phường Tân Bình, Thành phố Hồ Chí Minh
+                                (Quận Tân Bình cũ)
+                            </li>
+                            <li><strong>Chi nhánh:</strong> 34-36 Nguyễn Hữu Cảnh, phường Thạnh Mỹ Tây, Thành phố Hồ Chí
+                                Minh (Quận Bình
+                                Thạnh
+                                cũ)</li>
+                            <li><strong>Số điên thoại:</strong><a href="tel:090 3939 683">090 3939 683</a></li>
+                            <li><strong>Thời gian làm việc:</strong> Thứ 2 – Chủ nhật (8:00 – 19:00)</li>
+                            <li><strong>Email:</strong><a
+                                    href="mailto:akauto.com.vn@gmail.com">akauto.com.vn@gmail.com</a></li>
+                            <li><strong>Website:</strong>https://akauto.com.vn</li>
+
+                        </ul>
                     </div>
                 </div>
-                <p class="p-contact__txt">Góp ý với chúng tôi. Các chuyên viên tư vấn của chúng tôi sẽ trả lời bạn trong
-                    thời gian sớm nhất.
-
-                <div class="p-contact-form">
-                    <div class="fr-group">
-                        <input class="fr-field" type="text" placeholder="Họ tên" id="name">
-                        <input class="fr-field" type="text" placeholder="Email" id="email">
+                <div class="p-contact-map">
+                    <div class="map-item">
+                        <h3 class="map-item__ttl">AKAUTO TÂN BÌNH</h3><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0699575505487!2d106.6353297!3d10.805954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529f26167c1e3%3A0x971bf4ec49da52!2zQUthdXRvIC0gVHJ1bmcgdMOibSBjaMSDbSBzw7NjICYgcGjhu6Uga2nhu4duIMO0IHTDtCBjYW8gY-G6pXA!5e0!3m2!1sen!2s!4v1772503619751!5m2!1sen!2s"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="fr-group">
-                        <input class="fr-field" type="text" placeholder="Số điện thoại" id="phone">
-                        <input class="fr-field" type="text" placeholder="Tiêu đề (Không bắt buộc)" id="title">
-                    </div>
-                    <div class="fr-group">
-                        <textarea class="fr-field text" id="note" placeholder="Nội dung liên hệ"></textarea>
-                        <button type="submit" class="btn-send"><span class="ic-send"></span>Gửi đi</button>
+                    <div class="map-item">
+                        <h3 class="map-item__ttl">AKAUTO BÌNH THẠNH</h3><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.29305801019!2d106.715083!3d10.788851999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294e535bc393%3A0x6d733de6709bb3ab!2sAKauto%20-%20Binh%20Thanh%20District!5e0!3m2!1sen!2s!4v1772503633394!5m2!1sen!2s"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.2481436529197!2d105.779269374768!3d20.98268793936033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345333285053ed%3A0xd5623418d2bd0ea3!2zS2h1IMSRw7QgdGjhu4sgTeG7lyBMYW8sIE3hu5kgTGFvLCBIw6AgxJDDtG5nLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1766376897131!5m2!1svi!2s"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
         </div>
+
     </main>
 
-    <div id="footer"></div>
-    <div class="box-support">
-        <div class="support-content">
 
-            <a class="btn-support" href="https://zalo.me/">
-                <img src="../assets/images/ic-zalo.png" alt="">
-            </a>
-            <a class="btn-support" href="">
-                <img src="../assets/images/ic-messenger.png" alt="">
-            </a>
-            <a class="btn-support --tel" href="tel:">
-                <img src="../assets/images/ic-call-3.png" alt="">
-            </a>
-            <div class="btn-top" id="backToTop">
-                <img src="../assets/images/ic-top.png" alt="">
-            </div>
-        </div>
-    </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <script>
-        fetch("../inc/header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header").innerHTML = data);
-
-        fetch("../inc/footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
-    </script>
     <script src="../assets/js/script.js"></script>
 </body>

@@ -188,7 +188,7 @@
 }
 .about-home .about-title {
   text-align: center;
-  color: #b20110;
+  color: #d80019;
   text-transform: uppercase;
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -216,71 +216,6 @@
   opacity: 1;
 }
 
-.car-search {
-  background: #000;
-  padding: 2.5rem;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-@media (max-width: 767px) {
-  .car-search {
-    margin: 0 -1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    justify-content: center;
-  }
-}
-.car-search .car-search__title {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-.car-search .car-search__form {
-  display: flex;
-  gap: 1.5rem;
-  flex: 1;
-}
-@media (max-width: 767px) {
-  .car-search .car-search__form {
-    flex-direction: column;
-  }
-}
-.car-search .car-search__form select {
-  height: 4.5rem;
-  padding: 0 1.5rem;
-  border-radius: 0.6rem;
-  border: none;
-  font-size: 1.5rem;
-}
-.car-search .car-search__form selectt:disabled {
-  background: #e5e5e5;
-  color: #999;
-  cursor: not-allowed;
-}
-@media (min-width: 768px) {
-  .car-search .car-search__form select {
-    flex: 1;
-  }
-}
-.car-search .car-search__form .btn-search {
-  background: #b20110;
-  color: #fff;
-  border: none;
-  padding: 0 3rem;
-  height: 4.5rem;
-  border-radius: 0.6rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.car-search .car-search__form .btn-search:hover {
-  background: #c80000;
-}
-
 .product-home {
   position: relative;
   margin-bottom: 3rem;
@@ -306,7 +241,7 @@
   transition: all 0.3s;
 }
 .product-home__cate .cate-item:hover {
-  background: #b20110;
+  background: #d80019;
   color: #FFF;
 }
 .product-home-wrap {
@@ -378,7 +313,7 @@
   font-weight: 600;
 }
 .car-accessories .access-item:hover .access-item__ttl {
-  color: #b20110;
+  color: #d80019;
 }
 
 .p-utility {
@@ -392,7 +327,6 @@
   }
   .p-utility-scroll::-webkit-scrollbar {
     height: 0;
-    /* ⚠️ dùng height */
   }
   .p-utility-scroll {
     /* Nền track */

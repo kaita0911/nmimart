@@ -93,46 +93,20 @@ input[type="month"] {
 .btn-send {
     border: none;
     background: $primary;
-    border-radius: rem(10px);
     color: #FFF;
-    font-family: 700;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.6rem;
     transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    gap: rem(8px);
+    padding: 1rem 0;
+    display: inline-block;
+    border-radius: 0.5rem;
+    max-width: 17rem;
     cursor: pointer;
-    box-shadow: 0 rem(4px) 0 0 #001546;
-
-    @include mq("md") {
-        height: rem(45px);
-    }
-
-    @include mq("md", min) {
-        gap: rem(3px);
-        font-size: rem(20px);
-        flex-direction: column;
-        width: rem(115px);
-
-    }
 
     &:hover {
-        background: #073CB2;
+        background: $hover;
     }
 
-    .ic-send {
-        display: inline-block;
-        width: rem(20px);
-        height: rem(20px);
-        background-image: url(../images/ic-paper.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
 
-        @include mq("md", min) {
-            width: rem(33px);
-            height: rem(25px);
-        }
-    }
 }
