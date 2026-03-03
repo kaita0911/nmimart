@@ -291,6 +291,7 @@
   box-shadow: rgba(60, 64, 67, 0.1) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
   padding: 1.5rem;
   border-radius: 1rem;
+  background: #FFF;
 }
 @media (min-width: 768px) {
   .p-product-detail__body__right {
@@ -301,6 +302,7 @@
   box-shadow: rgba(60, 64, 67, 0.1) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
   padding: 1rem;
   border-radius: 1rem;
+  background: #FFF;
 }
 .p-product-detail__body__right .film-table-wrap {
   border-radius: 1rem;
@@ -1070,4 +1072,295 @@
   left: 0;
   content: "";
   z-index: 0;
+}
+
+.review-wrap {
+  margin: 4rem 0;
+  box-shadow: rgba(60, 64, 67, 0.1) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+  padding: 2rem 3rem 3rem;
+  border-radius: 1rem;
+}
+.review-wrap__ttl {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* TOP SECTION */
+.review-top {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  gap: 3rem;
+  /* LEFT */
+}
+.review-top .review-average {
+  width: 22rem;
+  text-align: center;
+  padding-left: 4rem;
+}
+.review-top .review-average .avg-number {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #f7941d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  line-height: 1;
+}
+.review-top .review-average .avg-number i {
+  font-size: 3rem;
+}
+.review-top .review-average .avg-text {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.review-top {
+  /* CENTER */
+}
+.review-top .review-progress {
+  flex: 1;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.review-top .review-progress .progress-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.review-top .review-progress .progress-item .star-label {
+  width: 3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-top .review-progress .progress-item .star-label i {
+  font-size: 1.3rem;
+}
+.review-top .review-progress .progress-item .progress-bar {
+  flex: 1;
+  height: 1.4rem;
+  background: #eee;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.review-top .review-progress .progress-item .progress-bar .progress-fill {
+  height: 100%;
+  background: #f7941d;
+  border-radius: 1rem;
+  transition: 0.4s;
+}
+.review-top .review-progress .progress-item .progress-text {
+  width: 13rem;
+  font-size: 1.4rem;
+  color: #03a0e2;
+}
+.review-top .review-action {
+  width: 20rem;
+  text-align: center;
+}
+.review-top .review-action .btn-review {
+  background: #03a0e2;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.review-top .review-action .btn-review:hover {
+  background: #1678a6;
+}
+
+/* FILTER */
+.review-filter {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+.review-filter .filter-btn {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: all 0.3s;
+}
+.review-filter .filter-btn i {
+  font-size: 1.1rem;
+}
+.review-filter .filter-btn:hover {
+  background: #f0f0f0;
+  border-color: #999;
+  color: #d80019;
+}
+.review-filter .filter-btn.active {
+  background: #03a0e2;
+  color: #FFF;
+}
+
+.review-list {
+  margin-top: 2rem;
+}
+.review-list .review-item {
+  margin-bottom: 2rem;
+}
+.review-list .review-item .review-head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.review-list .review-item .review-head__ttl {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.review-list .review-item .review-head .verified {
+  color: #2fb344;
+  font-style: italic;
+  font-weight: 500;
+}
+.review-list .review-item .review-content {
+  background: #eee;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  margin-top: 10px;
+}
+.review-list .review-item .review-content .review-stars {
+  font-size: 1.5rem;
+}
+.review-list .review-item .review-content .review-stars .star-rating {
+  font-size: 1.2rem;
+  gap: 0.2rem;
+  display: inline-flex;
+  color: #f7941d;
+  margin-right: 1rem;
+}
+.review-list .review-item .review-content .review-date {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.pagination .page-btn {
+  min-width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  background: #e9e9e9;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+.pagination .page-btn:hover {
+  background: #dcdcdc;
+}
+.pagination .page-btn.active {
+  background: #ccc;
+  font-weight: 500;
+}
+.pagination .page-btn.next {
+  font-size: 1.6rem;
+}
+
+.qa-section {
+  margin-top: 4rem;
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+}
+.qa-section__ttl {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  font-weight: 600;
+}
+.qa-section .qa-box {
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.qa-section .qa-box textarea {
+  width: 100%;
+  height: 15rem;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  font-size: 1.4rem;
+  resize: vertical;
+  outline: none;
+}
+.qa-section .qa-box .qa-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+.qa-section .qa-box .qa-bottom .qa-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+.qa-section .qa-box .qa-bottom .qa-left .radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.qa-section .qa-box .qa-bottom .qa-left .radio input {
+  accent-color: #1e90c9;
+}
+.qa-section .qa-box .qa-bottom .qa-left .input-text {
+  height: 4rem;
+  padding: 0 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  width: 35%;
+}
+.qa-section .qa-box .qa-bottom .qa-left .input-text:focus {
+  border-color: #1e90c9;
+  outline: none;
+}
+.qa-section .qa-box .qa-bottom .btn-send {
+  background: #f4c430;
+  border: none;
+  padding: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #333;
+}
+.qa-section .qa-box .qa-bottom .btn-send:hover {
+  background: #e0b21f;
+}
+.qa-section .note {
+  margin-top: 2rem;
 }/*# sourceMappingURL=product.css.map */

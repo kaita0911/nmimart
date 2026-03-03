@@ -692,6 +692,11 @@ a {
         }
     }
 
+    &.--detail {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
     @include mq("md", min) {}
 
     .c-writer {

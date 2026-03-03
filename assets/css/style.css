@@ -2475,6 +2475,10 @@ a {
 .c-info.--more:before {
   display: none;
 }
+.c-info.--detail {
+  margin-top: 0;
+  padding-top: 0;
+}
 .c-info .c-writer {
   display: flex;
   align-items: center;
