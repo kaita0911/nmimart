@@ -15,19 +15,144 @@ app.init = function () {
   // app.fontsize();
   // app.popup();
   app.checkall();
-  // app.liked();
+  app.review();
   // app.rating();
 };
-// app.liked = function () {
-//   let like = 0;
-//   const likeCount = document.getElementById("like-count");
-//   document.querySelectorAll(".btn-like").forEach((btn) => {
-//     btn.addEventListener("click", function () {
-//       let current = parseInt(likeCount.textContent, 10);
-//       likeCount.textContent = current + 1;
-//     });
-//   });
-// };
+app.review = function () {
+  const openBtn = document.getElementById("openReview");
+  const closeBtn = document.getElementById("closeReview");
+  const overlay = document.getElementById("reviewOverlay");
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+  // Hàm mở popup
+  const openModal = () => {
+    const scrollbarWidth = getScrollbarWidth();
+
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = scrollbarWidth + "px";
+    }
+    overlay.classList.add("active");
+    document.body.classList.add("no-scroll"); // 🔥 chặn scroll
+  };
+
+  // Hàm đóng popup
+  const closeModal = () => {
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll"); // 🔥 mở lại scroll
+    document.body.style.paddingRight = ""; // reset
+  };
+
+  // Nếu tồn tại nút mở
+  if (openBtn && overlay) {
+    openBtn.addEventListener("click", openModal);
+  }
+
+  // Nếu tồn tại nút đóng
+  if (closeBtn && overlay) {
+    closeBtn.addEventListener("click", closeModal);
+  }
+
+  // Click ra ngoài để đóng
+  if (overlay) {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        closeModal();
+      }
+    });
+  }
+
+  // ESC để đóng (pro hơn)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay?.classList.contains("active")) {
+      closeModal();
+    }
+  });
+
+  // Rating
+  const stars = document.querySelectorAll(".rating span");
+
+  if (stars.length > 0) {
+    stars.forEach((star, index) => {
+      star.addEventListener("click", () => {
+        stars.forEach((s) => s.classList.remove("active"));
+        for (let i = 0; i <= index; i++) {
+          stars[i].classList.add("active");
+        }
+      });
+    });
+  }
+  ////updoad image video
+  const imageInput = document.getElementById("imageInput");
+  const videoInput = document.getElementById("videoInput");
+  const previewList = document.getElementById("previewList");
+  const addMore = document.getElementById("addMore");
+
+  // Hiện preview-list
+  function showPreviewList() {
+    previewList?.classList.add("active");
+  }
+
+  // Kiểm tra còn file không
+  function updatePreviewState() {
+    const items = previewList.querySelectorAll(".preview-item");
+
+    if (items.length === 0) {
+      previewList.classList.remove("active"); // 🔥 Ẩn khi không còn file
+    } else {
+      previewList.classList.add("active");
+    }
+  }
+
+  // Tạo preview
+  function createPreview(file) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "preview-item";
+
+    const removeBtn = document.createElement("div");
+    removeBtn.className = "preview-remove";
+    removeBtn.innerHTML = "×";
+
+    removeBtn.addEventListener("click", () => {
+      wrapper.remove();
+      updatePreviewState(); // 🔥 kiểm tra sau khi xoá
+    });
+
+    if (file.type.startsWith("image/")) {
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(file);
+      wrapper.appendChild(img);
+    }
+
+    if (file.type.startsWith("video/")) {
+      const video = document.createElement("video");
+      video.src = URL.createObjectURL(file);
+      wrapper.appendChild(video);
+    }
+
+    wrapper.appendChild(removeBtn);
+
+    previewList.insertBefore(wrapper, addMore);
+    updatePreviewState(); // 🔥 cập nhật sau khi thêm
+  }
+
+  // Upload ảnh
+  imageInput?.addEventListener("change", (e) => {
+    Array.from(e.target.files).forEach(createPreview);
+    imageInput.value = "";
+  });
+
+  // Upload video
+  videoInput?.addEventListener("change", (e) => {
+    Array.from(e.target.files).forEach(createPreview);
+    videoInput.value = "";
+  });
+
+  // Click "+"
+  addMore?.addEventListener("click", () => {
+    imageInput?.click();
+  });
+};
 app.checkall = function () {
   const checkAll = document.getElementById("checkAll");
   const checkAllsp = document.getElementById("checkAllSp");
@@ -261,6 +386,29 @@ app.slick = function () {
     ],
   });
   $(".news-reviews-js").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  $(".new-related-js").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
@@ -710,8 +858,15 @@ $(document).ready(function () {
   const closeCart = document.getElementById("closeCart");
   const cartPanel = document.getElementById("cartPanel");
   const overlay = document.getElementById("cartOverlay");
-
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
   function showCart() {
+    const scrollbarWidth = getScrollbarWidth();
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = scrollbarWidth + "px";
+    }
+
     cartPanel.classList.add("show");
     overlay.classList.add("show");
     document.body.classList.add("no-scroll");
@@ -721,10 +876,11 @@ $(document).ready(function () {
     cartPanel.classList.remove("show");
     overlay.classList.remove("show");
     document.body.classList.remove("no-scroll");
+    document.body.style.paddingRight = ""; // reset
   }
-  if (openCart) {
+  if (openCart && cartPanel && overlay) {
     openCart.onclick = showCart;
-    closeCart.onclick = hideCart;
+    closeCart && (closeCart.onclick = hideCart);
     overlay.onclick = hideCart;
   }
 

@@ -1,14 +1,16 @@
-@import 'common/variables';
-@import 'common/mixin';
-@import 'common/reboot';
-@import 'common/grid';
-@import 'utilities/display';
-@import 'utilities/text';
-@import 'utilities/swiper';
-@import 'components/button';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/form';
-@import 'components/table';
-@import 'components/title';
-@import 'components/part';
+@use 'common/variables';
+@use 'common/mixin';
+@use 'common/reboot';
+@use 'common/grid';
+
+@use 'utilities/display';
+@use 'utilities/text';
+
+//@use 'components/animation';
+@use 'components/button';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/form';
+@use 'components/table';
+@use 'components/title';
+@use 'components/part';

@@ -1,26 +1,29 @@
+@use "../common/mixin";
+@use "../common/variables";
+
 .btn {
     border: none;
-    background: $primary-2;
-    color: $white;
-    padding: 0 rem(20px);
-    height: rem(45px);
-    border-radius: rem(90px);
+    background: variables.$primary-2;
+    color: variables.$white;
+    padding: 0 mixin.rem(20px);
+    height: mixin.rem(45px);
+    border-radius: mixin.rem(90px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
-    font-size: rem(14px);
+    font-size: mixin.rem(14px);
 
-    @include mq("md", min) {
-        font-size: rem(16px);
-        padding: 0 rem(35px);
-        height: rem(56px);
+    @include mixin.mq("md", min) {
+        font-size: mixin.rem(16px);
+        padding: 0 mixin.rem(35px);
+        height: mixin.rem(56px);
     }
 
-    @include hover() {
-        background: $primary;
+    @include mixin.hover() {
+        background: variables.$primary;
     }
 
     &:focus,
@@ -31,7 +34,7 @@
     // Disabled comes first so active can properly restyle
     &.disabled,
     &:disabled {
-        opacity: $btn-disabled-opacity;
+        opacity: variables.$btn-disabled-opacity;
     }
 
     &:not(:disabled):not(.disabled) {
@@ -41,26 +44,26 @@
 
 .c-btn {
     border: none;
-    background: $primary;
-    border-radius: rem(55px);
-    width: rem(130px);
-    height: rem(40px);
+    background: variables.$primary;
+    border-radius: mixin.rem(55px);
+    width: mixin.rem(130px);
+    height: mixin.rem(40px);
     color: #fff;
-    font-weight: $font-weight-semibold;
+    font-weight: variables.$font-weight-semibold;
     transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: rem(10px);
+    gap: mixin.rem(10px);
     cursor: pointer;
 
-    @include mq("md", min) {
-        width: rem(167px);
-        height: rem(55px);
+    @include mixin.mq("md", min) {
+        width: mixin.rem(167px);
+        height: mixin.rem(55px);
     }
 
     &:hover {
-        background: $primary-3;
+        background: variables.$primary-3;
     }
 
     .c-reduce {
@@ -68,9 +71,9 @@
     }
 
     &.btn-load-more {
-        @include mq("md", min) {
-            width: rem(159px);
-            height: rem(35px);
+        @include mixin.mq("md", min) {
+            width: mixin.rem(159px);
+            height: mixin.rem(35px);
         }
     }
 
@@ -78,7 +81,7 @@
         margin: auto;
 
         &.--related {
-            margin-top: rem(40px);
+            margin-top: mixin.rem(40px);
         }
     }
 }

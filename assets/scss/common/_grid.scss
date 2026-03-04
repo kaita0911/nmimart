@@ -1,16 +1,26 @@
+@use "mixin";
+@use "variables";
+
 .container {
     margin: auto;
-    max-width: rem($container-width + $grid-gutter-width*2);
-    padding-left: rem($grid-gutter-width);
-    padding-right: rem($grid-gutter-width);
+    max-width: mixin.rem(variables.$container-width + variables.$grid-gutter-width*2);
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 100%;
+
+    @include mixin.mq('md', min) {
+        padding-left: mixin.rem(variables.$grid-gutter-width);
+        padding-right: mixin.rem(variables.$grid-gutter-width);
+    }
 }
-.img-100{
+
+.img-100 {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.img-scale{
+
+.img-scale {
     width: 100%;
     height: 100%;
     object-fit: scale-down;

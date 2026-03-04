@@ -1,3 +1,6 @@
+@use "../common/mixin" as *;
+@use "../common/variables" as *;
+
 @include mq("md", min) {
     .sp {
         display: none !important;
@@ -20,9 +23,13 @@
 }
 
 #sidebar {
-    position: sticky;
-    top: 12%;
-    height: 65vh;
+
+
+    @include mq("md", min) {
+        position: sticky;
+        top: 12%;
+        height: 65vh;
+    }
 }
 
 .overlay {
@@ -54,6 +61,11 @@
     z-index: 10;
     transition: 0.3s;
     opacity: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 
     /* Ẩn icon mặc định */
     &:before {
@@ -64,6 +76,7 @@
         left: 1rem;
 
         &::after {
+            position: absolute;
             content: "";
             width: 0.5rem;
             height: 0.5rem;
@@ -77,6 +90,7 @@
         right: 1rem;
 
         &::after {
+            position: absolute;
             content: "";
             width: 0.5rem;
             height: 0.5rem;
@@ -506,6 +520,11 @@ a {
 
     iframe {
         margin: auto;
+
+        @include mq("md") {
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     &-inner {
@@ -2307,4 +2326,36 @@ a {
         }
     }
 
+}
+
+.tab-content {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.block-news {
+    padding: 0 0 4rem 0;
+
+    &__ttl {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    &-wrap {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+
+        &:hover {
+            .slick-arrow {
+                opacity: 1;
+            }
+        }
+
+        .news-item {
+            margin: 0 1.5rem;
+        }
+    }
 }

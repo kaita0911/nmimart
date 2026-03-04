@@ -91,12 +91,20 @@
         &.mv-js {
             .slick-dots {
 
-                bottom: rem(10px);
+                bottom: 1rem;
+                list-style: none;
+                display: flex !important;
+                position: absolute;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+                gap: 1rem;
 
                 li {
                     width: rem(10px);
                     height: rem(10px);
                     transition: all 0.3s;
+
 
                     &.slick-active {
                         width: rem(24px);
@@ -115,6 +123,7 @@
                         background: none;
                         border-radius: 50%;
                         padding: 0;
+                        color: transparent;
 
                         &:before {
                             display: none;

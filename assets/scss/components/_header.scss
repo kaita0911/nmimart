@@ -1,3 +1,6 @@
+@use "../common/mixin" as *;
+@use "../common/variables" as *;
+
 .p-header {
 
     &-top {

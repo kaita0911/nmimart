@@ -1,5 +1,9 @@
+@use "sass:map";
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-// grid
+
+// ================= GRID =================
+
 $grid-gutter-width: 15px !default;
 $container-width: 1400px !default;
 
@@ -7,18 +11,21 @@ $displays: none, block, flex !default;
 
 $grid-breakpoints: (
   xs: 0,
-  //sm: 576px,
+  // sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1400px,
   xl2: 1920px) !default;
 
 
-// Spacing
+// ================= SPACING =================
+
 $spacer: 1rem !default;
+
 $spacers: (
   ) !default;
-$spacers: map-merge((0: 0,
+
+$spacers: map.merge((0: 0,
       5: ($spacer * .5),
       10: ($spacer * 1),
       20: ($spacer * 2),
@@ -29,8 +36,10 @@ $spacers: map-merge((0: 0,
 );
 
 
-//font
+// ================= FONT =================
+
 $font-Montserrat: "Montserrat", sans-serif;
+
 $font-weight-extrabold: 900;
 $font-weight-bold: 700;
 $font-weight-semibold: 600;
@@ -38,38 +47,49 @@ $font-weight-medium: 500;
 $font-weight-regular: 400;
 $font-weight-light: 300;
 $font-weight-thin: 100;
+
 $font-size-reset: 10px !default;
 $font-family-base: $font-Montserrat;
 $font-size-base: 16px !default;
 $line-height-base: 1.5;
 $font-weight-base: $font-weight-regular;
 
-//color
+
+// ================= COLOR =================
+
 $black: #000;
 $dark: #222;
 $white: #fff;
 $gray: #EAEAEA;
 $gray-2: #E6E6E6;
 $gray-3: #dcdcdc;
+
 $primary: #d80019;
 $hover: #8a020e;
 $primary-2: #F9CA00;
 $primary-3: #DDE8FF;
 $primary-4: #FF4800;
-$body-color : $dark;
+
+$body-color: $dark;
 $body-bg: $white !default;
 $border-color: $dark !default;
 
-// Button
+
+// ================= BUTTON =================
+
 $btn-disabled-opacity: .6;
 $btn-border-width: 1px !default;
 $btn-font-weight: $font-weight-regular;
 $btn-font-family: $font-family-base;
 
-// Table
+
+// ================= TABLE =================
+
 $table-th-font-weight: $font-weight-base;
 
-// Form
+
+// ================= FORM =================
+
 $input-height: 50px !default;
 $input-padding-y: 5px !default;
 $input-padding-x: 10px !default;

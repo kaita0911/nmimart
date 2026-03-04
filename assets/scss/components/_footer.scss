@@ -1,3 +1,6 @@
+@use "../common/mixin" as *;
+@use "../common/variables" as *;
+
 .footer {
     background: url(../images/bg-footer.jpg) no-repeat top center;
     background-size: cover;

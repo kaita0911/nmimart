@@ -1,3 +1,6 @@
+@use "mixin";
+@use "variables";
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -10,19 +13,19 @@ body {
 }
 
 html {
-    font-size: $font-size-reset;
+    font-size: 1.4rem;
     font-size: calc(10 / 4.4)*1vw;
     //overflow-y: scroll !important;
 
-    @include mq('md', min) {
+    @include mixin.mq('md', min) {
         font-size: calc(10 / 16)*1vw;
     }
 
-    @include mq('xl', min) {
+    @include mixin.mq('xl', min) {
         font-size: calc(10 / 16)*1vw;
     }
 
-    @include mq('xl2', min) {
+    @include mixin.mq('xl2', min) {
         font-size: calc(10 / 19.2)*1vw;
     }
 
@@ -38,18 +41,18 @@ html {
 
 body {
     margin: 0;
-    font-family: $font-family-base;
-    font-size: rem(14px);
+    font-family: variables.$font-Montserrat;
+    font-size: mixin.rem(14px);
     font-weight: 500;
     line-height: 1.6;
-    color: $body-color;
+    color: variables.$body-color;
     text-align: left;
-    background-color: $body-bg;
+    background-color: variables.$body-bg;
     position: relative;
     overflow-x: hidden;
 
     //overflow-x: hidden;
-    @include mq('md', min) {
+    @include mixin.mq('md', min) {
         font-size: 1.5rem;
     }
 
@@ -70,7 +73,7 @@ p {
 
 b,
 strong {
-    font-weight: $font-weight-bold;
+    font-weight: variables.$font-weight-bold;
 }
 
 a {
@@ -91,7 +94,7 @@ table {
 }
 
 th {
-    font-weight: $table-th-font-weight;
+    font-weight: variables.$table-th-font-weight;
     text-align: inherit;
     text-align: -webkit-match-parent;
 }

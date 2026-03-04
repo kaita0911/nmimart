@@ -1,3 +1,6 @@
+@use "../common/mixin" as *;
+@use "../common/variables" as *;
+
 .form-control {
     display: block;
     width: 100%;
