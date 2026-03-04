@@ -9,11 +9,11 @@
     <meta name="description" content="{[#SITE_DESCRIPTION#]}">
     <meta name="keywords" content="{[#SITE_KEYWORDS#]}">
     <link rel="shortcut icon" href="" type="image/x-icon" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Fancybox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -21,10 +21,8 @@
 </head>
 
 <body>
-    <div id="header"></div>
 
     <main>
-
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <div class="container">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -41,156 +39,110 @@
         </nav>
 
         <div class="container">
-            <div class="p-cart">
+            <h1 class="ttl01 cart">Thanh toán</h1>
+            <div class="p-cart --pay">
                 <div class="p-cart-left">
-                    <p class="p-cart-left-txt">Mua thêm các sản phẩm tại NMImart <a class="tlink" href="#" title="">Nhận
-                            ưu đãi!</a></p>
+                    <p class="p-cart-left-txt">Bạn có mã ưu đãi?<span class="btn-code"> Ấn vào đây để nhập mã</span></p>
                     <div class="f-cart">
-
-                        <input type="text" id="name" name="name" placeholder="Họ và tên" required>
-
-                        <input type="tel" id="phone" name="phone" placeholder="Số điện thoại" required>
-
-                        <input type="text" id="address" name="address" placeholder="Nhập địa chỉ" required>
-
-                        <input type="email" id="email" name="email" placeholder="Nhập email">
-
-                        <div class="f-cart-select">
-                            <select id="city" name="city" required>
-                                <option value="">Thành phố</option>
-                                <option value="">TP.HCM</option>
-                                <option value="">Bình Dương</option>
-                                <option value="">Long An</option>
-                            </select>
-                        </div>
-                        <div class="f-cart-select">
-                            <select id="district" name="district" required>
-                                <option value="">Chọn Quận/Huyện</option>
-                                <option value="">TP.HCM</option>
-                                <option value="">Bình Dương</option>
-                                <option value="">Long An</option>
-                            </select>
-                        </div>
-                        <div class="f-cart-select">
-                            <select id="ward" name="ward" required>
-                                <option value="">Chọn Phường/Xã</option>
-                                <option value="">TP.HCM</option>
-                                <option value="">Bình Dương</option>
-                                <option value="">Long An</option>
-                            </select>
+                        <div class="f-cart-group">
+                            <label>Họ và tên <sup>*</sup></label>
+                            <input type="text" id="name" name="name" placeholder="Họ và tên" required>
                         </div>
 
-                        <textarea type="text" name="note" placeholder="Ghi chú"></textarea>
+                        <div class="f-cart-group">
+                            <label>Số điện thoại <sup>*</sup></label>
+                            <input type="tel" id="phone" name="phone" placeholder="098xxxxxx" required>
+                        </div>
+                        <div class="f-cart-group">
+                            <label>Địa chỉ nhận hàng <sup>*</sup></label>
+                            <input type="text" id="address" name="address" placeholder="Nhập địa chỉ" required>
+                        </div>
+                        <div class="f-cart-group">
+                            <label>Địa chỉ email <sup>*</sup></label>
+                            <input type="email" id="email" name="email" placeholder="youremail@gmail.com">
+                        </div>
+                        <div class="f-cart-group">
+                            <p>Thông tin bổ sung</p>
+                            <label>Ghi chú đơn hàng (tuỳ chọn)</label>
+                            <textarea type="text" name="note"
+                                placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+                        </div>
 
                     </div>
-                    <div class="p-cart-ttl">Phương thức thanh toán</div>
-                    <div class="p-cart-payment">
-                        <label class="payment-item">
-                            <input type="radio" name="payment" value="cod" checked>
-                            <span class="circle"></span> Thanh toán khi nhận hàng
-                        </label>
-                        <label class="payment-item">
-                            <input type="radio" name="payment" value="vnpay">
-                            <span class="circle"></span>
-                            Thanh toán qua VNPAY
-                        </label>
-                        <label class="payment-item">
-                            <input type="radio" name="payment" value="momo">
-                            <span class="circle"></span>
-                            Thanh toán qua MOMO
-                        </label>
-                        <label class="payment-item">
-                            <input type="radio" name="payment" value="visa">
-                            <span class="circle --visa"></span>
-                            <div class="payment-item-visa"> Online payment by Visa, Master Card, ...
-                                <img width="438" height="83" src="../assets/images/img-pay-3.png" alt="payment">
-                            </div>
-                        </label>
-                    </div>
+
                 </div>
                 <div class="p-cart-right">
-                    <div class="p-cart-right-content shadow">
+                    <div class="p-cart-right-content">
                         <div class="cart-item-end">
-                            <div class="cart-item-end__img"><img class="img_cover" src="../assets/images/product.jpg"
+                            <div class="cart-item-end__img"><img class="img_cover" src="../assets/images/sp-1.jpg"
                                     alt="" width="85" height="85"></div>
                             <div class="cart-item-end__meta">
                                 <div class="cart-item-end__ttl">82X Shiharu Collagen - Hộp 10 lon</div>
                                 <div class="cart-item-end__qty">Số lượng: 2</div>
-                                <div class="cart-item-end__price">175.000.000 vnđ</div>
+                                <div class="cart-item-end__price">175.000.000 ₫</div>
                             </div>
                         </div>
 
                         <div class="cart-item-end">
-                            <div class="cart-item-end__img"><img class="img_cover" src="../assets/images/product.jpg"
+                            <div class="cart-item-end__img"><img class="img_cover" src="../assets/images/sp-1.jpg"
                                     alt="" width="85" height="85"></div>
                             <div class="cart-item-end__meta">
                                 <div class="cart-item-end__ttl">82X Shiharu Collagen - Hộp 10 lon</div>
                                 <div class="cart-item-end__qty">Số lượng: 2</div>
-                                <div class="cart-item-end__price">175.000.000 vnđ</div>
+                                <div class="cart-item-end__price">175.000.000 ₫</div>
                             </div>
                         </div>
 
                         <div class="cart-item-end">
-                            <div class="cart-item-end__img"><img class="img_cover" src="../assets/images/product.jpg"
+                            <div class="cart-item-end__img"><img class="img_cover" src="../assets/images/sp-1.jpg"
                                     alt="" width="85" height="85"></div>
                             <div class="cart-item-end__meta">
                                 <div class="cart-item-end__ttl">82X Shiharu Collagen - Hộp 10 lon</div>
                                 <div class="cart-item-end__qty">Số lượng: 2</div>
-                                <div class="cart-item-end__price">175.000.000 vnđ</div>
+                                <div class="cart-item-end__price">175.000.000 ₫</div>
                             </div>
                         </div>
 
                         <div class="payment-details">
-                            <div class="payment-details__txt">Tạm tính <span>4.740.000 vnđ</span></div>
-                            <div class="payment-details__voucher">
-                                <input type="text" name="voucher" placeholder="Nhập mã giảm giá">
-                                <span class="btn-voucher">Áp dụng</span>
-                            </div>
-                            <div class="payment-details__txt">Phí vận chuyển <span>Miễn phí</span></div>
+                            <div class="payment-details__txt">Tạm tính <span>4.740.000 ₫</span></div>
+
+
                         </div>
                         <div class="payment-total">
                             <p>Tổng tiền thanh toán</p>
-                            <p class="payment-total__end">4.740.000 vnđ</p>
+                            <p class="payment-total__end">4.740.000 ₫</p>
+                        </div>
+                        <div class="p-cart-ttl">Phương thức thanh toán</div>
+                        <div class="p-cart-payment">
+                            <label class="payment-item">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <span class="circle"></span> Thanh toán khi nhận hàng
+                            </label>
+                            <label class="payment-item">
+                                <input type="radio" name="payment" value="vnpay">
+                                <span class="circle"></span>
+                                Chuyển khoản ngân hàng
+                            </label>
+
+
+                        </div>
+                        <div class="payment-btn">
+                            <a class="btn-finish" href="/cart/finish/">Đặt hàng</a>
                         </div>
                     </div>
                 </div>
-                <div class="p-cart-back">
+                <!-- <div class="p-cart-back">
                     <a class="back-to-cart" href="/cart" title="">Trở về giỏ hàng</a>
-                    <a class="btn-finish" href="/cart/finish/">Hoàn tất đơn hàng</a>
-                </div>
+
+                </div> -->
             </div>
         </div>
 
     </main>
-    <div id="footer"></div>
-    <div class="box-support">
-        <div class="support-content">
 
-            <a class="btn-support" href="https://zalo.me/">
-                <img src="../assets/images/ic-zalo.png" alt="">
-            </a>
-            <a class="btn-support" href="">
-                <img src="../assets/images/ic-messenger.png" alt="">
-            </a>
-            <a class="btn-support --tel" href="tel:">
-                <img src="../assets/images/ic-call-3.png" alt="">
-            </a>
-            <div class="btn-top" id="backToTop">
-                <img src="../assets/images/ic-top.png" alt="">
-            </div>
-        </div>
-    </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <script>
-        fetch("../inc/header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header").innerHTML = data);
 
-        fetch("../inc/footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
-    </script>
     <script src="../assets/js/script.js"></script>
 </body>

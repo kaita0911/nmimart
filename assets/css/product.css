@@ -129,7 +129,8 @@
 .p-product-detail__top .product-gallery .slider-for img {
   width: 100%;
   cursor: pointer;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .p-product-detail__top .product-gallery .slider-for img {
@@ -146,7 +147,8 @@
   cursor: pointer;
   opacity: 0.6;
   height: 9rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0 0.4rem;
 }
 .p-product-detail__top .product-gallery .slider-nav__item.slick-current {
@@ -502,7 +504,8 @@
 .filter-wrapper .brand-section .brand-list .brand-item .brand-item img {
   max-width: 90%;
   max-height: 70%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .filter-wrapper .need-section {
   margin-top: 3rem;
@@ -1157,7 +1160,8 @@
 .review-wrap .review-overlay .review-modal .preview-list .preview-item video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .review-wrap .review-overlay .review-modal .preview-list .preview-item .preview-remove {
   position: absolute;
@@ -1461,4 +1465,4 @@
 }
 .pagination .page-btn.next {
   font-size: 1.6rem;
-}
+}/*# sourceMappingURL=product.css.map */

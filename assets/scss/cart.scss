@@ -14,6 +14,10 @@
         margin-top: rem(10px);
     }
 
+    &.--pay {
+        padding-bottom: 4rem;
+    }
+
     &.--view {
         display: flex;
         gap: rem(30px);
@@ -45,12 +49,12 @@
 
     &-ttl {
         font-size: rem(16px);
-        font-family: 700;
-        margin-bottom: rem(10px);
+        font-weight: 600;
+        padding: 1.5rem;
 
         @include mq("md", min) {
-            font-size: rem(22px);
-            margin-bottom: rem(15px);
+            font-size: rem(18px);
+
         }
     }
 
@@ -65,30 +69,32 @@
             margin-bottom: rem(30px);
             display: flex;
             flex-direction: column;
-            gap: rem(9px);
+            gap: rem(13px);
 
             @include mq("md", min) {
                 margin-top: rem(23px);
             }
 
-            &-select {
-                position: relative;
 
-                &:after {
-                    position: absolute;
-                    right: rem(20px);
-                    top: 50%;
-                    transform: translateY(-50%);
-                    content: "";
-                    background: url(../images/ic-down.png) no-repeat top center;
-                    background-size: contain;
-                    width: rem(13px);
-                    height: rem(8px);
+
+            .f-cart-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                sup {
+                    color: red;
+                }
+
+                p {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 1.7rem;
+                    margin-top: 2rem;
                 }
             }
 
-            input,
-            select {
+            input {
                 color: #7e7e7e;
                 width: 100%;
                 border: 1px solid #DEDEDE;
@@ -210,6 +216,8 @@
 
     &-right {
         &-content {
+            border: 2px solid $primary;
+
             &.none-bg {
                 box-shadow: none;
                 background: none;
@@ -220,6 +228,27 @@
                     display: none;
                 }
             }
+
+            .payment-btn {
+                margin: 1.5rem;
+                text-align: right;
+
+                a.btn-finish {
+                    display: inline-block;
+                    padding: 1rem 4rem;
+                    background: $primary;
+                    color: #fff;
+                    border-radius: 4rem;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background: $hover;
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+
+
         }
     }
 
@@ -227,7 +256,8 @@
     &-payment {
         display: flex;
         flex-direction: column;
-        gap: rem(2px);
+        gap: 1rem;
+        padding: 0 1.5rem;
 
         .payment-item {
             cursor: pointer;
@@ -334,9 +364,7 @@
         border-bottom: 1px solid #D8D8F1;
         padding: rem(15px);
 
-        @include mq("md", min) {
-            padding: rem(25px);
-        }
+
 
         &__img {
             width: rem(80px);
@@ -361,9 +389,10 @@
         &__ttl {
             line-height: 1.3;
             color: #000;
+            font-size: 1.6rem;
 
             @include mq("md", min) {
-                font-size: rem(18px);
+                font-size: rem(16px);
                 width: 65%;
             }
         }
@@ -376,11 +405,11 @@
         &__price {
 
             font-size: rem(16px);
-            font-family: 700;
+            font-weight: 600;
             color: #000;
 
             @include mq("md", min) {
-                font-size: rem(18px);
+                font-size: rem(16px);
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -400,11 +429,11 @@
     }
 
     .payment-details {
-        border-bottom: 1px solid #D8D8F1;
+
         padding: rem(20px) rem(15px);
 
         @include mq("md", min) {
-            padding: rem(20px) rem(35px) rem(25px);
+            padding: 1.5rem;
         }
 
         &.--finish {
@@ -427,69 +456,28 @@
             align-items: center;
 
             span {
-                font-family: 700;
+                font-weight: 600;
                 color: #000;
+                font-size: 1.7rem;
             }
 
         }
 
-        &__voucher {
-            display: flex;
-            gap: rem(11px);
-            align-items: center;
-            justify-content: space-between;
-            margin: rem(17px) 0;
-
-            input {
-                background: #FFF;
-                border-radius: rem(10px);
-                height: rem(48px);
-                padding-left: rem(15px);
-                flex: 1;
-                border: none;
-                outline: none !important;
-
-                @include mq("md", min) {
-                    padding-left: rem(23px);
-                }
-            }
-
-            .btn-voucher {
-                background: $primary;
-                color: #FFF;
-                border-radius: rem(10px);
-                width: rem(107px);
-                height: rem(48px);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family: 700;
-
-                @include mq("md", min) {
-                    width: rem(127px);
-                }
-            }
-        }
     }
 
     .payment-total {
         display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: rem(20px) rem(15px);
-
-        @include mq("md", min) {
-            padding: rem(20px) rem(35px);
-        }
+        padding: 0 1.5rem;
+        align-items: center;
+        justify-content: space-between;
 
         &__end {
-            font-family: 700;
+            font-weight: 600;
             color: $primary;
             font-size: rem(22px);
 
             @include mq("md", min) {
-                font-size: rem(28px);
+                font-size: rem(24px);
             }
         }
     }
@@ -748,8 +736,12 @@
 
             .new-price {
                 color: #000;
-                font-size: rem(17px);
+                font-size: rem(15px);
                 font-weight: 600;
+
+                @include mq("md", min) {
+                    font-size: rem(17px);
+                }
             }
 
             .old-price {
@@ -761,9 +753,14 @@
 
         &__total {
             color: $primary;
-            font-size: 1.8rem;
-            text-align: center;
+            font-size: 1.6rem;
+            text-align: right;
             font-weight: 600;
+
+            @include mq("md", min) {
+                text-align: center;
+                font-size: 1.8rem;
+            }
         }
 
 
@@ -793,11 +790,23 @@
                     color: #fff;
                 }
 
-
-
                 &__pay {
                     background: $primary-2;
                     box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.1);
+                    display: flex;
+                    margin: 1.5rem;
+                    text-align: center;
+                    justify-content: center;
+                    padding: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    border-radius: 4rem;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background: $primary;
+                        color: #FFF;
+                    }
                 }
 
             }
@@ -814,35 +823,65 @@
         }
 
         &-box {
-            padding-top: rem(20px);
+            border: 1px solid #ddd;
         }
 
         &__ttl {
             text-align: center;
-            color: $primary;
-            font-family: 700;
-            font-size: rem(18px);
+            font-size: 1.6rem;
+            background: $hover;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 1rem 0;
         }
 
         .payment-details {
-            padding: rem(25px) rem(20px);
+            padding: 1.5rem;
             display: flex;
             flex-direction: column;
-            gap: rem(10px);
+            gap: 1rem;
         }
 
-        .payment-total {
-            padding: rem(20px);
+        .box-code-sale {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            margin: 2rem 0;
+            padding: 1.5rem;
+
+            &__ttl {
+                margin-bottom: 1rem;
+                font-size: 1.6rem;
+            }
+
+            &__form {
+                display: flex;
+                gap: 1rem;
+
+                input {
+                    width: 90%;
+                    border: 1px solid #ddd;
+                    border-radius: 0.5rem;
+                    padding-left: 1rem;
+                }
+
+                .sale-btn {
+                    background: #ccc;
+                    flex-shrink: 0;
+                    border: none;
+                    padding: 1rem;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+
+                    &:hover {
+                        background: $primary;
+                        color: #FFF;
+                    }
+                }
+            }
+
+
         }
 
-        .payment-recept {
-            margin-top: rem(26px);
-            text-align: center;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: rem(12px);
-        }
     }
 
     &-lst {
@@ -887,41 +926,41 @@
     }
 }
 
-.shadow {
-    background: #EEEEFF;
-    border-radius: rem(5px);
-    border: 1px solid rgba($color: #fff, $alpha: 0.2);
-    box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.05);
-    position: relative;
+// .shadow {
+//     background: #EEEEFF;
+//     border-radius: rem(5px);
+//     border: 1px solid rgba($color: #fff, $alpha: 0.2);
+//     box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.05);
+//     position: relative;
 
-    &:after {
-        width: 100%;
-        height: 100%;
-        border-radius: rem(5px);
-        position: absolute;
-        content: "";
-        top: rem(5px);
-        left: 0;
-        background: #eeeeff;
-        z-index: -1;
-        box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.05);
+//     &:after {
+//         width: 100%;
+//         height: 100%;
+//         border-radius: rem(5px);
+//         position: absolute;
+//         content: "";
+//         top: rem(5px);
+//         left: 0;
+//         background: #eeeeff;
+//         z-index: -1;
+//         box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.05);
 
-    }
+//     }
 
-    &:before {
-        width: 100%;
-        height: 100%;
-        border-radius: rem(5px);
-        position: absolute;
-        content: "";
-        top: rem(10px);
-        left: 0;
-        background: #eeeeff;
-        z-index: -2;
-        box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.05);
+//     &:before {
+//         width: 100%;
+//         height: 100%;
+//         border-radius: rem(5px);
+//         position: absolute;
+//         content: "";
+//         top: rem(10px);
+//         left: 0;
+//         background: #eeeeff;
+//         z-index: -2;
+//         box-shadow: 0 rem(2px) rem(6px) 0 rgba($color: #000000, $alpha: 0.05);
 
-    }
-}
+//     }
+// }
 
 // .box-pay {
 //     border-top: 1px solid #DED1BF;
