@@ -315,6 +315,16 @@ app.slick = function () {
     autoplaySpeed: 3000, // ⏱️ 3 giây / slide
     speed: 600, // tốc độ hiệu ứng
   });
+  $(".bh-js").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: true, // 🔥 bật tự chạy
+    autoplaySpeed: 3000, // ⏱️ 3 giây / slide
+    speed: 600, // tốc độ hiệu ứng
+  });
   $(".features-js").slick({
     slidesToShow: 3,
     slidesToScroll: 1,

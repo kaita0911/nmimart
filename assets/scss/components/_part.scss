@@ -193,21 +193,8 @@ html {
     }
 }
 
-
-.mrg-20 {
-    margin-bottom: rem(10px);
-
-    @include mq("md", min) {
-        margin-bottom: rem(20px);
-    }
-}
-
-.mrg-40 {
-    margin-top: rem(20px);
-
-    @include mq("md", min) {
-        margin-top: rem(40px);
-    }
+.mrg-0 {
+    margin-top: 0;
 }
 
 .c-short {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .p-about {
@@ -7,4 +8,248 @@
   .p-about {
     margin-top: 4.6rem;
   }
+}
+
+.form-bh {
+  background: url(../images/bg-bh.jpg) top center;
+  background-size: cover;
+  text-align: center;
+  min-height: 95rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-bh-content {
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 104rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6901960784);
+  position: relative;
+}
+.form-bh-content h1 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3.5rem;
+}
+.form-bh-content h1 img {
+  max-width: 70rem;
+}
+.form-bh-content .form-bh-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.form-bh-content .fr-bh {
+  border: none;
+  padding: 1rem;
+  background: #f1f1f1;
+  height: 5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.form-bh-content .btn-check {
+  border: none;
+  background: #d80019;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 0.3rem 2rem;
+  border-radius: 0.5rem;
+}
+.form-bh-content .btn-check.zalo {
+  position: absolute;
+  border-radius: 0;
+  height: 5rem;
+  right: 0.5rem;
+}
+.form-bh-content .btn-check {
+  cursor: pointer;
+}
+.form-bh-content .btn-check:hover {
+  background: #8a020e;
+}
+.form-bh-content label {
+  color: #ffdd3e;
+  font-style: italic;
+  text-align: left;
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.form-bh-content .form-bh-input-2 {
+  background: #FFF;
+  position: relative;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.warranty-wrap {
+  max-width: 110rem;
+  margin: 4rem auto;
+  background: #eee;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* grid info */
+}
+.warranty-wrap .title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+.warranty-wrap {
+  /* slider */
+}
+.warranty-wrap .car-slider {
+  position: relative;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.warranty-wrap .car-slider .slick-arrow {
+  opacity: 1;
+  border: none;
+  background: none;
+}
+.warranty-wrap .car-slider .slick-arrow.slick-prev:after {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-left: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+.warranty-wrap .car-slider .slick-arrow.slick-next:after {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+.warranty-wrap .car-slider img {
+  width: 100%;
+  display: block;
+}
+.warranty-wrap .info-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.warranty-wrap .info-grid .info-head {
+  background: #222;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 0.6rem;
+  font-style: italic;
+}
+.warranty-wrap .info-grid .info-box {
+  background: #c3c3c3;
+  padding: 1.8rem;
+  text-align: center;
+  border-radius: 0.6rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-kq {
+  background: url(../images/bh.jpg) top center;
+  background-size: cover;
+  text-align: center;
+  min-height: 70rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-kq .support-box {
+  width: 52rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin: 14rem 5rem;
+  /* góc đỏ */
+}
+.form-kq .support-box .corner {
+  position: absolute;
+  left: -3rem;
+  top: -3rem;
+  width: 6rem;
+  height: 6rem;
+  border-left: 2px solid #e21324;
+  border-top: 2px solid #e21324;
+  border-top-left-radius: 1rem;
+}
+.form-kq .support-box h1 {
+  color: #e21324;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-weight: 800;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6), -1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.form-kq .support-box .hotline-text {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6), -1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.form-kq .support-box .hotline-text strong {
+  font-weight: 700;
+}
+.form-kq .support-box .btn-group {
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.form-kq .support-box {
+  /* text nghiêng */
+}
+.form-kq .support-box .note {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+.form-kq .support-box {
+  /* form */
+}
+.form-kq .support-box .support-form {
+  margin: auto;
+}
+.form-kq .support-box .support-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.form-kq .support-box .support-form button {
+  background: #e21324;
+  border: none;
+  padding: 1rem 3rem;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.form-kq .support-box .support-form button:hover {
+  background: #8a020e;
 }/*# sourceMappingURL=about.css.map */
