@@ -1,6 +1,45 @@
 @import "common/variables";
 @import "common/mixin";
 
+.coupon-box {
+    .coupon-toggle {
+        #showCoupon {
+            color: $primary;
+        }
+    }
+
+    .coupon-form {
+        display: none;
+        border: 2px dashed $primary;
+        padding: 2rem;
+        margin-top: 1rem;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 4rem;
+            padding: 0 1rem;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background: $primary;
+            color: #fff;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+            position: absolute;
+            right: 1rem;
+            height: 4rem;
+
+            &:hover {
+                background: $hover;
+            }
+        }
+
+    }
+}
+
 .p-cart {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -10,18 +49,13 @@
 
     @include mq("md", min) {
         grid-template-columns: repeat(2, 1fr);
-        gap: rem(25px);
+        gap: 3rem;
         margin-top: rem(10px);
-    }
-
-    &.--pay {
-        padding-bottom: 4rem;
     }
 
     &.--view {
         display: flex;
         gap: rem(30px);
-        margin-bottom: rem(54px);
         flex-direction: column;
 
         @include mq("md", min) {
@@ -50,7 +84,7 @@
     &-ttl {
         font-size: rem(16px);
         font-weight: 600;
-        padding: 1.5rem;
+        padding: 1.5rem 0;
 
         @include mq("md", min) {
             font-size: rem(18px);
@@ -58,15 +92,18 @@
         }
     }
 
+
+
     &-left {
         .tlink {
             color: $primary;
             font-family: 700;
         }
 
+
+
         .f-cart {
             margin-top: rem(13px);
-            margin-bottom: rem(30px);
             display: flex;
             flex-direction: column;
             gap: rem(13px);
@@ -215,31 +252,42 @@
     }
 
     &-right {
+        &__ttl {
+            font-weight: 600;
+            font-size: 1.6rem;
+
+            @include mq("md", min) {
+                font-size: 1.8rem;
+            }
+        }
+
         &-content {
             border: 2px solid $primary;
+            padding: 2rem;
 
-            &.none-bg {
-                box-shadow: none;
-                background: none;
-                border: none;
+            // &.none-bg {
+            //     box-shadow: none;
+            //     background: none;
+            //     border: none;
 
-                &:after,
-                &:before {
-                    display: none;
-                }
-            }
+            //     &:after,
+            //     &:before {
+            //         display: none;
+            //     }
+            // }
 
             .payment-btn {
-                margin: 1.5rem;
+                margin: 1.5rem 0;
                 text-align: right;
 
                 a.btn-finish {
                     display: inline-block;
-                    padding: 1rem 4rem;
+                    padding: 1.2rem 5rem;
                     background: $primary;
                     color: #fff;
                     border-radius: 4rem;
                     transition: all 0.3s;
+                    font-size: 1.6rem;
 
                     &:hover {
                         background: $hover;
@@ -257,7 +305,11 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 0 1.5rem;
+
+        .payment-content {
+            display: none;
+            padding: 10px 0;
+        }
 
         .payment-item {
             cursor: pointer;
@@ -285,17 +337,6 @@
                 }
             }
 
-            &:after {
-                position: absolute;
-                content: "";
-                right: -1px;
-                bottom: -1px;
-                width: rem(21px);
-                height: rem(21px);
-                background: url(../images/ic-check-3.png) no-repeat center;
-                background-size: contain;
-                display: none;
-            }
 
             &:has(input[type="radio"]:checked) {
 
@@ -355,6 +396,8 @@
                     }
                 }
             }
+
+
         }
     }
 
@@ -362,7 +405,7 @@
         display: flex;
         gap: rem(15px);
         border-bottom: 1px solid #D8D8F1;
-        padding: rem(15px);
+        padding: 1.5rem 0;
 
 
 
@@ -389,76 +432,77 @@
         &__ttl {
             line-height: 1.3;
             color: #000;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
 
             @include mq("md", min) {
-                font-size: rem(16px);
+                font-size: 1.6rem;
                 width: 65%;
             }
         }
 
         &__qty {
-            font-size: rem(15px);
+
             color: #666;
+
+            @include mq("md", min) {
+                font-size: rem(15px);
+            }
         }
 
         &__price {
 
-            font-size: rem(16px);
+            font-size: 1.4rem;
             font-weight: 600;
             color: #000;
 
             @include mq("md", min) {
-                font-size: rem(16px);
+                font-size: 1.6rem;
                 position: absolute;
                 right: 0;
                 top: 0;
             }
         }
-
-
-        // &-note {
-
-        //     padding-bottom: rem(15px);
-        //     border-bottom: 1px solid #E4E4E4;
-
-        //     @include mq("md", min) {
-        //         font-size: rem(15px);
-        //     }
-        // }
     }
 
     .payment-details {
 
-        padding: rem(20px) rem(15px);
+        padding: rem(20px) 0;
 
         @include mq("md", min) {
-            padding: 1.5rem;
+            padding: 1.5rem 0;
         }
 
-        &.--finish {
-            padding: 0;
+        // &.--finish {
+        //     padding: 0;
 
-            .payment-details__txt {
-                padding: rem(20px) rem(35px) rem(20px);
+        //     .payment-details__txt {
+        //         padding: rem(20px) rem(35px) rem(20px);
 
 
-                &:last-child {
-                    border-top: 1px solid #D8D8F1;
-                }
-            }
-        }
+        //         &:last-child {
+        //             border-top: 1px solid #D8D8F1;
+        //         }
+        //     }
+        // }
 
         &__txt {
             display: flex;
             justify-content: space-between;
-            font-size: rem(16px);
+
             align-items: center;
+
+            @include mq("md", min) {
+                font-size: rem(16px);
+            }
 
             span {
                 font-weight: 600;
                 color: #000;
-                font-size: 1.7rem;
+                font-size: 1.5rem;
+
+                @include mq("md", min) {
+                    font-size: 1.7rem;
+                }
             }
 
         }
@@ -467,71 +511,75 @@
 
     .payment-total {
         display: flex;
-        padding: 0 1.5rem;
         align-items: center;
         justify-content: space-between;
+
+        &.--pad {
+            padding: 0 1.5rem;
+        }
 
         &__end {
             font-weight: 600;
             color: $primary;
-            font-size: rem(22px);
+            font-size: 1.8rem;
 
             @include mq("md", min) {
-                font-size: rem(24px);
+                font-size: 2.2rem;
             }
+
         }
     }
 
-    &-back {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    // &-back {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
 
-        @include mq("md") {
-            margin-top: rem(20px);
-        }
+    //     @include mq("md") {
+    //         margin-top: rem(20px);
+    //     }
 
-        .back-to-cart {
-            display: inline-block;
-            font-size: rem(16px);
-            background: url(../images/ic-prev.png) no-repeat left center;
-            background-size: rem(12px);
-            padding-left: rem(20px);
-            transition: all 0.3s;
+    //     .back-to-cart {
+    //         display: inline-block;
+    //         font-size: rem(16px);
+    //         background: url(../images/ic-prev.png) no-repeat left center;
+    //         background-size: rem(12px);
+    //         padding-left: rem(20px);
+    //         transition: all 0.3s;
 
-            &:hover {
-                color: $primary;
-                padding-left: rem(25px);
-            }
-        }
+    //         &:hover {
+    //             color: $primary;
+    //             padding-left: rem(25px);
+    //         }
+    //     }
 
-        .btn-finish {
-            background: $primary-2;
-            color: $primary;
-            border-radius: rem(5px);
-            font-size: rem(16px);
-            font-family: 700;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: rem(220px);
-            height: rem(50px);
-            cursor: pointer;
-            transition: all 0.3s;
+    //     .btn-finish {
+    //         background: $primary-2;
+    //         color: $primary;
+    //         border-radius: rem(5px);
+    //         font-size: rem(16px);
+    //         font-family: 700;
+    //         text-transform: uppercase;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         width: rem(220px);
+    //         height: rem(50px);
+    //         cursor: pointer;
+    //         transition: all 0.3s;
 
-            @include mq("md", min) {
-                width: rem(290px);
-                height: rem(45px);
-                font-size: rem(18px);
-            }
+    //         @include mq("md", min) {
+    //             width: rem(290px);
+    //             height: rem(45px);
+    //             font-size: rem(18px);
+    //         }
 
-            &:hover {
-                background: $primary;
-                color: #FFF;
-            }
-        }
-    }
+    //         &:hover {
+    //             background: $primary;
+    //             color: #FFF;
+    //         }
+    //     }
+    // }
 
     &-tbl {
         flex: 1;

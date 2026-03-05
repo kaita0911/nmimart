@@ -19,7 +19,7 @@
             align-items: center;
             justify-content: center;
 
-            .menu-top {
+            .menu-top-head {
                 display: flex;
                 gap: 1rem;
                 list-style: none;
@@ -37,6 +37,10 @@
                         text-transform: capitalize;
                         font-size: 1.3rem;
                         color: #FFF;
+
+                        &:hover {
+                            color: #ccc;
+                        }
                     }
                 }
             }
@@ -139,6 +143,10 @@
             align-items: center;
             gap: 2rem;
 
+            @include mq("md") {
+                width: 100%;
+            }
+
             @include mq("md", min) {
                 gap: 3rem;
             }
@@ -163,6 +171,10 @@
 
             .box-search {
                 position: relative;
+
+                @include mq("md") {
+                    width: 63%;
+                }
 
                 @include mq("md", min) {
                     width: 39rem;
@@ -235,16 +247,11 @@
                     transform: translateY(-10px);
                     transition: all 0.3s ease;
 
-                    &:hover {
-                        .menu-top__lst {
-                            display: block;
-                        }
-
-                        ~.overlay {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
+                    // &:hover {
+                    //     .menu-top__lst {
+                    //         display: block;
+                    //     }
+                    // }
                 }
 
 
@@ -1024,7 +1031,9 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &.view-cart {
                 background: #d60000;

@@ -33,9 +33,9 @@
                         <p>Địa chỉ: 36 Nguyễn Hữu Cảnh, Phường Thạnh Mỹ Tây, Hồ Chí Minh
                         </p>
                         <div class="p-header-top-right">
-                            <ul class="menu-top">
-                                <li><a href="#" title="">giới thiệu</a></li>
-                                <li><a href="#" title="">Kiến thức ô tô</a></li>
+                            <ul class="menu-top-head">
+                                <li><a href="/gioi-thieu/" title="">giới thiệu</a></li>
+                                <li><a href="/tin-tuc/" title="">Kiến thức ô tô</a></li>
                                 <li><a href="#" title="">khuyến mãi</a></li>
                             </ul>
                             <ul class="social-top">
@@ -65,9 +65,7 @@
                             </a>
                             <div class="menu-wrapper">
                                 <div class="menu-top">
-                                    <span class="ic-menu sp"><i class="fa-solid fa-list"></i></span>
                                     <span class="menu-top__ttl pc">Danh mục</span>
-
                                     <div class="menu-top__lst">
                                         <ul class="menu-cate">
                                             <li class="has-sub"><span class="ic-sub"><i
@@ -128,7 +126,7 @@
                                 </div>
                             </div>
                             <div class="bg-close-menu"></div>
-                            <div class="overlay"></div>
+
                             <div class="box-search">
                                 <input type="text" placeholder="Bạn cần tìm gì ?">
                                 <span class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -140,7 +138,7 @@
                                 <span class="hotline__label">Tư vấn miễn phí</span>
                                 <span class="hotline__num">0903939683</span>
                             </div>
-                            <a class="branch pc" href="">
+                            <a class="branch pc" href="/lien-he/">
                                 Hệ thống<br>chi nhánh
                             </a>
                             <div class="cart">
@@ -1682,70 +1680,7 @@
             </div>
         </div>
     </main>
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <!-- CART PANEL -->
-    <div class="cart-panel" id="cartPanel">
 
-        <div class="cart-header">
-            <h3>GIỎ HÀNG</h3>
-            <span class="close-cart" id="closeCart">&times;</span>
-        </div>
-
-        <div class="cart-body">
-            <div class="cart-item">
-                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
-                        alt=""></a>
-                <div class="cart-item__info">
-                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
-                        TS-2K
-                        Lite</a>
-                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
-                </div>
-                <span class="cart-item__remove">&times;</span>
-            </div>
-            <div class="cart-item">
-                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
-                        alt=""></a>
-                <div class="cart-item__info">
-                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
-                        TS-2K
-                        Lite</a>
-                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
-                </div>
-                <span class="cart-item__remove">&times;</span>
-            </div>
-            <div class="cart-item">
-                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
-                        alt=""></a>
-                <div class="cart-item__info">
-                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
-                        TS-2K
-                        Lite</a>
-                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
-                </div>
-                <span class="cart-item__remove">&times;</span>
-            </div>
-            <div class="cart-item">
-                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
-                        alt=""></a>
-                <div class="cart-item__info">
-                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
-                        TS-2K
-                        Lite</a>
-                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
-                </div>
-                <span class="cart-item__remove">&times;</span>
-            </div>
-
-            <div class="cart-total">
-                <span>Tổng số phụ:</span>
-                <strong>19.257.000đ</strong>
-            </div>
-            <button class="cart-btn view-cart">Xem giỏ hàng</button>
-            <button class="cart-btn checkout">Thanh toán</button>
-        </div>
-
-    </div>
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -1854,7 +1789,6 @@
             Chịu trách nhiệm nội dung: <strong>Trần Phú Quý</strong>
         </div>
     </footer>
-    <div id="backToTop"><i class="fa-solid fa-angle-up"></i></div>
     <!-- Nút liên hệ góc trái -->
     <button id="contactBtn"><img width="186" height="61" class="img-scale" src="./assets/images/ic-contact.gif"
             alt=""></button>
@@ -1895,6 +1829,72 @@
             </div>
         </div>
     </div>
+    <!---open cart-->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <!-- CART PANEL -->
+    <div class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+            <h3>GIỎ HÀNG</h3>
+            <span class="close-cart" id="closeCart">&times;</span>
+        </div>
+
+        <div class="cart-body">
+            <div class="cart-item">
+                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
+                        alt=""></a>
+                <div class="cart-item__info">
+                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                        TS-2K
+                        Lite</a>
+                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                </div>
+                <span class="cart-item__remove">&times;</span>
+            </div>
+            <div class="cart-item">
+                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
+                        alt=""></a>
+                <div class="cart-item__info">
+                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                        TS-2K
+                        Lite</a>
+                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                </div>
+                <span class="cart-item__remove">&times;</span>
+            </div>
+            <div class="cart-item">
+                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
+                        alt=""></a>
+                <div class="cart-item__info">
+                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                        TS-2K
+                        Lite</a>
+                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                </div>
+                <span class="cart-item__remove">&times;</span>
+            </div>
+            <div class="cart-item">
+                <a href="cart-item__img"><img width="60" height="60" class="img-cover" src="assets/images/sp-1.jpg"
+                        alt=""></a>
+                <div class="cart-item__info">
+                    <a class="cart-item__ttl hover" href="" title="">Camera hành trình Vietmap
+                        TS-2K
+                        Lite</a>
+                    <div class="cart-item__price">7 × <span>2.751.000đ</span></div>
+                </div>
+                <span class="cart-item__remove">&times;</span>
+            </div>
+
+            <div class="cart-total">
+                <span>Tổng số phụ:</span>
+                <strong>19.257.000đ</strong>
+            </div>
+            <a href="/cart/" class="cart-btn view-cart">Xem giỏ hàng</a>
+            <a href="/cart-thanh-toan/" class="cart-btn checkout">Thanh toán</a>
+        </div>
+
+    </div>
+    <!--footer mobile-->
     <div class="fix-footer sp">
         <a class="f-link" href="#" title=""><span class="ic-link home"></span>AKauto</a>
         <a class="f-link" href="#" title=""><span class="ic-link sale"></span>Khuyến mãi</a>
@@ -1969,6 +1969,8 @@
         </div>
 
     </div>
+    <div id="backToTop"><i class="fa-solid fa-angle-up"></i></div>
+    <div class="overlay"></div>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>

@@ -706,24 +706,37 @@ app.addtocart = function () {};
 //     }, 2000);
 //   }
 // };
-const backToTop = document.getElementById("backToTop");
-if (backToTop) {
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
-  });
+// const backToTop = document.getElementById("backToTop");
+// if (backToTop) {
+//   window.addEventListener("scroll", function () {
+//     if (window.scrollY > 300) {
+//       backToTop.classList.add("show");
+//     } else {
+//       backToTop.classList.remove("show");
+//     }
+//   });
 
-  backToTop.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-}
+//   backToTop.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     window.scrollTo({
+//       top: 0,
+//       behavior: "smooth",
+//     });
+//   });
+// }
+/////
+
+////payment
+$(".menu-top").hover(
+  function () {
+    $(".menu-top__lst").show();
+    $(".overlay").addClass("show");
+  },
+  function () {
+    $(".menu-top__lst").hide();
+    $(".overlay").removeClass("show");
+  }
+);
 
 const currentUrl = window.location.pathname;
 document.querySelectorAll(".menu-item a").forEach((link) => {
@@ -771,23 +784,23 @@ $(document).ready(function () {
     });
   }
 
-  $(".gt_selected").click(function () {
-    $(".gt_selected span").toggleClass("is-active");
-    $(".gt_option").toggleClass("is-active");
-  });
-  ///open menu
-  $(".ic-menu").click(function () {
-    $(".menu-top__lst").addClass("show");
-    $(".bg-close-menu").addClass("show");
-    document.documentElement.classList.add("noscroll");
-  });
+  // $(".gt_selected").click(function () {
+  //   $(".gt_selected span").toggleClass("is-active");
+  //   $(".gt_option").toggleClass("is-active");
+  // });
+  // ///open menu
+  // $(".ic-menu").click(function () {
+  //   $(".menu-top__lst").addClass("show");
+  //   $(".bg-close-menu").addClass("show");
+  //   document.documentElement.classList.add("noscroll");
+  // });
 
-  $(".bg-close-menu").click(function () {
-    $(".menu-top__lst").removeClass("show");
-    $(this).removeClass("show");
-    document.documentElement.classList.remove("noscroll");
-  });
-  ///openmneu con
+  // $(".bg-close-menu").click(function () {
+  //   $(".menu-top__lst").removeClass("show");
+  //   $(this).removeClass("show");
+  //   document.documentElement.classList.remove("noscroll");
+  // });
+  // ///openmneu con
 
   ///addcart
 
@@ -962,7 +975,6 @@ $(document).ready(function () {
     });
   });
   //rate
-
   $(".star-rating").each(function () {
     let rating = parseInt($(this).data("rating")) || 0;
     let html = "";

@@ -548,7 +548,7 @@
 }
 @media (min-width: 768px) {
   .filter-wrapper .need-section .need-list .need-item__ttl {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 .filter-wrapper .sort-section {
@@ -850,11 +850,11 @@
 }
 
 .why-section {
-  padding: 3rem 0;
+  padding: 3rem 0 0;
 }
 @media (min-width: 768px) {
   .why-section {
-    padding: 5rem 0;
+    padding: 5rem 0 0;
   }
 }
 .why-section .slick-arrow {

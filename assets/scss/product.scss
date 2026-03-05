@@ -1110,7 +1110,7 @@
                     margin-top: 1rem;
 
                     @include mq("md", min) {
-                        font-size: 1.6rem;
+                        font-size: 1.5rem;
                     }
                 }
 
@@ -1451,10 +1451,10 @@
 }
 
 .why-section {
-    padding: 3rem 0;
+    padding: 3rem 0 0;
 
     @include mq("md", min) {
-        padding: 5rem 0;
+        padding: 5rem 0 0;
     }
 
     .slick-arrow {

@@ -14,12 +14,12 @@
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Fancybox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/product.css">
 </head>
-
 
 <body>
     <header>
@@ -158,56 +158,286 @@
         </div>
     </header>
     <main>
-        <div class="p-contact">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
             <div class="container">
-                <h1 class="ttl01 txt-center --contact"><span>Liên Hệ</span></h1>
-                <div class="p-contact-wrap">
-                    <div class="p-contact-form">
-                        <h3 class="p-contact__ttl">ĐÓNG GÓP Ý KIẾN/ TƯ VẤN NHANH</h3>
-                        <p>Đội ngũ chuyên gia tại AKauto sẽ liên hệ cho anh/ chị ngay ạ!</p>
-                        <input class="fr-field" type="text" placeholder="Cho em xin tên của anh/ chị..." id="name">
-                        <input class="fr-field" type="text" placeholder="Số điện thoại của anh/ chị..." id="phone">
-                        <button type="submit" class="btn-send">Gửi yêu cầu</button>
-                    </div>
-                    <div class="p-contact-info">
-                        <h3 class="p-contact__ttl --primary">PHỤ KIỆN, ĐỒ CHƠI Ô TÔ AKAUTO</h3>
-                        <ul>
-                            <li><strong>Chi nhánh:</strong> 678 Trường Chinh, phường Tân Bình, Thành phố Hồ Chí Minh
-                                (Quận Tân Bình cũ)
-                            </li>
-                            <li><strong>Chi nhánh:</strong> 34-36 Nguyễn Hữu Cảnh, phường Thạnh Mỹ Tây, Thành phố Hồ Chí
-                                Minh (Quận Bình
-                                Thạnh
-                                cũ)</li>
-                            <li><strong>Số điên thoại:</strong><a href="tel:090 3939 683">090 3939 683</a></li>
-                            <li><strong>Thời gian làm việc:</strong> Thứ 2 – Chủ nhật (8:00 – 19:00)</li>
-                            <li><strong>Email:</strong><a
-                                    href="mailto:akauto.com.vn@gmail.com">akauto.com.vn@gmail.com</a></li>
-                            <li><strong>Website:</strong>https://akauto.com.vn</li>
-
-                        </ul>
-                    </div>
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <!-- <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/shop"><span itemprop="name">Liên hệ</span></a>
+                        <meta itemprop="position" content="2" />
+                    </li> -->
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+                        <span itemprop="name">Kết quả tìm kiếm</span>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="ttl01 --search">Kết quả tìm kiếm</h1>
+            <div class="p-products-wrap">
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="p-contact-map">
-                    <div class="map-item">
-                        <h3 class="map-item__ttl">AKAUTO TÂN BÌNH</h3><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0699575505487!2d106.6353297!3d10.805954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529f26167c1e3%3A0x971bf4ec49da52!2zQUthdXRvIC0gVHJ1bmcgdMOibSBjaMSDbSBzw7NjICYgcGjhu6Uga2nhu4duIMO0IHTDtCBjYW8gY-G6pXA!5e0!3m2!1sen!2s!4v1772503619751!5m2!1sen!2s"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="map-item">
-                        <h3 class="map-item__ttl">AKAUTO BÌNH THẠNH</h3><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.29305801019!2d106.715083!3d10.788851999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294e535bc393%3A0x6d733de6709bb3ab!2sAKauto%20-%20Binh%20Thanh%20District!5e0!3m2!1sen!2s!4v1772503633394!5m2!1sen!2s"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-box">
+                    <span class="sale-badge">-58%</span>
+                    <a class="product-item" href="">
+                        <div class="product-item__img"><img class="img_cover" src="../assets/images/sp-1.jpg" alt=""
+                                width="274" height="274">
+                        </div>
+                        <div class="product-item__meta">
+                            <h3 class="product-item__ttl">Camera hành trình Vietmap TS-C9P</h3>
+                            <div class="product-price">
+                                <span class="new-price">1.045.000₫</span>
+                                <span class="old-price">2.500.000₫</span>
+                            </div>
+                            <div class="product-item__des">
+                                <strong>Màn hình</strong>: LCD 0.96″<br>
+                                <strong>Độ phân giải</strong>: Ghi hình 2K Super HD<br>
+                                <strong>Tính năng nổi bật</strong> :<br>
+                                Cảm biến G-Sensor, pin siêu tụ điện<br>
+                                Ghi hình GPS tốc độ, tọa độ
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
+            <div class="load-more">
+                <button class="btn-loadmore">
+                    XEM THÊM SẢN PHẨM
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
+            <div class="section-search">
+                <div class="c-info --more --search">
+                    <div class="c-writer"><img src="../assets/images/person.jpg" alt="">Trần phú quý</div>
+                    <div class="c-date">Cập nhật : 10/03/2020</div>
+                </div>
+                <h2 class="section-search__ttl">Bài viết đã tìm thấy</h2>
+                <div class="news-search news-reviews-js">
+                    <a class="news-item --search" href="" title="">
+                        <div class="news-item__img">
+                            <div class="news-item__date">09<br>Th2</div>
+                            <img class="img_cover" src="../assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
 
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item --search" href="" title="">
+                        <div class="news-item__img">
+                            <div class="news-item__date">09<br>Th2</div>
+                            <img class="img_cover" src="../assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item --search" href="" title="">
+                        <div class="news-item__img">
+                            <div class="news-item__date">09<br>Th2</div>
+                            <img class="img_cover" src="../assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                    <a class="news-item --search" href="" title="">
+                        <div class="news-item__img">
+                            <div class="news-item__date">09<br>Th2</div>
+                            <img class="img_cover" src="../assets/images/new-1.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="news-item__meta">
+
+                            <h3 class="news-item__ttl">Bảng Tra Tuổi Đẹp Xông Đất Đầu Năm 2025 - Bí Quyết Đón Lộc
+                                Đầu Năm</h3>
+
+                            <div class="news-item__short">
+                                Kích bình xe ô tô gần như là món phụ kiện thiết yếu mà bất kỳ chủ xe nào cũng nên trang
+                                bị cho xế yêu. Chỉ cần một bộ kích nhỏ gọn trong cốp, bạn có thể xử lý nhanh chóng những
+                                tình huống “nằm đường” của xế yêu mà không cần đến cứu hộ. </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
 
     </main>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -479,5 +709,6 @@
     <script src="../assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
     <script src="../assets/js/script.js"></script>
 </body>
